@@ -54,3 +54,4 @@ $THEME->scss = function($theme) {
 };
 
 $THEME->haseditswitch = true;
+$THEME->removedprimarynavitems = ['home']; //To eliminate the home site in primary navigation within mobile or desktop view
