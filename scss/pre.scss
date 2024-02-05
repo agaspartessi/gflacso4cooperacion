@@ -9,7 +9,7 @@ $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #090a0b !default;
 $black: #000 !default;
 
 $grays: () !default;
@@ -53,21 +53,36 @@ $colors: map-merge(
     "teal": $teal,
     "cyan": $cyan,
     "white": $white,
-    "gray": #656565,
+    "gray": $gray-500,
     "gray-dark": $gray-800,
   ),
   $colors
 );
 
-$primary: #408070 !default;
-$primary-1: #a0c0b8 !default;
-$primary-2: #c6d9d4 !default;
-$primary-3: #ecf2f1 !default;
+$primary: hsl(165, 33%, 38%) !default;
+$primary-1: hsl(165, 33%, 48%) !default;
+$primary-2: hsl(164, 33%, 68%) !default;
+$primary-3: hsl(165, 33%, 88%) !default;
+$primary-a: hsl(165, 53%, 38%) !default;
+$focus: hsl(165, 33%, 58%) !default;
 
-$secondary: #7b4d80 !default;
-$secondary-1: #bda6c0 !default;
-$secondary-2: #d7cad9 !default;
-$secondary-3: #f2edf2 !default;
+$base: hsl(165, 33%, 23%) !default;
+$base-a: hsla(165, 33%, 23%, 0.5) !default;
+
+$border-1: $primary-3 !default;
+
+$background-1: $primary-3 !default;
+$background-2: hsla(165, 32%, 83%, 0.4) !default;
+$background-3: hsla(45, 100%, 38%, 0.3) !default;
+
+$secondary: hsl(293, 25%, 40%) !default;
+$secondary-a: hsla(293, 25%, 40%, 0.8) !default;
+$secondary-1: hsl(294, 25%, 50%) !default;
+$secondary-2: hsl(293, 25%, 70%) !default;
+$secondary-3: hsl(300, 23%, 90%) !default;
+
+$color-links: hsl(294, 55%, 40%) !default;
+$notas: hsl(294, 55%, 40%) !default;
 
 $success: #478040b3 !default;
 $info: #4fadb0b3 !default;
@@ -76,15 +91,10 @@ $danger: #a02241b3 !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
-$base: #274c43 !default;
-$base-1: #68817c !default;
-$base-2: #a8b7b4 !default;
-$base-3: #e9edec !default;
-
-$flacso: #192e4d !default;
-$flacso-1: #8c97a6 !default;
-$flacso-2: #bac0ca !default;
-$flacso-3: #e8eaed !default;
+$flacso: hsl(216, 51%, 20%) !default;
+$flacso-1: hsl(216, 51%, 30%) !default;
+$flacso-2: hsl(216, 51%, 50%) !default;
+$flacso-3: hsl(216, 51%, 80%) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -138,19 +148,20 @@ $yiq-contrasted-threshold: 190 !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Roboto Condensed", sans-serif !default;
+$font-family-sans-serif: "Roboto", system-ui, sans-serif !default;
 $font-family-serif: "Roboto Serif", serif !default;
-$font-family-monospace: "Roboto Mono", monospace !default;
+$font-family-monospace: "Roboto Mono", ui-monospace, monospace !default;
+$font-family-condensed: "Roboto Condensed", system-ui, sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
 
-$headings-font-family: "Roboto Flex", sans-serif !default;
-$headings-color: $base-1 !default;
+$headings-font-family: "Roboto Slab", system-ui, sans-serif !default;
+$headings-color: $primary !default;
 
 $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 
 // Fonts
 $rfs-base-font-size: 0.9em !default;
-$headings-font-weight: 600 !default;
+$headings-font-weight: 400 !default;
 
 // Tables
 
@@ -160,7 +171,7 @@ $table-border-color: rgba(0, 0, 0, 0.1) !default;
 
 $input-btn-padding-y: 0.5rem !default;
 $input-btn-padding-x: 1.1rem !default;
-$btn-font-family: $headings-font-family !default;
+$btn-font-family: $font-family-base !default;
 $btn-font-size: 1em !default;
 $btn-font-size-sm: 0.8rem !default;
 
