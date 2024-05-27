@@ -63,7 +63,7 @@ a {
 }
 
 table {
-  background: white;
+  background: $white;
   font-family: $font-family-condensed;
   font-size: 0.9em;
   line-height: 1.2;
@@ -96,6 +96,7 @@ fieldset {
       width: calc(1.5em + 1rem + 2px);
       aspect-ratio: 1;
     }
+
     &:first-child {
       > .btn:not(:first-child),
       > .input-group-text:not(:first-child) {
@@ -144,9 +145,9 @@ fieldset {
 
 .drawer {
   z-index: 1050;
-  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+  -webkit-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+  -moz-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
   background-color: $white;
   background-size: 10px 10px;
   background-image: repeating-linear-gradient(
@@ -156,6 +157,10 @@ fieldset {
     $white 0,
     $white 50%
   );
+}
+
+.drawer-right h6 {
+  font-size: 0.8em;
 }
 
 .drawer-right,
@@ -169,35 +174,49 @@ fieldset {
   padding-right: 0rem !important;
 
   .main-inner {
-    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+    -webkit-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+    -moz-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
   }
 
   .drawer-right-toggle .btn {
     border-right: 0;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border: 2px solid hsla(0, 0%, 100%, 0.25);
   }
 
   .drawer-left-toggle .btn {
     border-left: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+    border: 2px solid hsla(0, 0%, 100%, 0.25);
+  }
+}
+
+.drawer-toggles .drawer-right-toggle,
+.drawer-toggles .drawer-left-toggle {
+  .btn:hover .icon {
+    color: $white;
   }
 }
 
 .drawer-toggles {
   .drawer-toggler {
     position: fixed;
-    bottom: 0;
-    top: auto;
+    bottom: 15dvh;
 
     .btn {
-      background-color: $white;
-      border: 3px solid $secondary-a;
+      background-color: $secondary-a;
+      border: none;
       z-index: 1050;
       transition: color 0.45s ease-in-out, background-color 0.45s ease-in-out,
         border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
         padding 0.25s ease-in-out;
-      margin: 0 0 1em;
-      color: $secondary-a;
+      margin: 0;
+      color: $white;
+      box-shadow: 0px 0px 20px 0px #ffffff40 !important;
+      padding-block: 0.5rem;
 
       &:focus {
         box-shadow: 0 0 20px 0 $secondary-a;
@@ -205,17 +224,21 @@ fieldset {
 
       &:hover {
         border-color: transparent;
-        background-color: $secondary-a;
+        background-color: $secondary;
+      }
+
+      .icon {
+        font-size: 1rem;
       }
     }
   }
 
   .drawer-right-toggle .btn:hover {
-    padding-right: 3em;
+    padding-right: 1.2rem;
   }
 
   .drawer-left-toggle .btn:hover {
-    padding-left: 2.5em;
+    padding-left: 1rem;
   }
 
   .drawer-toggler .btn .icon {
@@ -229,7 +252,7 @@ fieldset {
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 0;
+  bottom: 15dvh;
   margin-bottom: 0;
   width: 80px;
   background: transparent;
@@ -273,14 +296,15 @@ fieldset {
   color: $secondary-a !important;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding-right: 14px;
-  padding-left: 10px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   border-left: 0;
+
   &:hover {
     border-color: transparent;
     background-color: $secondary-a;
     color: $white !important;
-    padding-left: 2.5em;
+    padding-left: 1rem;
   }
 }
 
@@ -294,14 +318,15 @@ fieldset {
   color: $secondary-a !important;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  padding-right: 10px;
-  padding-left: 14px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
   border-right: 0;
+
   &:hover {
     border-color: transparent;
     background-color: $secondary-a;
     color: $white !important;
-    padding-right: 2.5em;
+    padding-right: 1rem;
   }
 }
 
@@ -328,30 +353,42 @@ fieldset {
   border-right: none;
 }
 
+.drawer-right h6 {
+  font-size: 0.8em;
+}
+
 .btn.drawertoggle {
   border-radius: 200px;
-  padding: 16px;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  background-color: $white;
-  border: 3px solid $secondary-a;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 20px 0px #ffffff40;
+  background-color: $secondary-a;
+  border: none;
   z-index: 1050;
   transition: color 0.45s ease-in-out, background-color 0.45s ease-in-out,
     border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
     padding 0.25s ease-in-out;
-  margin: 0 0 1em;
-  color: $secondary-a !important;
+  margin: 0;
+  color: $white !important;
+
   &:hover {
     border-color: transparent;
     background-color: $secondary-a;
     color: $white !important;
   }
+
   &:focus {
     box-shadow: 0 0 20px 0 $secondary-a;
   }
+
   .icon {
     color: inherit;
-    font-size: 1em;
+    font-size: 1rem;
   }
+}
+
+.drawer.drawer-left .drawertoggle,
+.drawer.drawer-right .drawertoggle {
+  color: $white !important;
 }
 
 @media (min-width: 576px) {
@@ -369,8 +406,12 @@ fieldset {
 @media (min-width: 992px) {
   .drawer-left,
   .drawer-right {
-    top: 60px;
-    height: calc(100vh - 60px);
+    top: 62px;
+    height: calc(100vh + -62px);
+
+    section:last-child {
+      margin-bottom: 5.8em;
+    }
   }
 }
 
@@ -464,13 +505,13 @@ fieldset {
   position: fixed;
   top: 60px;
   left: 0;
-  background-color: #ffffffd9 !important;
+  background-color: hsla(0, 0%, 100%, 0.851) !important;
   line-height: 120%;
   font-size: 0.9em;
   z-index: 1;
   min-height: 35px;
   height: auto;
-  border: 1px solid #ddddddd9 !important;
+  border: 1px solid hsla(0, 0%, 87%, 0.851) !important;
   border-radius: 0;
   padding: 0.7rem 1rem;
   margin-left: 0;
@@ -500,6 +541,7 @@ fieldset {
   .breadcrumb {
     display: flex;
   }
+
   .breadcrumb:not(:empty) .breadcrumb-item {
     display: inline;
   }
@@ -656,15 +698,23 @@ body.limitedwidth #page.drawers .main-inner,
   color: $primary-2 !important;
 }
 
-.navbar .custom-control-input:checked ~ .custom-control-label::before {
-  color: $white;
-  border-color: $primary-1;
+.custom-switch .custom-control-label::after {
+  background-color: $secondary;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: $primary-1;
 }
 
+.navbar .custom-control-input:checked ~ .custom-control-label::before {
+  color: $white;
+  border-color: transparent;
+  background-color: $white;
+}
+
 .navbar .custom-control-label::before {
-  background-color: $gray-400;
-  border-color: $gray-400;
+  background-color: hsl(204, 3%, 68%);
+  border: none;
 }
 
 .navbar label {
@@ -709,11 +759,8 @@ body.limitedwidth #page.drawers .main-inner,
 
 .btn-secondary {
   background: $secondary;
-  background-image: linear-gradient(
-    #935c99,
-    $secondary 90%,
-    #6f4573
-  ); /** Revisar **/
+  background-image: linear-gradient(#935c99, $secondary 90%, #6f4573);
+  /** Revisar **/
   background-repeat: no-repeat;
   color: $white;
   border: none;
@@ -721,11 +768,8 @@ body.limitedwidth #page.drawers .main-inner,
 
 .btn-secondary:hover {
   background: $gray-200;
-  background-image: linear-gradient(
-    #935c99,
-    #c77ecf 1%,
-    #6f4573
-  ); /** Revisar **/
+  background-image: linear-gradient(#935c99, #c77ecf 1%, #6f4573);
+  /** Revisar **/
   color: $white;
   border: none;
   outline: 0.2rem solid $secondary-1;
@@ -740,11 +784,8 @@ body.limitedwidth #page.drawers .main-inner,
 
 .btn-primary {
   background-color: $primary;
-  background-image: linear-gradient(
-    #4e9b88,
-    $primary 60%,
-    #397264
-  ); /** Revisar **/
+  background-image: linear-gradient(#4e9b88, $primary 60%, #397264);
+  /** Revisar **/
   background-repeat: no-repeat;
   color: $white;
   border-color: $primary;
@@ -755,18 +796,17 @@ body.limitedwidth #page.drawers .main-inner,
   color: $white;
   background-color: $primary-2;
   border-color: $primary;
-  background-image: linear-gradient(
-    #4e9b88,
-    #63c1a9 1%,
-    #397264
-  ); /** Revisar **/
-  outline: 0.2rem solid #63c1a9; /** Revisar **/
+  background-image: linear-gradient(#4e9b88, #63c1a9 1%, #397264);
+  /** Revisar **/
+  outline: 0.2rem solid #63c1a9;
+  /** Revisar **/
   box-shadow: inset 0 0 0 2px $white;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
-  outline: 0.2rem solid #63c1a9; /** Revisar **/
+  outline: 0.2rem solid #63c1a9;
+  /** Revisar **/
   box-shadow: inset 0 0 0 2px $white;
 }
 
@@ -961,13 +1001,17 @@ h2 {
   align-items: center;
 }
 
+#page-login-index a {
+  color: $white;
+}
+
 #page-login-index .pt-5 {
   padding: 0 !important;
 }
 
 .pagelayout-login #page {
   background: $base;
-  background-image: url(http://moodlecoop.flacso.org.ar/moodle//theme/gflacso4cooperacion/img/fondo-login.svg);
+  background-image: url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/img/fondo-login.svg);
   background-repeat: no-repeat;
   background-size: 115vh;
   background-position-x: 60%;
@@ -998,7 +1042,7 @@ h2 {
 }
 
 .login-container {
-  background-color: #ffffffa3;
+  background-color: #00000040;
   box-shadow: none;
   border-radius: 3px;
   max-height: 95dvh;
@@ -1033,6 +1077,10 @@ h2 {
   .form-group {
     margin-bottom: 0;
   }
+}
+
+.login-form-forgotpassword.form-group {
+  margin-block: 0.7em;
 }
 
 @media (min-width: 768px) {
@@ -1078,7 +1126,7 @@ h2 {
   color: $white !important;
   text-align: left;
   background-color: $base !important;
-  background-image: url(http://moodlecoop.flacso.org.ar/moodle//theme/gflacso4cooperacion/img/fondo-login.svg);
+  background-image: url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/img/fondo-login.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: left;
@@ -1705,7 +1753,7 @@ ul.onetopic {
 
 [data-for="cmlist"] .actividad_en_etiqueta h3:before {
   content: " ";
-  background: url(http://moodlecoop.flacso.org.ar/moodle//theme/gflacso4cooperacion/img/ondemand_video_white.svg);
+  background: url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/img/ondemand_video_white.svg);
   background-color: $blue;
   width: 50px;
   height: 50px;
@@ -1863,18 +1911,23 @@ ul.onetopic {
       h1 {
         font-size: 3.1em !important;
       }
+
       h2 {
         font-size: 2.3em !important;
       }
+
       h3 {
         font-size: 1.8em !important;
       }
+
       h4 {
         font-size: 1.5em !important;
       }
+
       h5 {
         font-size: 1.3em !important;
       }
+
       h6 {
         font-size: 1.2em !important;
       }
@@ -2442,6 +2495,36 @@ ul.onetopic {
   font-size: clamp(15px, 2.1vw, 21px);
 }
 
+/** modal**/
+
+.yui3-panel {
+  position: absolute;
+  font-size: 0.85em;
+  line-height: 1.2;
+
+  .form-control {
+    margin: 0.5em 0;
+  }
+  .px-3 {
+    padding-inline: 0 !important;
+  }
+
+  label {
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    max-width: 75vw;
+  }
+}
+
+.format-tiles .embed_cm_modal.mod_page .modal-body {
+  padding-inline: max(7vw, 3rem);
+}
+
 /** stickyfooter **/
 
 #page.drawers.hasstickyfooter {
@@ -2480,17 +2563,17 @@ ul.onetopic {
 
 #data-listview-content .defaulttemplate-list-body > div,
 #data-singleview-content .defaulttemplate-single-body .my-6 .mt-4 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
   padding-bottom: 1rem !important;
 }
 
 #defaulttemplate-addentry > div {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
   padding-bottom: 2rem !important;
 }
 
 #data-listview-content .defaulttemplate-list-body .col-8.col-lg-9.ml-n3 {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid hsla(0, 0%, 0%, 0.1);
 }
 
 .defaulttemplate-single-body .ml-auto {
@@ -2623,9 +2706,9 @@ ul.onetopic {
     background-color: $white;
     margin-bottom: 3rem;
     flex: 1 0 auto;
-    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+    -webkit-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
+    -moz-box-shadow: 1px 1px 15px 1px hsla(0, 0%, 0%, 0.05);
     font-family: $font-family-sans-serif;
     font-size: clamp(15px, 2.1vw, 21px);
 
@@ -3084,7 +3167,7 @@ table.ygtvtable {
     background: $white;
     margin-bottom: 3em;
     font-size: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid hsla(0, 0%, 0%, 0.1);
 
     table {
       margin: 0;
@@ -3405,7 +3488,7 @@ div.no-overflow:has(table) {
 
 .generaltable th,
 .generaltable td {
-  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-top: 1px solid hsla(0, 0%, 0%, 0.1) !important;
 }
 
 [role="main"] .table thead th.pl-0 {
@@ -3489,19 +3572,24 @@ div.no-overflow:has(table) {
 .action-list .icon {
   font-size: 0.85em !important;
   color: $primary;
+
   &:hover {
     color: $secondary;
   }
 }
+
 .fa-arrow-up:before {
   content: "";
 }
+
 .fa-arrow-down:before {
   content: "";
 }
+
 .fa-cog:before {
   content: "";
 }
+
 .fa-times:before {
   content: "";
 }
@@ -3521,6 +3609,12 @@ div.no-overflow:has(table) {
 
 .book_toc li a:hover {
   text-decoration: none !important;
+}
+
+.book_toc li .action-list a {
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
 }
 
 .book_toc_numbered {
@@ -3644,6 +3738,7 @@ div.no-overflow:has(table) {
   border-bottom: 1px solid $gray-300;
   padding-bottom: 0.7em;
 }
+
 .block_news_items .card-body .newlink a:before {
   content: "+";
   margin-right: 4px;
@@ -3657,6 +3752,7 @@ div.no-overflow:has(table) {
   border-top: 1px solid $gray-300;
   padding-top: 0.7em;
 }
+
 .block_news_items .card-body .footer a:before {
   content: "";
   margin-right: 4px;
@@ -3669,6 +3765,7 @@ div.no-overflow:has(table) {
   margin-bottom: 0.5em;
   border-bottom: 1px solid $gray-300;
   padding-bottom: 0.5em;
+
   &:last-child {
     border: none;
     padding-bottom: 0;
@@ -3700,6 +3797,7 @@ div.no-overflow:has(table) {
     width: 10%;
     font-size: 0.8em;
   }
+
   section:not(#region-main)
     .block.block_calendar_month
     .maincalendar
@@ -3711,42 +3809,66 @@ div.no-overflow:has(table) {
   }
 }
 
-.modtype_hvp .activityiconcontainer {
-  content: " ";
-  background: url("http://moodlecoop.flacso.org.ar/moodle/theme/image.php?theme=gflacso4cooperacion&component=h5pactivity&image=monologo");
-  background-color: $blue;
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  padding: 0.7rem;
-  background-size: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 1rem;
+/** iconos recursos**/
+
+.modtype_customcert,
+.modtype_hvp,
+.modtype_resource {
+  img.activityicon.nofilter {
+    display: none;
+  }
 }
 
-img.activityicon.nofilter {
-  display: none;
+.modtype_hvp,
+.modtype_customcert,
+.modtype_resource {
+  .activityiconcontainer {
+    content: " ";
+    background: none;
+    background-color: $flacso-4;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0.7rem;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
 }
 
-.modtype_customcert .activityiconcontainer {
-  content: " ";
-  background: url("http://moodlecoop.flacso.org.ar/moodle/theme/image.php?theme=gflacso4cooperacion&component=h5pactivity&image=monologo");
-  background-color: $blue;
-  width: 50px;
-  height: 50px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  padding: 0.7rem;
-  background-size: 24px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 1rem;
+.modtype_hvp,
+.modtype_customcert,
+.modtype_resource {
+  .activityiconcontainer::after {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+
+    content: "";
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    display: block;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 10px;
+  }
+}
+.modtype_hvp .activityiconcontainer::after {
+  background: url("https://campuscoop.flacso.org.ar/theme/image.php?theme=gflacso4cooperacion&component=h5pactivity&image=monologo");
+}
+.modtype_customcert .activityiconcontainer::after {
+  background: url("https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/img/bx-certification.svg");
+}
+
+.modtype_resource .activityiconcontainer::after {
+  background: url("https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/img/bx-file-blank.svg");
+  width: 26px;
+  height: 26px;
+  top: 12px;
 }
 
 /* Volver arriba */
@@ -3771,25 +3893,28 @@ img.activityicon.nofilter {
 .BtnTop {
   margin: auto;
   display: block;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 3px solid $secondary-a;
+  background-color: $secondary-b;
+  border: none;
   color: $secondary-a;
-  border-bottom: none;
   z-index: 1050;
   transition: color 0.45s ease-in-out, background-color 0.45s ease-in-out,
     border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
     padding 0.25s ease-in-out;
   text-decoration: none;
   line-height: 1;
-  width: 4rem;
-  height: 2.6rem;
   text-align: center !important;
   pointer-events: all;
   border-radius: 200px;
-  padding: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0px 0px 20px 0px hsla(0, 0%, 100%, 0.251) !important;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  padding-inline: 0.5rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.35rem;
+  height: 2.5rem;
+  width: 3rem;
+  border: 2px solid hsla(0, 0%, 100%, 0.25);
+  border-bottom: none;
 
   span {
     color: $secondary-a;
@@ -3800,16 +3925,27 @@ img.activityicon.nofilter {
   }
 
   &:hover {
-    border-color: transparent;
-    background-color: $secondary-a;
     text-decoration: none !important;
-    padding-bottom: 3rem !important;
+    background-color: $secondary;
+    border: 2px solid hsla(0, 0%, 100%, 0.25);
+    border-bottom: none;
+    padding-bottom: 2.2rem !important;
 
     span {
       text-decoration: none !important;
       color: $white;
     }
   }
+}
+
+.BtnTop img {
+  filter: none;
+  width: 16px;
+  height: auto;
+}
+
+.BtnTop:hover img {
+  filter: none;
 }
 
 #page-login-index {
@@ -4070,6 +4206,7 @@ blockquote footer,
   font-style: normal;
   font-weight: 700;
   color: $gray-600;
+
   &:before {
     content: "— ";
   }

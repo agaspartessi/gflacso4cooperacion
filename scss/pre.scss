@@ -77,6 +77,7 @@ $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
 $secondary: hsl(293, 25%, 40%) !default;
 $secondary-a: hsla(293, 25%, 40%, 0.8) !default;
+$secondary-b: hsla(293, 25%, 40%, 0.65) !default;
 $secondary-1: hsl(294, 25%, 50%) !default;
 $secondary-2: hsl(293, 25%, 70%) !default;
 $secondary-3: hsl(300, 23%, 90%) !default;
@@ -95,6 +96,7 @@ $flacso: hsl(216, 51%, 20%) !default;
 $flacso-1: hsl(216, 51%, 30%) !default;
 $flacso-2: hsl(216, 51%, 50%) !default;
 $flacso-3: hsl(216, 51%, 80%) !default;
+$flacso-4: hsla(216, 51%, 40%, 0.82) !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
