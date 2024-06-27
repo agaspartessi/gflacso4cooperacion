@@ -1,4 +1,4 @@
-// Color system
+/*#region*/ // Color system
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -133,6 +133,8 @@ $activity-icon-colors: map-merge(
   $activity-icon-colors
 );
 
+/*#endregion*/
+
 // Set a specific jump point for requesting color jumps
 $theme-color-interval: 8% !default;
 
@@ -145,7 +147,7 @@ $yiq-text-light: $white !default;
 
 $yiq-contrasted-threshold: 190 !default;
 
-// Typography
+/*#region*/ // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
@@ -164,6 +166,8 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 // Fonts
 $rfs-base-font-size: 0.9em !default;
 $headings-font-weight: 400 !default;
+
+/*#endregion*/
 
 // Tables
 
