@@ -18,3 +18,5 @@ $plugin->component = 'theme_gflacso4cooperacion';
 $plugin->dependencies = [                                                                                                           
     'theme_boost' => '2016102100'                                                                                                   
 ];
+$plugin->maturity  = MATURITY_STABLE; // Nivel de madurez (puede ser ALPHA, BETA, RC o STABLE).
+$plugin->release   = '1.0'; // Versión del tema.
