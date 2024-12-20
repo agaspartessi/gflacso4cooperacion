@@ -27,16 +27,16 @@ $grays: map-merge(("100": $gray-100,
     $grays
 );
 
-$blue: #3678c9 !default;
-$indigo: #7136c9 !default;
-$purple: #c936a2 !default;
-$pink: #efc5c3 !default;
-$red: #c94736 !default;
-$orange: #c98036 !default;
-$yellow: #C9C636 !default;
-$green: #4EC936 !default;
-$teal: #258d6e !default;
-$cyan: #36c99d !default;
+$blue: #365BC9 !default;
+$indigo: #672895 !default;
+$purple: #952895 !default;
+$pink: #EAAEB8 !default;
+$red: #C9365B !default;
+$orange: #C96536 !default;
+$yellow: #C9A336 !default;
+$green: #289528 !default;
+$teal: #289595 !default;
+$cyan: #35C9B9 !default;
 
 $colors: (
   ) !default;
@@ -57,44 +57,35 @@ $colors: map-merge(("blue": $blue,
     $colors
 );
 
-$primary: hsl(162, 58%, 35%) !default;
+$primary: hsl(162, 59%, 35%) !default;
 
 // Derivados del color primario
-$primary-1: lighten($primary, 10%) !default; // Color primario más claro
-$primary-2: lighten($primary, 25%) !default; // Color primario aún más claro
-$primary-3: lighten($primary, 50%) !default; // Color primario muy claro
+$primary-1: hsl(162, 32%, 50%) !default; // Color primario más claro
+$primary-2: hsl(162, 32%, 74%) !default; // Color primario aún más claro
+$primary-3: hsl(162, 31%, 87%) !default; // Color primario muy claro
 $primary-a: saturate($primary, 20%) !default; // Color primario más saturado
-$primary-b: rgba($primary, 0.8) !default; // Color primario con opacidad
-$focus: lighten($primary, 35%) !default; // Color de enfoque
 
-$base: hsl(162, 58%, 19%) !default;
+$base: hsl(162, 59%, 19%) !default;
 $base-a: rgba($base, 0.5) !default;
-
-$border-1: $primary-3 !default;
 
 $background-1: $primary-3 !default;
 $background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
 $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
-$secondary: hsl(312, 58%, 35%) !default;
+$secondary: hsl(312, 59%, 35%) !default;
 
 // Derivados del color secundario
 $secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
-$secondary-b: rgba($secondary, 0.65) !default; // Color secundario con opacidad reducida
 $secondary-1: lighten($secondary, 10%) !default; // Color secundario más claro
 $secondary-2: lighten($secondary, 25%) !default; // Color secundario aún más claro
 $secondary-3: lighten($secondary, 50%) !default; // Color secundario muy claro
 
-$color-links: $secondary !default;
-$notas: $secondary !default;
-
-$flacso: hsl(213, 58%, 19%) !default;
+$flacso: hsl(213, 59%, 19%) !default;
 
 // Derivados del color flacso
 $flacso-1: lighten($flacso, 10%) !default; // Color flacso más claro
 $flacso-2: lighten($flacso, 30%) !default; // Color flacso más claro
 $flacso-3: lighten($flacso, 60%) !default; // Color flacso muy claro
-$flacso-4: rgba($flacso, 0.82) !default; // Color flacso con opacidad
 
 $success: $green !default;
 $info: $cyan !default;
@@ -162,13 +153,13 @@ $font-family-condensed: "Roboto Condensed", system-ui, sans-serif !default;
 $font-family-base: $font-family-sans-serif !default;
 
 $headings-font-family: "Roboto Slab", system-ui, sans-serif !default;
-$headings-color: $primary !default;
+$headings-color: $black !default;
 
 $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 
 // Fonts
 $rfs-base-font-size: 0.9em !default;
-$headings-font-weight: 400 !default;
+$headings-font-weight: 600 !default;
 
 /*#endregion*/
 
