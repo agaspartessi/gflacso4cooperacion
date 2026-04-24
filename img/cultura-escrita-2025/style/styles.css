@@ -1,0 +1,1128 @@
+.course-25411:not(.editing) .drawer-toggles, .course-27641:not(.editing) .drawer-toggles, .course-29748:not(.editing) .drawer-toggles {
+  display: none !important; }
+.course-25411 #region-main, .course-27641 #region-main, .course-29748 #region-main {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+  .course-25411 #region-main #tabs-tree-start, .course-27641 #region-main #tabs-tree-start, .course-29748 #region-main #tabs-tree-start {
+    margin-top: initial; }
+.course-25411 #region-main [role="main"], .course-27641 #region-main [role="main"], .course-29748 #region-main [role="main"] {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  text-align: left; }
+  .course-25411 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content, .course-27641 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content, .course-29748 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border-radius: none !important; }
+    .course-25411 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content .summary, .course-27641 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content .summary, .course-29748 #region-main [role="main"] .single-section.onetopic ul.topics li.section .content .summary {
+      background: none !important; }
+.course-25411 #page #topofscroll.main-inner, .course-27641 #page #topofscroll.main-inner, .course-29748 #page #topofscroll.main-inner {
+  padding: initial;
+  width: 100% !important; }
+  .course-25411 #page #topofscroll.main-inner .secondary-navigation, .course-27641 #page #topofscroll.main-inner .secondary-navigation, .course-29748 #page #topofscroll.main-inner .secondary-navigation {
+    padding-bottom: initial; }
+  .course-25411 #page #topofscroll.main-inner #page-header.header-maxwidth, .course-27641 #page #topofscroll.main-inner #page-header.header-maxwidth, .course-29748 #page #topofscroll.main-inner #page-header.header-maxwidth {
+    width: initial !important;
+    padding-left: 15px; }
+  @media (min-width: 576px) {
+    .course-25411 #page #topofscroll.main-inner, .course-27641 #page #topofscroll.main-inner, .course-29748 #page #topofscroll.main-inner {
+      margin-top: 43px;
+      padding: initial; } }
+  .course-25411 #page #topofscroll.main-inner .page-header-headings h1, .course-27641 #page #topofscroll.main-inner .page-header-headings h1, .course-29748 #page #topofscroll.main-inner .page-header-headings h1 {
+    font-size: 1.6em !important;
+    font-family: 'Roboto Condensed';
+    border-left: 15px solid #BA0C2F !important;
+    font-weight: 600;
+    max-width: none;
+    margin: auto;
+    color: #312C30;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 0;
+    border-radius: 0;
+    padding-left: 20px; }
+    @media screen and (max-width: 768px) {
+      .course-25411 #page #topofscroll.main-inner .page-header-headings h1, .course-27641 #page #topofscroll.main-inner .page-header-headings h1, .course-29748 #page #topofscroll.main-inner .page-header-headings h1 {
+        font-size: 1.4em !important; } }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #section-1, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 {
+    background-color: #312C30; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign {
+      color: #FFFFFF;
+      font-family: "Roboto Condensed" !important;
+      font-size: 26px; }
+      .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign .instancename, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign .instancename, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign .instancename, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign .instancename, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 li.activity.modtype_assign .instancename, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 li.activity.modtype_assign .instancename {
+        color: #FFFFFF; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 .volver a, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 .volver a, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 .volver a, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 .volver a, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 .volver a, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 .volver a {
+      color: #C1C1C1 !important; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 #page-course-view-onetopic .section .activity.modtype_label.label .dropdown a.dropdown-toggle:before {
+      color: #C1C1C1 !important; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 h3, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 h1, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 h3, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 h3, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 h1, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 h3, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 h3, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 h1, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 h3 {
+      color: #C1C1C1 !important; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 h1, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 h1, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 h1, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 h1 {
+      font-size: 5rem;
+      font-family: 'Roboto Condensed';
+      font-weight: bold;
+      text-transform: uppercase; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 a, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 a, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 a, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 a, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 a, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 a {
+      color: #C1C1C1; }
+      .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 a span, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 a span, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 a span, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 a span, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 a span, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 a span {
+        color: black; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 h2, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 h2, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 h2, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 h2, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 h2, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 h2 {
+      color: #C1C1C1 !important;
+      text-transform: uppercase;
+      font-weight: bold !important;
+      font-size: 60px !important;
+      margin-top: 50px;
+      font-family: 'Roboto Condensed';
+      padding: 0;
+      background: transparent;
+      border-bottom: initial; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 hr, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 hr, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 hr, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 hr, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 hr, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 hr {
+      border-top: 1px solid #C1C1C1 !important; }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #section-1 p, .course-25411 #page #topofscroll.main-inner #region-main-box #section-14 p, .course-27641 #page #topofscroll.main-inner #region-main-box #section-1 p, .course-27641 #page #topofscroll.main-inner #region-main-box #section-14 p, .course-29748 #page #topofscroll.main-inner #region-main-box #section-1 p, .course-29748 #page #topofscroll.main-inner #region-main-box #section-14 p {
+      color: #C1C1C1 !important;
+      hyphens: none !important; }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #section-2, .course-27641 #page #topofscroll.main-inner #region-main-box #section-2, .course-29748 #page #topofscroll.main-inner #region-main-box #section-2 {
+    background-color: #E8FF74; }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #section-6, .course-27641 #page #topofscroll.main-inner #region-main-box #section-6, .course-29748 #page #topofscroll.main-inner #region-main-box #section-6 {
+    background-color: #FF8D46; }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #section-10, .course-27641 #page #topofscroll.main-inner #region-main-box #section-10, .course-29748 #page #topofscroll.main-inner #region-main-box #section-10 {
+    background-color: #F8A0FF; }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #genially1, .course-27641 #page #topofscroll.main-inner #region-main-box #genially1, .course-29748 #page #topofscroll.main-inner #region-main-box #genially1 {
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    background-image: url(/cultura-escrita/img/bggenially.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 0  40px 0;
+    height: 1150px;
+    overflow: hidden; }
+    @media screen and (max-width: 990px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #genially1, .course-27641 #page #topofscroll.main-inner #region-main-box #genially1, .course-29748 #page #topofscroll.main-inner #region-main-box #genially1 {
+        height: 104vw; } }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #genially1 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #genially1 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #genially1 iframe {
+      width: 800px;
+      height: 1200px;
+      margin: auto; }
+      @media screen and (max-width: 990px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #genially1 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #genially1 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #genially1 iframe {
+          height: 106vw;
+          width: calc(81vw - 40px); } }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 {
+    overflow: hidden;
+    height: 2300px;
+    position: relative;
+    margin-top: 40px; }
+    @media screen and (max-width: 768px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 {
+        height: 2600px; } }
+    @media screen and (max-width: 590px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 {
+        height: 4000px; } }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe {
+      position: absolute;
+      height: 2500px;
+      top: -120px; }
+      @media screen and (max-width: 768px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe {
+          height: 2800px; } }
+      @media screen and (max-width: 590px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet1 iframe {
+          height: 4200px; } }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 {
+    overflow: hidden;
+    height: 1600px;
+    position: relative;
+    margin-top: 40px; }
+    @media screen and (max-width: 768px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 {
+        height: 1700px; } }
+    @media screen and (max-width: 590px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 {
+        height: 3000px; } }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe {
+      position: absolute;
+      height: 1800px;
+      top: -120px; }
+      @media screen and (max-width: 768px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe {
+          height: 1900px; } }
+      @media screen and (max-width: 590px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet2 iframe {
+          height: 3200px; } }
+  .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 {
+    overflow: hidden;
+    height: 2600px;
+    position: relative;
+    margin-top: 40px; }
+    @media screen and (max-width: 768px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 {
+        height: 1700px; } }
+    @media screen and (max-width: 590px) {
+      .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 {
+        height: 4700px; } }
+    .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe {
+      position: absolute;
+      height: 2800px;
+      top: -120px; }
+      @media screen and (max-width: 768px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe {
+          height: 1900px; } }
+      @media screen and (max-width: 590px) {
+        .course-25411 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-27641 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe, .course-29748 #page #topofscroll.main-inner #region-main-box #paddlet3 iframe {
+          height: 4900px; } }
+@media screen and (max-width: 990px) {
+  .course-25411 .section, .course-27641 .section, .course-29748 .section {
+    padding: 20px; } }
+.course-25411 .section .content, .course-27641 .section .content, .course-29748 .section .content {
+  max-width: 900px;
+  margin: auto !important; }
+  .course-25411 .section .content .my-3[data-for="sectioninfo"], .course-27641 .section .content .my-3[data-for="sectioninfo"], .course-29748 .section .content .my-3[data-for="sectioninfo"] {
+    padding: 0;
+    border: none; }
+    .course-25411 .section .content .my-3[data-for="sectioninfo"] h1, .course-27641 .section .content .my-3[data-for="sectioninfo"] h1, .course-29748 .section .content .my-3[data-for="sectioninfo"] h1 {
+      font-size: 5rem !important;
+      text-transform: uppercase !important;
+      font-family: 'Roboto Condensed';
+      font-weight: bold;
+      line-height: 120%;
+      color: #191E21; }
+      @media screen and (max-width: 990px) {
+        .course-25411 .section .content .my-3[data-for="sectioninfo"] h1, .course-27641 .section .content .my-3[data-for="sectioninfo"] h1, .course-29748 .section .content .my-3[data-for="sectioninfo"] h1 {
+          font-size: 12vw;
+          line-height: 110%; } }
+    .course-25411 .section .content .my-3[data-for="sectioninfo"] h2, .course-27641 .section .content .my-3[data-for="sectioninfo"] h2, .course-29748 .section .content .my-3[data-for="sectioninfo"] h2 {
+      font-family: 'Roboto Condensed';
+      padding: 0 !important;
+      border-bottom: 0 !important;
+      background: transparent;
+      text-transform: uppercase;
+      font-weight: 900 !important;
+      margin-bottom: .5em !important;
+      font-size: 2em !important; }
+    .course-25411 .section .content .my-3[data-for="sectioninfo"] .row, .course-27641 .section .content .my-3[data-for="sectioninfo"] .row, .course-29748 .section .content .my-3[data-for="sectioninfo"] .row {
+      margin-right: 0;
+      margin-left: 0; }
+      .course-25411 .section .content .my-3[data-for="sectioninfo"] .row .col a, .course-27641 .section .content .my-3[data-for="sectioninfo"] .row .col a, .course-29748 .section .content .my-3[data-for="sectioninfo"] .row .col a {
+        font-family: 'Roboto Condensed';
+        color: #191E21;
+        text-transform: uppercase; }
+  .course-25411 .section .content h3, .course-27641 .section .content h3, .course-29748 .section .content h3 {
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Roboto Condensed';
+    border-right: 0;
+    padding: 0;
+    background: transparent; }
+  .course-25411 .section .content hr, .course-27641 .section .content hr, .course-29748 .section .content hr {
+    border-top: 1px solid #191E21; }
+  .course-25411 .section .content a img, .course-27641 .section .content a img, .course-29748 .section .content a img {
+    transition: transform 0.3s ease; }
+    .course-25411 .section .content a img:hover, .course-27641 .section .content a img:hover, .course-29748 .section .content a img:hover {
+      transform: scale(1.08); }
+  .course-25411 .section .content .volver a, .course-27641 .section .content .volver a, .course-29748 .section .content .volver a {
+    color: #191E21;
+    font-family: 'Roboto Condensed'; }
+    .course-25411 .section .content .volver a img, .course-27641 .section .content .volver a img, .course-29748 .section .content .volver a img {
+      vertical-align: initial; }
+      .course-25411 .section .content .volver a img:hover, .course-27641 .section .content .volver a img:hover, .course-29748 .section .content .volver a img:hover {
+        transform: none; }
+  .course-25411 .section .content .container, .course-27641 .section .content .container, .course-29748 .section .content .container {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+    .course-25411 .section .content .container .col, .course-27641 .section .content .container .col, .course-29748 .section .content .container .col {
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
+  .course-25411 .section .content .postales, .course-27641 .section .content .postales, .course-29748 .section .content .postales {
+    margin: 50px 0 0 0; }
+    .course-25411 .section .content .postales .container, .course-27641 .section .content .postales .container, .course-29748 .section .content .postales .container {
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
+      .course-25411 .section .content .postales .container .mediaplugin, .course-27641 .section .content .postales .container .mediaplugin, .course-29748 .section .content .postales .container .mediaplugin {
+        margin-top: 0;
+        margin-bottom: 0; }
+  .course-25411 .section .content ul.section.img-text, .course-27641 .section .content ul.section.img-text, .course-29748 .section .content ul.section.img-text {
+    border: none;
+    padding: 2em 0 !important;
+    margin-top: 0 !important; }
+    .course-25411 .section .content ul.section.img-text p, .course-27641 .section .content ul.section.img-text p, .course-29748 .section .content ul.section.img-text p {
+      color: #191E21 !important;
+      font-weight: 300 !important;
+      hyphens: none !important;
+      font-size: 22px; }
+      @media screen and (max-width: 768px) {
+        .course-25411 .section .content ul.section.img-text p, .course-27641 .section .content ul.section.img-text p, .course-29748 .section .content ul.section.img-text p {
+          font-size: 20px;
+          line-height: 130%;
+          hyphens: none !important; } }
+    .course-25411 .section .content ul.section.img-text a, .course-27641 .section .content ul.section.img-text a, .course-29748 .section .content ul.section.img-text a {
+      color: #191E21; }
+  .course-25411 .section .content .summary, .course-27641 .section .content .summary, .course-29748 .section .content .summary {
+    border: none !important;
+    padding: 0 !important; }
+    .course-25411 .section .content .summary a, .course-27641 .section .content .summary a, .course-29748 .section .content .summary a {
+      text-transform: uppercase;
+      font-weight: 400; }
+    .course-25411 .section .content .summary h1, .course-27641 .section .content .summary h1, .course-29748 .section .content .summary h1 {
+      font-size: 5rem !important;
+      text-transform: uppercase !important;
+      font-family: 'Roboto Condensed';
+      font-weight: bold;
+      line-height: 120%;
+      color: #191E21; }
+      @media screen and (max-width: 990px) {
+        .course-25411 .section .content .summary h1, .course-27641 .section .content .summary h1, .course-29748 .section .content .summary h1 {
+          font-size: 12vw;
+          line-height: 110%; } }
+    .course-25411 .section .content .summary h2, .course-27641 .section .content .summary h2, .course-29748 .section .content .summary h2 {
+      color: #191E21 !important;
+      text-transform: uppercase;
+      font-weight: bold !important;
+      font-size: 60px; }
+    .course-25411 .section .content .summary p, .course-27641 .section .content .summary p, .course-29748 .section .content .summary p {
+      color: #191E21 !important;
+      font-weight: 300 !important;
+      hyphens: none !important; }
+    .course-25411 .section .content .summary .barra-nav.container, .course-27641 .section .content .summary .barra-nav.container, .course-29748 .section .content .summary .barra-nav.container {
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
+      .course-25411 .section .content .summary .barra-nav.container .col, .course-27641 .section .content .summary .barra-nav.container .col, .course-29748 .section .content .summary .barra-nav.container .col {
+        padding-right: 0 !important;
+        padding-left: 0 !important; }
+  .course-25411 .section .content li.activity, .course-27641 .section .content li.activity, .course-29748 .section .content li.activity {
+    padding: 0 !important;
+    line-height: 160%;
+    font-size: .95em; }
+    .course-25411 .section .content li.activity h5, .course-27641 .section .content li.activity h5, .course-29748 .section .content li.activity h5 {
+      font-weight: 400;
+      text-transform: uppercase;
+      color: black;
+      font-size: 20px; }
+    .course-25411 .section .content li.activity .importante, .course-27641 .section .content li.activity .importante, .course-29748 .section .content li.activity .importante {
+      border: 1px solid black;
+      padding: 20px;
+      border-radius: 10px; }
+    .course-25411 .section .content li.activity .descargar, .course-27641 .section .content li.activity .descargar, .course-29748 .section .content li.activity .descargar {
+      background-color: #191E21 !important;
+      color: #ffffff !important;
+      border-radius: 500px;
+      padding: 5px 20px;
+      text-transform: uppercase;
+      font-weight: 400; }
+    .course-25411 .section .content li.activity .descargar-dark, .course-27641 .section .content li.activity .descargar-dark, .course-29748 .section .content li.activity .descargar-dark {
+      background-color: #FFFFFF !important;
+      color: #191E21 !important;
+      border-radius: 500px;
+      padding: 5px 20px;
+      text-transform: uppercase;
+      font-weight: 700; }
+.course-25411 .section div.no-overflow, .course-27641 .section div.no-overflow, .course-29748 .section div.no-overflow {
+  overflow: visible; }
+  .course-25411 .section div.no-overflow div.no-overflow, .course-27641 .section div.no-overflow div.no-overflow, .course-29748 .section div.no-overflow div.no-overflow {
+    overflow: visible; }
+    .course-25411 .section div.no-overflow div.no-overflow .row, .course-27641 .section div.no-overflow div.no-overflow .row, .course-29748 .section div.no-overflow div.no-overflow .row {
+      margin-left: 0;
+      margin-right: 0; }
+      .course-25411 .section div.no-overflow div.no-overflow .row .col a, .course-27641 .section div.no-overflow div.no-overflow .row .col a, .course-29748 .section div.no-overflow div.no-overflow .row .col a {
+        font-family: 'Roboto Condensed';
+        text-transform: uppercase; }
+    .course-25411 .section div.no-overflow div.no-overflow p, .course-27641 .section div.no-overflow div.no-overflow p, .course-29748 .section div.no-overflow div.no-overflow p {
+      font-family: 'Roboto Condensed'; }
+    .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos {
+      position: relative;
+      left: calc(0px - (100vw - 900px) / 2);
+      height: 680px;
+      margin-top: 150px; }
+      @media screen and (max-width: 990px) {
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos {
+          margin-top: 60px;
+          width: 100vw;
+          left: -20px; } }
+      @media screen and (max-width: 768px) {
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos {
+          overflow: hidden;
+          height: 720px; } }
+      .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos {
+        position: absolute;
+        width: 1200px;
+        left: calc((100vw - 1200px ) / 2);
+        height: 550px; }
+        @media screen and (max-width: 990px) {
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos {
+            left: calc((100vw - 320px ) / 2);
+            width: 320px;
+            margin-top: 75px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras {
+          position: absolute;
+          left: -365px;
+          width: 1920px; }
+          @media screen and (max-width: 768px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras {
+              width: 100vw;
+              height: 500px;
+              overflow: hidden;
+              left: -100px !important; }
+              .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras img, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras img, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .bg-letras img {
+                width: 1920px;
+                max-width: none !important; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren {
+          position: absolute;
+          width: 470px;
+          left: 299px;
+          top: -83.78px; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video {
+            width: 470px;
+            transform: rotate(-4.46deg);
+            border: 1px solid white;
+            background: white; }
+            @media screen and (max-width: 990px) {
+              .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren video {
+                transform: rotate(5.54deg);
+                width: 300px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postal-tren {
+              left: 156px;
+              top: 10.22px;
+              width: 300px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1 {
+          position: absolute;
+          left: 185px;
+          top: 211px;
+          transform: rotate(7.41deg); }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-1 {
+              left: -64px;
+              top: 103px;
+              transform: rotate(-9.59deg);
+              width: 250px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2 {
+          position: absolute;
+          left: 297px;
+          top: 408.21px;
+          transform: rotate(-21.96deg); }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2 {
+              left: 327px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-2 {
+              left: -65px;
+              top: 231px;
+              transform: rotate(8.41deg);
+              width: 250px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3 {
+          position: absolute;
+          left: 596px;
+          top: 271px;
+          transform: rotate(-10.4deg); }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3 {
+              left: 618px;
+              top: 250px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .ticket-3 {
+              left: -63px;
+              top: 370px;
+              transform: rotate(-3.59deg);
+              width: 250px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit {
+          position: absolute;
+          left: 0px;
+          top: 230px;
+          transform: rotate(-13.86deg); }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit img, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit img, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit img {
+            width: 190px; }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit {
+              left: 117px;
+              top: 375px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .postit {
+              left: 202px;
+              top: 520px;
+              width: 129px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa {
+          position: absolute;
+          width: 400px;
+          left: 715px;
+          top: 0px;
+          transform: rotate(10.28deg); }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa {
+              top: -18px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mapa {
+              left: 191px;
+              top: 295px;
+              width: 350px;
+              transform: rotate(-4.28deg); } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro {
+          position: absolute;
+          width: 120px;
+          left: 530px;
+          top: 174px;
+          transform: rotate(7.16deg); }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .tag-foro {
+              left: 205px;
+              top: 180px;
+              transform: rotate(-3.59deg);
+              width: 120px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves {
+          position: absolute;
+          width: 310px;
+          left: 911px;
+          top: 261px;
+          transform: rotate(-28.29deg); }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves img, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves img, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves img {
+            width: auto; }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves {
+              left: 791px;
+              top: 377px;
+              transform: rotate(7.71deg); } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .llaves {
+              left: -38px;
+              top: 491px;
+              width: 237px;
+              transform: rotate(7.71deg); } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion {
+          position: absolute;
+          left: 52px;
+          top: -66px; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion img, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion img, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .foro-presentacion img {
+            width: 280px; }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block {
+          position: absolute;
+          left: 0px;
+          top: 53px; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block img, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block img, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .podcast-block img {
+            width: auto; }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 {
+          position: absolute;
+          left: 0px;
+          top: 53px;
+          background-color: #F1F3F4;
+          padding: 10px 10px 0 15px;
+          border-radius: 10px;
+          border: 2px solid black;
+          transition: transform 0.3s ease;
+          display: flex;
+          flex-direction: column; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 span, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 span, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 span {
+            display: block;
+            color: #000000;
+            font-weight: 700; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 a, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 a, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 a {
+            color: #000000 !important;
+            font-size: 16px; }
+          .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio {
+            height: 30px; }
+            @media screen and (max-width: 768px) {
+              .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio {
+                width: 20px; } }
+          @media screen and (max-width: 1200px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 {
+              left: 117px;
+              top: 66px; } }
+          @media screen and (max-width: 990px) {
+            .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 {
+              left: -30px;
+              top: 16px; }
+              .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3 audio {
+                width: 190px; } }
+        .course-25411 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3:hover, .course-27641 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3:hover, .course-29748 .section div.no-overflow div.no-overflow .contenedor-accesos .accesos .mp3:hover {
+          transform: scale(1.08); }
+.course-25411 .course-content ul.topics, .course-25411 .course-content ul.weeks, .course-27641 .course-content ul.topics, .course-27641 .course-content ul.weeks, .course-29748 .course-content ul.topics, .course-29748 .course-content ul.weeks {
+  padding: 0 !important;
+  margin: 0 !important; }
+  .course-25411 .course-content ul.topics .barra-nav a, .course-25411 .course-content ul.weeks .barra-nav a, .course-27641 .course-content ul.topics .barra-nav a, .course-27641 .course-content ul.weeks .barra-nav a, .course-29748 .course-content ul.topics .barra-nav a, .course-29748 .course-content ul.weeks .barra-nav a {
+    font-family: 'Roboto Condensed';
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important; }
+.course-25411 #section-0 .section-modchooser-link, .course-27641 #section-0 .section-modchooser-link, .course-29748 #section-0 .section-modchooser-link {
+  display: none; }
+.course-25411:not(.editing) #section-0, .course-27641:not(.editing) #section-0, .course-29748:not(.editing) #section-0 {
+  height: 0 !important;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
+@media screen and (max-width: 768px) {
+  .course-25411#page-mod-page-view .box, .course-27641#page-mod-page-view .box, .course-29748#page-mod-page-view .box {
+    padding-inline: 15px; } }
+.course-25411#page-mod-page-view .secondary-navigation, .course-27641#page-mod-page-view .secondary-navigation, .course-29748#page-mod-page-view .secondary-navigation {
+  padding-bottom: 0; }
+.course-25411#page-mod-page-view #region-main, .course-27641#page-mod-page-view #region-main, .course-29748#page-mod-page-view #region-main {
+  background-color: #C1C1C1;
+  padding: 2rem 0; }
+  .course-25411#page-mod-page-view #region-main h2:first-of-type, .course-27641#page-mod-page-view #region-main h2:first-of-type, .course-29748#page-mod-page-view #region-main h2:first-of-type {
+    display: none; }
+  .course-25411#page-mod-page-view #region-main div[role="main"], .course-27641#page-mod-page-view #region-main div[role="main"], .course-29748#page-mod-page-view #region-main div[role="main"] {
+    margin: auto !important; }
+    .course-25411#page-mod-page-view #region-main div[role="main"] h2:first-of-type, .course-27641#page-mod-page-view #region-main div[role="main"] h2:first-of-type, .course-29748#page-mod-page-view #region-main div[role="main"] h2:first-of-type {
+      display: none; }
+    .course-25411#page-mod-page-view #region-main div[role="main"] .barra-nav .row, .course-27641#page-mod-page-view #region-main div[role="main"] .barra-nav .row, .course-29748#page-mod-page-view #region-main div[role="main"] .barra-nav .row {
+      margin-right: 0;
+      margin-left: 0; }
+  .course-25411#page-mod-page-view #region-main h1, .course-27641#page-mod-page-view #region-main h1, .course-29748#page-mod-page-view #region-main h1 {
+    font-size: 110px !important;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #191E21;
+    margin-bottom: 0 !important;
+    border-bottom: none;
+    font-family: 'Roboto Condensed'; }
+    @media screen and (max-width: 990px) {
+      .course-25411#page-mod-page-view #region-main h1, .course-27641#page-mod-page-view #region-main h1, .course-29748#page-mod-page-view #region-main h1 {
+        font-size: 12vw !important; } }
+  .course-25411#page-mod-page-view #region-main h2, .course-27641#page-mod-page-view #region-main h2, .course-29748#page-mod-page-view #region-main h2 {
+    color: #191E21 !important;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    font-size: 60px;
+    font-family: 'Roboto Condensed'; }
+  .course-25411#page-mod-page-view #region-main h3, .course-27641#page-mod-page-view #region-main h3, .course-29748#page-mod-page-view #region-main h3 {
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400;
+    font-size: 30px;
+    border-top: none;
+    border-bottom: none;
+    font-family: 'Roboto Condensed'; }
+  .course-25411#page-mod-page-view #region-main p, .course-27641#page-mod-page-view #region-main p, .course-29748#page-mod-page-view #region-main p {
+    color: #191E21 !important;
+    font-weight: 300 !important;
+    font-family: 'Roboto Condensed' !important;
+    hyphens: none !important;
+    font-size: 22px; }
+    @media screen and (max-width: 768px) {
+      .course-25411#page-mod-page-view #region-main p, .course-27641#page-mod-page-view #region-main p, .course-29748#page-mod-page-view #region-main p {
+        font-size: 20px;
+        line-height: 130%;
+        hyphens: none !important; } }
+  .course-25411#page-mod-page-view #region-main .container, .course-27641#page-mod-page-view #region-main .container, .course-29748#page-mod-page-view #region-main .container {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+    .course-25411#page-mod-page-view #region-main .container .col, .course-27641#page-mod-page-view #region-main .container .col, .course-29748#page-mod-page-view #region-main .container .col {
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
+  .course-25411#page-mod-page-view #region-main a, .course-27641#page-mod-page-view #region-main a, .course-29748#page-mod-page-view #region-main a {
+    font-family: 'Roboto Condensed';
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    text-decoration: none !important; }
+  .course-25411#page-mod-page-view #region-main .modified, .course-27641#page-mod-page-view #region-main .modified, .course-29748#page-mod-page-view #region-main .modified {
+    display: none; }
+  .course-25411#page-mod-page-view #region-main hr, .course-27641#page-mod-page-view #region-main hr, .course-29748#page-mod-page-view #region-main hr {
+    border-top: 1px solid #191E21; }
+  .course-25411#page-mod-page-view #region-main .descargar, .course-27641#page-mod-page-view #region-main .descargar, .course-29748#page-mod-page-view #region-main .descargar {
+    background-color: #191E21 !important;
+    color: #C1C1C1 !important;
+    border-radius: 500px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-weight: 400; }
+  .course-25411#page-mod-page-view #region-main .panel, .course-27641#page-mod-page-view #region-main .panel, .course-29748#page-mod-page-view #region-main .panel {
+    border-bottom: 1px solid #191E21 !important; }
+    .course-25411#page-mod-page-view #region-main .panel h4, .course-27641#page-mod-page-view #region-main .panel h4, .course-29748#page-mod-page-view #region-main .panel h4 {
+      display: block;
+      width: 100%;
+      border-bottom: 0px !important; }
+      .course-25411#page-mod-page-view #region-main .panel h4 a, .course-27641#page-mod-page-view #region-main .panel h4 a, .course-29748#page-mod-page-view #region-main .panel h4 a {
+        display: block;
+        width: 100%;
+        position: relative;
+        font-family: 'Roboto Condensed';
+        color: #191E21 !important;
+        text-transform: uppercase !important;
+        font-weight: 400 !important;
+        font-size: 24px; }
+        .course-25411#page-mod-page-view #region-main .panel h4 a::after, .course-27641#page-mod-page-view #region-main .panel h4 a::after, .course-29748#page-mod-page-view #region-main .panel h4 a::after {
+          position: absolute;
+          width: 20px;
+          height: 26px;
+          right: 10px;
+          top: calc(50% - 13px);
+          background-image: url(/cultura-escrita/img/arrow.svg);
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: 0 0;
+          content: " ";
+          transition: .5s ease all;
+          transform: rotate(180deg); }
+        .course-25411#page-mod-page-view #region-main .panel h4 a.collapsed::after, .course-27641#page-mod-page-view #region-main .panel h4 a.collapsed::after, .course-29748#page-mod-page-view #region-main .panel h4 a.collapsed::after {
+          transform: rotate(0deg); }
+    .course-25411#page-mod-page-view #region-main .panel a[role="button"]:focus, .course-27641#page-mod-page-view #region-main .panel a[role="button"]:focus, .course-29748#page-mod-page-view #region-main .panel a[role="button"]:focus {
+      box-shadow: none; }
+.course-25411#page-mod-page-mod #page, .course-25411#page-mod-hsuforum-mod #page, .course-25411#page-course-edit #page, .course-25411#page-mod-forum-mod #page, .course-25411#page-mod-forum-view #page, .course-25411#page-mod-forum-discuss #page, .course-25411#page-mod-assign-mod #page, .course-25411#page-mod-assign-view #page, .course-27641#page-mod-page-mod #page, .course-27641#page-mod-hsuforum-mod #page, .course-27641#page-course-edit #page, .course-27641#page-mod-forum-mod #page, .course-27641#page-mod-forum-view #page, .course-27641#page-mod-forum-discuss #page, .course-27641#page-mod-assign-mod #page, .course-27641#page-mod-assign-view #page, .course-29748#page-mod-page-mod #page, .course-29748#page-mod-hsuforum-mod #page, .course-29748#page-course-edit #page, .course-29748#page-mod-forum-mod #page, .course-29748#page-mod-forum-view #page, .course-29748#page-mod-forum-discuss #page, .course-29748#page-mod-assign-mod #page, .course-29748#page-mod-assign-view #page {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+.course-25411#page-mod-resource-view #page, .course-27641#page-mod-resource-view #page, .course-29748#page-mod-resource-view #page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .course-25411#page-mod-resource-view #page .resourcecontent.resourcepdf, .course-27641#page-mod-resource-view #page .resourcecontent.resourcepdf, .course-29748#page-mod-resource-view #page .resourcecontent.resourcepdf {
+    background-color: #323639; }
+.course-25411#page-mod-hsuforum-index #region-main [role="main"], .course-27641#page-mod-hsuforum-index #region-main [role="main"], .course-29748#page-mod-hsuforum-index #region-main [role="main"] {
+  max-width: 1000px;
+  margin: auto; }
+.course-25411#page-mod-label-mod #region-main [role="main"], .course-27641#page-mod-label-mod #region-main [role="main"], .course-29748#page-mod-label-mod #region-main [role="main"] {
+  max-width: 1000px;
+  margin: auto; }
+.course-25411#page-mod-hsuforum-view input.btn-primary, .course-27641#page-mod-hsuforum-view input.btn-primary, .course-29748#page-mod-hsuforum-view input.btn-primary {
+  background-color: black !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-image: initial;
+  border-color: initial; }
+.course-25411#page-mod-hsuforum-view input#searchforums.btn-secondary, .course-27641#page-mod-hsuforum-view input#searchforums.btn-secondary, .course-29748#page-mod-hsuforum-view input#searchforums.btn-secondary {
+  background-image: initial;
+  border-color: initial;
+  background: initial;
+  background-color: #C1C1C1 !important;
+  color: black;
+  border: 1px solid black !important;
+  border-radius: 500px;
+  text-transform: uppercase;
+  font-weight: 700 !important; }
+.course-25411#page-mod-hsuforum-view .btn-secondary, .course-27641#page-mod-hsuforum-view .btn-secondary, .course-29748#page-mod-hsuforum-view .btn-secondary {
+  background-image: initial;
+  border-color: initial;
+  background: initial;
+  background-color: #C1C1C1 !important;
+  color: black;
+  border: 1px solid black !important;
+  border-radius: 500px;
+  text-transform: uppercase;
+  font-weight: 700 !important; }
+.course-25411#page-mod-hsuforum-view .btn-secondary:hover, .course-27641#page-mod-hsuforum-view .btn-secondary:hover, .course-29748#page-mod-hsuforum-view .btn-secondary:hover {
+  background-image: initial !important;
+  border-color: initial;
+  background: initial;
+  outline: initial; }
+.course-25411#page-mod-hsuforum-view .btn-link, .course-27641#page-mod-hsuforum-view .btn-link, .course-29748#page-mod-hsuforum-view .btn-link {
+  background-color: #C1C1C1 !important;
+  color: black;
+  border: 1px solid black !important;
+  border-radius: 500px;
+  text-transform: uppercase;
+  font-weight: 700; }
+.course-25411#page-mod-hsuforum-view #region-main, .course-27641#page-mod-hsuforum-view #region-main, .course-29748#page-mod-hsuforum-view #region-main {
+  background-color: #C1C1C1; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview #hsuforum-menu .forumsearch fieldset, .course-27641#page-mod-hsuforum-view #region-main #discussionsview #hsuforum-menu .forumsearch fieldset, .course-29748#page-mod-hsuforum-view #region-main #discussionsview #hsuforum-menu .forumsearch fieldset {
+    background-color: #C1C1C1; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview h3, .course-27641#page-mod-hsuforum-view #region-main #discussionsview h3, .course-29748#page-mod-hsuforum-view #region-main #discussionsview h3 {
+    font-family: 'Roboto Condensed'; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview form fieldset, .course-27641#page-mod-hsuforum-view #region-main #discussionsview form fieldset, .course-29748#page-mod-hsuforum-view #region-main #discussionsview form fieldset {
+    background-color: white; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview form .btn-primary, .course-27641#page-mod-hsuforum-view #region-main #discussionsview form .btn-primary, .course-29748#page-mod-hsuforum-view #region-main #discussionsview form .btn-primary {
+    background-color: black !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-image: initial;
+    border-color: initial; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary, .course-27641#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary, .course-29748#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary {
+    background-image: initial;
+    border-color: initial;
+    background: initial;
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700 !important; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary:hover, .course-27641#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary:hover, .course-29748#page-mod-hsuforum-view #region-main #discussionsview form .btn-secondary:hover {
+    background-image: initial !important;
+    border-color: initial;
+    background: initial;
+    outline: initial; }
+  .course-25411#page-mod-hsuforum-view #region-main #discussionsview form .btn-link, .course-27641#page-mod-hsuforum-view #region-main #discussionsview form .btn-link, .course-29748#page-mod-hsuforum-view #region-main #discussionsview form .btn-link {
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  @media screen and (max-width: 990px) {
+    .course-25411#page-mod-hsuforum-view #region-main, .course-27641#page-mod-hsuforum-view #region-main, .course-29748#page-mod-hsuforum-view #region-main {
+      padding: 20px; } }
+  .course-25411#page-mod-hsuforum-view #region-main .activity-header, .course-27641#page-mod-hsuforum-view #region-main .activity-header, .course-29748#page-mod-hsuforum-view #region-main .activity-header {
+    background-color: #C1C1C1; }
+    .course-25411#page-mod-hsuforum-view #region-main .activity-header h1, .course-25411#page-mod-hsuforum-view #region-main .activity-header h3, .course-25411#page-mod-hsuforum-view #region-main .activity-header p, .course-27641#page-mod-hsuforum-view #region-main .activity-header h1, .course-27641#page-mod-hsuforum-view #region-main .activity-header h3, .course-27641#page-mod-hsuforum-view #region-main .activity-header p, .course-29748#page-mod-hsuforum-view #region-main .activity-header h1, .course-29748#page-mod-hsuforum-view #region-main .activity-header h3, .course-29748#page-mod-hsuforum-view #region-main .activity-header p {
+      font-family: 'Roboto Condensed'; }
+    .course-25411#page-mod-hsuforum-view #region-main .activity-header .volver a, .course-27641#page-mod-hsuforum-view #region-main .activity-header .volver a, .course-29748#page-mod-hsuforum-view #region-main .activity-header .volver a {
+      font-family: 'Roboto Condensed'; }
+  .course-25411#page-mod-hsuforum-view #region-main .activity-header:not(:empty), .course-27641#page-mod-hsuforum-view #region-main .activity-header:not(:empty), .course-29748#page-mod-hsuforum-view #region-main .activity-header:not(:empty) {
+    border: none; }
+  .course-25411#page-mod-hsuforum-view #region-main h1, .course-27641#page-mod-hsuforum-view #region-main h1, .course-29748#page-mod-hsuforum-view #region-main h1 {
+    font-size: 110px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #191E21; }
+    @media screen and (max-width: 990px) {
+      .course-25411#page-mod-hsuforum-view #region-main h1, .course-27641#page-mod-hsuforum-view #region-main h1, .course-29748#page-mod-hsuforum-view #region-main h1 {
+        font-size: 12vw;
+        line-height: 110%; } }
+  .course-25411#page-mod-hsuforum-view #region-main h2, .course-27641#page-mod-hsuforum-view #region-main h2, .course-29748#page-mod-hsuforum-view #region-main h2 {
+    display: none; }
+    .course-25411#page-mod-hsuforum-view #region-main h2 img, .course-27641#page-mod-hsuforum-view #region-main h2 img, .course-29748#page-mod-hsuforum-view #region-main h2 img {
+      display: none; }
+  .course-25411#page-mod-hsuforum-view #region-main p, .course-27641#page-mod-hsuforum-view #region-main p, .course-29748#page-mod-hsuforum-view #region-main p {
+    color: #191E21 !important;
+    font-weight: 300 !important;
+    hyphens: none !important;
+    font-size: 22px; }
+    @media screen and (max-width: 768px) {
+      .course-25411#page-mod-hsuforum-view #region-main p, .course-27641#page-mod-hsuforum-view #region-main p, .course-29748#page-mod-hsuforum-view #region-main p {
+        font-size: 20px;
+        line-height: 130%;
+        hyphens: none !important; } }
+  .course-25411#page-mod-hsuforum-view #region-main h3, .course-27641#page-mod-hsuforum-view #region-main h3, .course-29748#page-mod-hsuforum-view #region-main h3 {
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400;
+    font-size: 30px; }
+  .course-25411#page-mod-hsuforum-view #region-main hr, .course-27641#page-mod-hsuforum-view #region-main hr, .course-29748#page-mod-hsuforum-view #region-main hr {
+    border-top: 1px solid #191E21; }
+  .course-25411#page-mod-hsuforum-view #region-main .container, .course-27641#page-mod-hsuforum-view #region-main .container, .course-29748#page-mod-hsuforum-view #region-main .container {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+    .course-25411#page-mod-hsuforum-view #region-main .container .col, .course-27641#page-mod-hsuforum-view #region-main .container .col, .course-29748#page-mod-hsuforum-view #region-main .container .col {
+      padding-right: 0 !important;
+      padding-left: 0 !important; }
+  .course-25411#page-mod-hsuforum-view #region-main .barra-nav a, .course-27641#page-mod-hsuforum-view #region-main .barra-nav a, .course-29748#page-mod-hsuforum-view #region-main .barra-nav a {
+    font-family: 'Roboto Condensed';
+    color: #191E21 !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important; }
+  .course-25411#page-mod-hsuforum-view #region-main a, .course-27641#page-mod-hsuforum-view #region-main a, .course-29748#page-mod-hsuforum-view #region-main a {
+    color: #191E21 !important; }
+  .course-25411#page-mod-hsuforum-view #region-main .btn-primary, .course-27641#page-mod-hsuforum-view #region-main .btn-primary, .course-29748#page-mod-hsuforum-view #region-main .btn-primary {
+    background-color: black !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px; }
+  .course-25411#page-mod-hsuforum-view #region-main .btn-link, .course-27641#page-mod-hsuforum-view #region-main .btn-link, .course-29748#page-mod-hsuforum-view #region-main .btn-link {
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .course-25411#page-mod-hsuforum-view #region-main .btn-secondary, .course-27641#page-mod-hsuforum-view #region-main .btn-secondary, .course-29748#page-mod-hsuforum-view #region-main .btn-secondary {
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700 !important; }
+  .course-25411#page-mod-hsuforum-view #region-main form .form-control, .course-27641#page-mod-hsuforum-view #region-main form .form-control, .course-29748#page-mod-hsuforum-view #region-main form .form-control {
+    border: 1px solid black !important;
+    border-radius: 10px;
+    color: black !important; }
+  .course-25411#page-mod-hsuforum-view #region-main form legend, .course-27641#page-mod-hsuforum-view #region-main form legend, .course-29748#page-mod-hsuforum-view #region-main form legend {
+    color: #191E21;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 25px 0 0 20px;
+    border-radius: 10px 10px 0 0; }
+    .course-25411#page-mod-hsuforum-view #region-main form legend:before, .course-27641#page-mod-hsuforum-view #region-main form legend:before, .course-29748#page-mod-hsuforum-view #region-main form legend:before {
+      content: "" !important; }
+  .course-25411#page-mod-hsuforum-view #region-main form .hsuforum-textarea, .course-27641#page-mod-hsuforum-view #region-main form .hsuforum-textarea, .course-29748#page-mod-hsuforum-view #region-main form .hsuforum-textarea {
+    border: 1px solid black !important;
+    border-radius: 10px; }
+  .course-25411#page-mod-hsuforum-view #region-main form .hsuforum-post-body, .course-27641#page-mod-hsuforum-view #region-main form .hsuforum-post-body, .course-29748#page-mod-hsuforum-view #region-main form .hsuforum-post-body {
+    background-color: white !important;
+    padding: 20px;
+    border-radius: 0 0 10px 10px; }
+    .course-25411#page-mod-hsuforum-view #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn, .course-27641#page-mod-hsuforum-view #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn, .course-29748#page-mod-hsuforum-view #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn {
+      padding-right: 1.1rem; }
+  .course-25411#page-mod-hsuforum-view #region-main #hsuforum-notification, .course-27641#page-mod-hsuforum-view #region-main #hsuforum-notification, .course-29748#page-mod-hsuforum-view #region-main #hsuforum-notification {
+    background-color: #C1C1C1;
+    color: #191E21;
+    border: 1px solid #191E21; }
+  .course-25411#page-mod-hsuforum-view #region-main #hsuforum-filter-options .custom-select, .course-27641#page-mod-hsuforum-view #region-main #hsuforum-filter-options .custom-select, .course-29748#page-mod-hsuforum-view #region-main #hsuforum-filter-options .custom-select {
+    background-color: #C1C1C1;
+    color: #191E21;
+    border: 1px solid #191E21;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article {
+    margin-top: 2em;
+    padding-top: 0px;
+    border-top: none !important; }
+    .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article {
+      background-color: #C1C1C1 !important;
+      border: 1px solid #191E21 !important;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px; }
+      .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article span, .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article p, .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article small, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article span, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article p, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article small, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article span, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article p, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article small {
+        color: #191E21 !important;
+        font-weight: 400 !important;
+        hyphens: none !important;
+        font-size: 16px; }
+      .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article h4, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article h4, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article h4 {
+        text-transform: uppercase;
+        margin-top: 15px !important; }
+      .course-25411#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article .hsuforum-thread-author img, .course-27641#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article .hsuforum-thread-author img, .course-29748#page-mod-hsuforum-view #region-main .mod-hsuforum-posts-container.article article .hsuforum-thread-author img {
+        margin-bottom: 5px; }
+  .course-25411#page-mod-hsuforum-view #region-main .text-right .managesubscriptions-url, .course-25411#page-mod-hsuforum-view #region-main .text-right hr, .course-27641#page-mod-hsuforum-view #region-main .text-right .managesubscriptions-url, .course-27641#page-mod-hsuforum-view #region-main .text-right hr, .course-29748#page-mod-hsuforum-view #region-main .text-right .managesubscriptions-url, .course-29748#page-mod-hsuforum-view #region-main .text-right hr {
+    display: none; }
+  .course-25411#page-mod-hsuforum-view #region-main div[role="main"], .course-27641#page-mod-hsuforum-view #region-main div[role="main"], .course-29748#page-mod-hsuforum-view #region-main div[role="main"] {
+    max-width: 1000px;
+    margin: auto; }
+.course-25411#page-mod-hsuforum-discuss #region-main, .course-27641#page-mod-hsuforum-discuss #region-main, .course-29748#page-mod-hsuforum-discuss #region-main {
+  background-color: #C1C1C1 !important; }
+  .course-25411#page-mod-hsuforum-discuss #region-main h2:first-of-type, .course-27641#page-mod-hsuforum-discuss #region-main h2:first-of-type, .course-29748#page-mod-hsuforum-discuss #region-main h2:first-of-type {
+    display: none; }
+  .course-25411#page-mod-hsuforum-discuss #region-main .activity-header, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header {
+    background-color: #C1C1C1;
+    border: none; }
+    .course-25411#page-mod-hsuforum-discuss #region-main .activity-header h1, .course-25411#page-mod-hsuforum-discuss #region-main .activity-header h2, .course-25411#page-mod-hsuforum-discuss #region-main .activity-header h3, .course-25411#page-mod-hsuforum-discuss #region-main .activity-header p, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header h1, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header h2, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header h3, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header p, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header h1, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header h2, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header h3, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header p {
+      font-family: 'Roboto Condensed'; }
+    .course-25411#page-mod-hsuforum-discuss #region-main .activity-header .volver a, .course-27641#page-mod-hsuforum-discuss #region-main .activity-header .volver a, .course-29748#page-mod-hsuforum-discuss #region-main .activity-header .volver a {
+      color: black;
+      font-family: 'Roboto Condensed'; }
+  .course-25411#page-mod-hsuforum-discuss #region-main .btn-primary, .course-27641#page-mod-hsuforum-discuss #region-main .btn-primary, .course-29748#page-mod-hsuforum-discuss #region-main .btn-primary {
+    background-color: black !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+    background-image: initial;
+    border-color: initial; }
+  .course-25411#page-mod-hsuforum-discuss #region-main input#searchforums.btn-secondary, .course-27641#page-mod-hsuforum-discuss #region-main input#searchforums.btn-secondary, .course-29748#page-mod-hsuforum-discuss #region-main input#searchforums.btn-secondary {
+    background-image: initial;
+    border-color: initial;
+    background: initial;
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    margin-bottom: 50px; }
+  .course-25411#page-mod-hsuforum-discuss #region-main .btn-secondary, .course-27641#page-mod-hsuforum-discuss #region-main .btn-secondary, .course-29748#page-mod-hsuforum-discuss #region-main .btn-secondary {
+    background-image: initial;
+    border-color: initial;
+    background: initial;
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    margin-bottom: 50px; }
+  .course-25411#page-mod-hsuforum-discuss #region-main .btn-secondary:hover, .course-27641#page-mod-hsuforum-discuss #region-main .btn-secondary:hover, .course-29748#page-mod-hsuforum-discuss #region-main .btn-secondary:hover {
+    background-image: initial !important;
+    border-color: initial;
+    background: initial;
+    outline: initial; }
+  .course-25411#page-mod-hsuforum-discuss #region-main .btn-link, .course-27641#page-mod-hsuforum-discuss #region-main .btn-link, .course-29748#page-mod-hsuforum-discuss #region-main .btn-link {
+    background-color: #C1C1C1 !important;
+    color: black;
+    border: 1px solid black !important;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 50px; }
+  .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"], .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"], .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] {
+    max-width: 900px !important;
+    margin: auto !important; }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] p, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] p, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] p {
+      color: #191E21 !important;
+      font-weight: 300 !important;
+      hyphens: none !important;
+      font-size: 22px; }
+      @media screen and (max-width: 768px) {
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] p, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] p, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] p {
+          font-size: 20px;
+          line-height: 130%;
+          hyphens: none !important; } }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container {
+      border-top: none !important; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article {
+        background-color: #C1C1C1 !important; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header {
+          background-color: white;
+          padding: 2em 2em 0 2em;
+          border-radius: 15px; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header h4, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header h4, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header h4 {
+            text-transform: uppercase;
+            color: #191E21;
+            font-size: 40px; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header .hsuforum-thread-meta, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header .hsuforum-thread-meta, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article header .hsuforum-thread-header .hsuforum-thread-meta {
+            display: none; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting {
+          color: #191E21 !important;
+          font-weight: 300 !important;
+          hyphens: none !important;
+          font-size: 22px; }
+          @media screen and (max-width: 768px) {
+            .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .mod-hsuforum-posts-container article .posting {
+              font-size: 20px;
+              line-height: 130%;
+              hyphens: none !important; } }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article {
+      background-color: #C1C1C1 !important; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies h5[role="heading"], .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies h5[role="heading"], .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies h5[role="heading"] {
+        border-bottom: none;
+        padding: 10px 20px;
+        background: #ffffff;
+        border-radius: 10px;
+        margin-top: 1em;
+        color: black; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list {
+        background-color: #C1C1C1;
+        padding: 20px 20px 0 20px;
+        border-radius: 15px; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post {
+          margin-bottom: 20px; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post:before, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post:before, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post:before, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post:before, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post:before, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post:before {
+          display: none; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header h4, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list h4, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header h4, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list h4, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header h4, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list h4 {
+          text-transform: uppercase;
+          color: #191E21;
+          font-size: 30px; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author {
+          padding: 20px 0 !important;
+          text-align: left !important; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author .userpicture, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author .userpicture, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author .userpicture, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author .userpicture, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-author .userpicture, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-author .userpicture {
+            width: 70px !important;
+            margin: 0 0 10px 0; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-content, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-content, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-content, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-content, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-thread-content, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-thread-content {
+          padding: 15px 0 !important; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .btn:not(:disabled):not(.disabled), .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .btn:not(:disabled):not(.disabled), .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .btn:not(:disabled):not(.disabled), .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .btn:not(:disabled):not(.disabled), .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .btn:not(:disabled):not(.disabled), .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .btn:not(:disabled):not(.disabled) {
+          border-radius: 0px !important;
+          padding: 0 !important; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a {
+          font-family: 'Roboto Condensed';
+          text-transform: uppercase;
+          font-weight: 400;
+          color: black; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a:hover, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools a:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools a:hover {
+            color: black;
+            border-bottom: 1px solid black; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .hsuforum-reply-link, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .hsuforum-reply-link, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .hsuforum-reply-link, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .hsuforum-reply-link, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools .hsuforum-reply-link, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools .hsuforum-reply-link {
+          background-color: transparent; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton {
+          background-color: white !important;
+          color: black;
+          text-transform: uppercase;
+          font-weight: 400; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton:hover, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-tools form .pinbutton:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-tools form .pinbutton:hover {
+            border-bottom: 1px solid black; }
+        .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper {
+          border: none;
+          padding: 2em;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          border-radius: 10px;
+          background-color: white; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-use-advanced.btn {
+            padding-right: 1.1rem; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 {
+            color: black; }
+            .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 img, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 img, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 img, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 img, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 img, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 img {
+              display: none; }
+            .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2), .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2), .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2), .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2), .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2), .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body h6 a:nth-of-type(2) {
+              display: none; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date a {
+            color: black; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuform-post-date .hsuforum-post-pubdate {
+            border-left: none !important; }
+          .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article header .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-replies-list .hsuforum-post-wrapper .hsuforum-post-body .hsuforum-post-content .hsuforum-post-title {
+            text-transform: uppercase;
+            color: black;
+            font-style: normal; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article small, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article small, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article small {
+        color: #191E21 !important;
+        font-weight: 400 !important;
+        hyphens: none !important;
+        font-size: 16px; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article p a, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article h6 a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article p a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article h6 a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article p a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article h6 a {
+        color: #191E21 !important;
+        font-weight: 300 !important;
+        hyphens: none !important;
+        font-family: 'Roboto Condensed'; }
+      .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-body .hsuforum-footer-reply form fieldset, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-body .hsuforum-footer-reply form fieldset, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] article .hsuforum-thread-body .hsuforum-footer-reply form fieldset {
+        background-color: white; }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] h2 a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] h2 a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] h2 a {
+      color: #191E21 !important;
+      text-transform: uppercase;
+      font-weight: bold !important;
+      font-size: 22px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious div, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext div, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious div, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext div, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious div, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext div {
+      text-transform: uppercase;
+      color: black; }
+    .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a:hover, .course-25411#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a:hover, .course-27641#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigateprevious a:hover, .course-29748#page-mod-hsuforum-discuss #region-main div[role="main"] .discussioncontrols .navigatenext a:hover {
+      border-bottom: 1px solid black; }
+  .course-25411#page-mod-hsuforum-discuss #region-main form, .course-27641#page-mod-hsuforum-discuss #region-main form, .course-29748#page-mod-hsuforum-discuss #region-main form {
+    margin-top: 50px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .btn-primary, .course-27641#page-mod-hsuforum-discuss #region-main form .btn-primary, .course-29748#page-mod-hsuforum-discuss #region-main form .btn-primary {
+      background-color: black !important;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 50px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .btn-link, .course-27641#page-mod-hsuforum-discuss #region-main form .btn-link, .course-29748#page-mod-hsuforum-discuss #region-main form .btn-link {
+      background-color: #C1C1C1 !important;
+      color: black;
+      border: 1px solid black !important;
+      border-radius: 500px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 50px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .btn-secondary, .course-27641#page-mod-hsuforum-discuss #region-main form .btn-secondary, .course-29748#page-mod-hsuforum-discuss #region-main form .btn-secondary {
+      background-color: #C1C1C1 !important;
+      color: black;
+      border: 1px solid black !important;
+      border-radius: 500px;
+      text-transform: uppercase;
+      font-weight: 700 !important;
+      margin-bottom: 50px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .form-control, .course-27641#page-mod-hsuforum-discuss #region-main form .form-control, .course-29748#page-mod-hsuforum-discuss #region-main form .form-control {
+      border: 1px solid black !important;
+      border-radius: 10px;
+      color: black !important; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form legend, .course-27641#page-mod-hsuforum-discuss #region-main form legend, .course-29748#page-mod-hsuforum-discuss #region-main form legend {
+      color: #191E21;
+      text-transform: uppercase;
+      background-color: white;
+      padding: 25px 0 0 20px;
+      border-radius: 10px 10px 0 0; }
+      .course-25411#page-mod-hsuforum-discuss #region-main form legend:before, .course-27641#page-mod-hsuforum-discuss #region-main form legend:before, .course-29748#page-mod-hsuforum-discuss #region-main form legend:before {
+        content: "" !important; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .hsuforum-textarea, .course-27641#page-mod-hsuforum-discuss #region-main form .hsuforum-textarea, .course-29748#page-mod-hsuforum-discuss #region-main form .hsuforum-textarea {
+      border: 1px solid black !important;
+      border-radius: 10px; }
+    .course-25411#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body, .course-27641#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body, .course-29748#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body {
+      background-color: white !important;
+      padding: 20px;
+      border-radius: 0 0 10px 10px; }
+      .course-25411#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn, .course-27641#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn, .course-29748#page-mod-hsuforum-discuss #region-main form .hsuforum-post-body .hsuforum-use-advanced.btn {
+        padding-right: 1.1rem; }
+.course-25411 .editing .mform, .course-27641 .editing .mform, .course-29748 .editing .mform {
+  max-width: 1000px;
+  margin: auto; }
+.course-25411 a:not([class]):focus, .course-27641 a:not([class]):focus, .course-29748 a:not([class]):focus {
+  background-color: initial;
+  box-shadow: initial; }
+.course-25411 .activityiconcontainer, .course-27641 .activityiconcontainer, .course-29748 .activityiconcontainer {
+  display: none; }
+.course-25411 .description .course-description-item, .course-27641 .description .course-description-item, .course-29748 .description .course-description-item {
+  padding-left: 0;
+  padding-right: 0; }
+.course-25411 #page, .course-27641 #page, .course-29748 #page {
+  transition: all .5s ease !important;
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */
