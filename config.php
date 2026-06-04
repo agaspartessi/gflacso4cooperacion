@@ -53,5 +53,9 @@ $THEME->scss = function($theme) {
     return theme_gflacso4cooperacion_get_main_scss_content($theme);                                                                               
 };
 
+// Raw initial SCSS and Raw SCSS callbacks.
+$THEME->prescsscallback = 'theme_gflacso4cooperacion_get_pre_scss';
+$THEME->extrascsscallback = 'theme_gflacso4cooperacion_get_extra_scss';
+
 $THEME->haseditswitch = true;
 $THEME->removedprimarynavitems = ['home']; //To eliminate the home site in primary navigation within mobile or desktop view

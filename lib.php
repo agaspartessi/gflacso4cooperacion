@@ -38,3 +38,47 @@ function theme_gflacso4cooperacion_get_main_scss_content($theme) {
      // Combine them together.                                                                                                       
      return $pre . "\n" . $scss . "\n" . $post;                                                                                                                  
 }
+
+/**
+ * Returns SCSS to prepend before the main SCSS.
+ * This loads the theme setting theme_gflacso4cooperacion/scsspre.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_gflacso4cooperacion_get_pre_scss($theme) {
+    $scss = '';
+
+    // Map the brand colour setting to Bootstrap/Moodle variables.
+    $configurable = [
+        'brandcolor' => ['primary', 'brand-primary'],
+    ];
+
+    foreach ($configurable as $configkey => $targets) {
+        $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
+        if (empty($value)) {
+            continue;
+        }
+
+        foreach ((array)$targets as $target) {
+            $scss .= '$' . $target . ': ' . $value . ";\n";
+        }
+    }
+
+    if (!empty($theme->settings->scsspre)) {
+        $scss .= "\n" . $theme->settings->scsspre . "\n";
+    }
+
+    return $scss;
+}
+
+/**
+ * Returns SCSS to append after the main SCSS.
+ * This loads the theme setting theme_gflacso4cooperacion/scss.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return string
+ */
+function theme_gflacso4cooperacion_get_extra_scss($theme) {
+    return !empty($theme->settings->scss) ? $theme->settings->scss : '';
+}
