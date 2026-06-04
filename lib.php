@@ -7,36 +7,64 @@ defined('MOODLE_INTERNAL') || die();
 
 // We will add callbacks here as we add features to our theme.
 
-function theme_gflacso4cooperacion_get_main_scss_content($theme) {                                                                                
-    global $CFG;                                                                                                                    
-                                                                                                                                    
-    $scss = '';                                                                                                                     
-    $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;                                                 
-    $fs = get_file_storage();                                                                                                       
-                                                                                                                                    
-    $context = context_system::instance();                                                                                          
-    if ($filename == 'default.scss') {                                                                                              
-        // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');                                        
-    } else if ($filename == 'plain.scss') {                                                                                         
-        // We still load the default preset files directly from the boost theme. No sense in duplicating them.                      
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');                                          
-                                                                                                                                    
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_gflacso4cooperacion', 'preset', 0, '/', $filename))) {              
-        // This preset file was fetched from the file area for theme_gflacso4cooperacion and not theme_boost (see the line above).                
-        $scss .= $presetfile->get_content();                                                                                        
-    } else {                                                                                                                        
-        // Safety fallback - maybe new installs etc.                                                                                
-        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');                                        
-    }          
-    
-     // Pre CSS - this is loaded AFTER any prescss from the setting but before the main scss.                                        
-     $pre = file_get_contents($CFG->dirroot . '/theme/gflacso4cooperacion/scss/pre.scss');                                                         
-     // Post CSS - this is loaded AFTER the main scss but before the extra scss from the setting.                                    
-     $post = file_get_contents($CFG->dirroot . '/theme/gflacso4cooperacion/scss/post.scss');     
-                 
-     // Combine them together.                                                                                                       
-     return $pre . "\n" . $scss . "\n" . $post;                                                                                                                  
+function theme_gflacso4cooperacion_get_main_scss_content($theme) {
+    global $CFG;
+
+    // 1) Raw initial SCSS desde la configuración del theme.
+    // Esto entra antes de todo. Sirve especialmente para variables.
+    $scsspre = '';
+
+    if (!empty($theme->settings->brandcolor)) {
+        $brandcolor = $theme->settings->brandcolor;
+        $scsspre .= '$primary: ' . $brandcolor . " !default;\n";
+        $scsspre .= '$brand-primary: ' . $brandcolor . " !default;\n";
+    }
+
+    if (!empty($theme->settings->scsspre)) {
+        $scsspre .= "\n" . $theme->settings->scsspre . "\n";
+    }
+
+    // 2) Archivo pre.scss propio del theme.
+    $pre = '';
+    $prepath = $CFG->dirroot . '/theme/gflacso4cooperacion/scss/pre.scss';
+
+    if (is_readable($prepath)) {
+        $pre = file_get_contents($prepath);
+    }
+
+    // 3) Preset principal: Boost default/plain o preset subido al theme.
+    $scss = '';
+    $filename = !empty($theme->settings->preset) ? $theme->settings->preset : null;
+    $fs = get_file_storage();
+    $context = context_system::instance();
+
+    if ($filename === 'default.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
+    } else if ($filename === 'plain.scss') {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_gflacso4cooperacion', 'preset', 0, '/', $filename))) {
+        $scss .= $presetfile->get_content();
+    } else {
+        $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
+    }
+
+    // 4) Archivo post.scss propio del theme.
+    $post = '';
+    $postpath = $CFG->dirroot . '/theme/gflacso4cooperacion/scss/post.scss';
+
+    if (is_readable($postpath)) {
+        $post = file_get_contents($postpath);
+    }
+
+    // 5) Raw SCSS desde la configuración del theme.
+    // Esto entra AL FINAL, después de post.scss, por lo que debería pisar todo.
+    $scsspost = '';
+
+    if (!empty($theme->settings->scss)) {
+        $scsspost .= "\n" . $theme->settings->scss . "\n";
+    }
+
+    return $scsspre . "\n" . $pre . "\n" . $scss . "\n" . $post . "\n" . $scsspost;
 }
 
 /**
