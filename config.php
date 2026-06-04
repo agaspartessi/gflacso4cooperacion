@@ -4,6 +4,7 @@
 
 // This line protects the file from being accessed by a URL directly.                                                               
 defined('MOODLE_INTERNAL') || die();
+require_once(__DIR__ . '/lib.php');
 
 // $THEME is defined before this page is included and we can define settings by adding properties to this global object.            
                                                                                                                                     
@@ -52,6 +53,9 @@ $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
 $THEME->scss = function($theme) {                                                                                                   
     return theme_gflacso4cooperacion_get_main_scss_content($theme);                                                                               
 };
+
+$THEME->prescsscallback = 'theme_gflacso4cooperacion_get_pre_scss';
+$THEME->extrascsscallback = 'theme_gflacso4cooperacion_get_extra_scss';
 
 
 $THEME->haseditswitch = true;
