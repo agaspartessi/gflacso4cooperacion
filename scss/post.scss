@@ -2,13 +2,13 @@
 
 // Variables globales de color
 :root {
-    --color-area: hsl(123, 59%, 45%);
-    --color-area-1: hsl(123, 48%, 53%);
-    --color-area-2: hsl(124, 49%, 73%);
-    --color-area-3: hsl(123, 48%, 92%);
-    --color-area-4: hsl(123, 59%, 25%);
-    --color-area-5: hsla(123, 59%, 35%, .8);
-    --color-area-6: hsla(123, 59%, 25%, .5);
+    --color-area: hsl(162, 59%, 35%) !important;
+    --color-area-1: hsl(162, 59%, 53%) !important;
+    --color-area-2: hsl(162, 59%, 73%) !important;
+    --color-area-3: hsl(162, 59%, 92%) !important;
+    --color-area-4: hsl(162, 59%, 25%) !important;
+    --color-area-5: hsla(162, 59%, 35%, .8) !important;
+    --color-area-6: hsla(162, 59%, 25%, .5) !important;
 
     color-scheme: light dark;
 }
@@ -310,16 +310,17 @@ code,
 }
 
 #page-header h1.h2,
+#page-header .h2.h1,
 #course-header .h2 {
-	border-bottom: none;
+	border: none !important;
 	border-radius: 0;
-	font-size: clamp(1.5rem, 2.2vw, 1.75rem);
+	font-size: clamp(1.5rem, 2.2vw, 1.75rem) !important;
 	padding: 0.2em 0;
 	margin: 0 0 1em !important;
-	border-radius: 0;
 	line-height: 1;
 	font-family: $font-family-condensed;
-	color: $flacso-1 !important;
+	background: transparent;
+	color: var(--color-area-4) !important;
 	font-weight: 500 !important;
 	&:after {
 		content: "";
@@ -895,8 +896,14 @@ code,
     display: inline;
 }
 
-.navbar.fixed-top {
+.navbar {
+	&.fixed-top {
     height: 62px;
+
+        &.bg-body {
+	        background: linear-gradient(180deg, #2f425e, #192e4d, #2f425e);
+		}
+	}
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -1523,10 +1530,9 @@ body#page-login-signup {
     }
 }
 
-
 .pagelayout-login {
     #page {
-        background: $flacso url(https://virtual.flacso.org.ar/theme/gflacso4academic/pix/mapa.svg) no-repeat;
+        background: $base url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/pix/mapa.svg) no-repeat;
         background-size: 100dvh;
         background-position-x: 70%;
         background-position-y: 110%;
@@ -3118,7 +3124,7 @@ ul.onetopic {
 /*#region*///Texto página y libro
 
 .box {
-    font-family: $font-family-serif, serif !important;
+    font-family: $font-family-serif !important;
     font-size: 21px;
     line-height: 1.8;
     font-size: clamp(15px, 2.1vw, 21px);
@@ -5433,7 +5439,10 @@ textarea {
 
 @media (min-width: 576px) {
 	.toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation)>.form-control-lg:not(:last-child) {
-		border-radius: 0.2rem 0 0 0.2rem;
+		border-radius: 3px;
+	}
+	.toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation)>.toggle-sensitive-btn {
+		display: block;
 	}
 }
 

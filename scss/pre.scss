@@ -57,22 +57,22 @@ $colors: map-merge(("blue": $blue,
     $colors
 );
 
-$primary: #2fb636 !default;
+$primary: #258e6e !default;
 
 // Derivados del color primario
-$primary-1: hsl(123, 59%, 50%) !default; // Color primario más claro
-$primary-2: hsl(123, 59%, 74%) !default; // Color primario aún más claro
-$primary-3: hsl(123, 59%, 93%) !default; // Color primario muy claro
+$primary-1: hsl(162, 32%, 50%) !default; // Color primario más claro
+$primary-2: hsl(162, 32%, 74%) !default; // Color primario aún más claro
+$primary-3: hsl(162, 31%, 93%) !default; // Color primario muy claro
 $primary-a: saturate($primary, 20%) !default; // Color primario más saturado
 
-$base: #144b4d !default;
+$base: #144d3c !default;
 $base-a: rgba($base, 0.5) !default;
 
 $background-1: $primary-3 !default;
 $background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
 $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
-$secondary: #7a2fb6 !default;
+$secondary: hsl(312, 59%, 35%) !default;
 
 // Derivados del color secundario
 $secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
