@@ -1,0 +1,207 @@
+/* Moodle 5.1 safe pre.scss */
+/*#region*/
+// Color system
+
+$white: #fff !default;
+$gray-100: #f2f3f4 !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #090a0b !default;
+$black: #000 !default;
+
+$grays: (
+  ) !default;
+$grays: map-merge(("100": $gray-100,
+      "200": $gray-200,
+      "300": $gray-300,
+      "400": $gray-400,
+      "500": $gray-500,
+      "600": $gray-600,
+      "700": $gray-700,
+      "800": $gray-800,
+      "900": $gray-900,
+    ),
+    $grays
+);
+
+$blue: #2f4fb6 !default;
+$indigo: #832fb6 !default;
+$purple: #b62f75 !default;
+$pink: #eaaeb8 !default;
+$red: #b62f46 !default;
+$orange: #b65c2f !default;
+$yellow: #b6a02f !default;
+$green: #2fb636 !default;
+$teal: #289a8f !default;
+$cyan: #2fb6a0 !default;
+
+$colors: (
+  ) !default;
+$colors: map-merge(("blue": $blue,
+      "indigo": $indigo,
+      "purple": $purple,
+      "pink": $pink,
+      "red": $red,
+      "orange": $orange,
+      "yellow": $yellow,
+      "green": $green,
+      "teal": $teal,
+      "cyan": $cyan,
+      "white": $white,
+      "gray": $gray-500,
+      "gray-dark": $gray-800,
+    ),
+    $colors
+);
+
+$primary: #2fb636 !default;
+
+// Derivados del color primario
+$primary-1: hsl(123, 59%, 50%) !default; // Color primario más claro
+$primary-2: hsl(123, 59%, 74%) !default; // Color primario aún más claro
+$primary-3: hsl(123, 59%, 93%) !default; // Color primario muy claro
+$primary-a: saturate($primary, 20%) !default; // Color primario más saturado
+
+$base: #144b4d !default;
+$base-a: rgba($base, 0.5) !default;
+
+$background-1: $primary-3 !default;
+$background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
+$background-3: hsla(45, 100%, 38%, 0.3) !default;
+
+$secondary: #7a2fb6 !default;
+
+// Derivados del color secundario
+$secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
+$secondary-1: lighten($secondary, 10%) !default; // Color secundario más claro
+$secondary-2: lighten($secondary, 25%) !default; // Color secundario aún más claro
+$secondary-3: lighten($secondary, 70%) !default; // Color secundario muy claro
+
+$flacso: #142e4d !default;
+
+// Derivados del color flacso
+$flacso-1: lighten($flacso, 10%) !default; // Color flacso más claro
+$flacso-2: lighten($flacso, 30%) !default; // Color flacso más claro
+$flacso-3: lighten($flacso, 70%) !default; // Color flacso muy claro
+
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: (
+  ) !default;
+$theme-colors: map-merge(("primary": $primary,
+      "secondary": $secondary,
+      "success": $success,
+      "info": $info,
+      "warning": $warning,
+      "danger": $danger,
+      "light": $light,
+      "dark": $dark,
+    ),
+    $theme-colors
+);
+
+$activity-icon-administration-bg: $teal !default;
+$activity-icon-assessment-bg: $green !default;
+$activity-icon-collaboration-bg: $orange !default;
+$activity-icon-communication-bg: $yellow !default;
+$activity-icon-content-bg: $blue !default;
+$activity-icon-interface-bg: $indigo !default;
+
+$activity-icon-colors: (
+  ) !default;
+$activity-icon-colors: map-merge(("administration": $activity-icon-administration-bg,
+      "assessment": $activity-icon-assessment-bg,
+      "collaboration": $activity-icon-collaboration-bg,
+      "communication": $activity-icon-communication-bg,
+      "content": $activity-icon-content-bg,
+      "interface": $activity-icon-interface-bg,
+    ),
+    $activity-icon-colors
+);
+
+/*#endregion*/
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval: 8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+$yiq-contrasted-threshold: 190 !default;
+
+/*#region*/
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Roboto", system-ui, sans-serif !default;
+$font-family-serif: "Roboto Serif", serif !default;
+$font-family-monospace: "Roboto Mono", ui-monospace, monospace !default;
+$font-family-condensed: "Roboto Condensed", system-ui, sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$headings-font-family: $font-family-condensed !default;
+$headings-color: $black !default;
+
+$text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
+
+// Fonts
+$rfs-base-font-size: 0.9em !default;
+$headings-font-weight: 500 !default;
+
+/*#endregion*/
+
+// Tables
+
+$table-border-color: rgba(0, 0, 0, 0.1) !default;
+
+// Buttons
+
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-x: 1.1rem !default;
+$btn-font-family: $font-family-base !default;
+$btn-font-size: 1em !default;
+$btn-font-size-sm: 0.8rem !default;
+
+$btn-border-radius: 3px !default;
+$btn-border-radius-lg: 3px !default;
+$btn-border-radius-sm: 3px !default;
+
+// Navbar
+$navbar-dark-color: rgba($white, 0.6) !default;
+
+/* =========================================================
+   Compatibilidad Moodle 5.1 / Bootstrap 5
+   ---------------------------------------------------------
+   Definiciones defensivas para evitar que SCSS viejo falle
+   si una variable ya no viene desde Boost/Bootstrap.
+   ========================================================= */
+
+$secondary-b: rgba($secondary, 0.65) !default;
+$secondary-y: $secondary-b !default;
+$secondary-bg: $secondary-3 !default;
+
+$navbar-light-color: rgba($black, .65) !default;
+$navbar-light-hover-color: rgba($black, .8) !default;
+$navbar-light-active-color: $black !default;
+$navbar-light-disabled-color: rgba($black, .3) !default;
+
+$navbar-dark-color: rgba($white, .75) !default;
+$navbar-dark-hover-color: $white !default;
+$navbar-dark-active-color: $white !default;
+$navbar-dark-disabled-color: rgba($white, .35) !default;
