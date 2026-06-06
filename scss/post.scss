@@ -2,13 +2,13 @@
 
 // Variables globales de color
 :root {
-    --color-area: hsl(162, 59%, 35%) !important;
-    --color-area-1: hsl(162, 59%, 53%) !important;
-    --color-area-2: hsl(162, 59%, 73%) !important;
-    --color-area-3: hsl(162, 59%, 92%) !important;
-    --color-area-4: hsl(162, 59%, 25%) !important;
-    --color-area-5: hsla(162, 59%, 35%, .8) !important;
-    --color-area-6: hsla(162, 59%, 25%, .5) !important;
+    --color-area: hsl(123, 59%, 45%);
+    --color-area-1: hsl(123, 48%, 53%);
+    --color-area-2: hsl(124, 49%, 73%);
+    --color-area-3: hsl(123, 48%, 92%);
+    --color-area-4: hsl(123, 59%, 25%);
+    --color-area-5: hsla(123, 59%, 35%, .8);
+    --color-area-6: hsla(123, 59%, 25%, .5);
 
     color-scheme: light dark;
 }
@@ -310,17 +310,16 @@ code,
 }
 
 #page-header h1.h2,
-#page-header .h2.h1,
 #course-header .h2 {
-	border: none !important;
+	border-bottom: none;
 	border-radius: 0;
-	font-size: clamp(1.5rem, 2.2vw, 1.75rem) !important;
+	font-size: clamp(1.5rem, 2.2vw, 1.75rem);
 	padding: 0.2em 0;
 	margin: 0 0 1em !important;
+	border-radius: 0;
 	line-height: 1;
 	font-family: $font-family-condensed;
-	background: transparent;
-	color: var(--color-area-4) !important;
+	color: $flacso-1 !important;
 	font-weight: 500 !important;
 	&:after {
 		content: "";
@@ -886,24 +885,18 @@ code,
     display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
-    $white-space: nowrap;
+    white-space: nowrap;
 }
 
 .breadcrumb-item:not(.text-truncate) {
     overflow: hidden;
     text-overflow: ellipsis;
-    $white-space: nowrap;
+    white-space: nowrap;
     display: inline;
 }
 
-.navbar {
-	&.fixed-top {
+.navbar.fixed-top {
     height: 62px;
-
-        &.bg-body {
-	        background: linear-gradient(180deg, #2f425e, #192e4d, #2f425e);
-		}
-	}
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
@@ -999,10 +992,10 @@ body.limitedwidth #page.drawers .main-inner {
 /*#region*/// Mixins
 
 @mixin btn-shadow($color) {
-    @include gradient-y-three-colors(lighten($color, 8%),
-        $color,
-        60%,
-        darken($color, 4%));
+    // Moodle 5.1 / Bootstrap 5 compatibility:
+    // Moodle 5.1 / Bootstrap 5 compatibility: avoid depending on older Bootstrap gradient mixins.
+    background-image: linear-gradient(lighten($color, 8%), $color 60%, darken($color, 4%));
+    background-repeat: no-repeat;
 }
 
 /*#endregion*/
@@ -1530,9 +1523,10 @@ body#page-login-signup {
     }
 }
 
+
 .pagelayout-login {
     #page {
-        background: $base url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/pix/mapa.svg) no-repeat;
+        background: $flacso url(https://virtual.flacso.org.ar/theme/gflacso4academic/pix/mapa.svg) no-repeat;
         background-size: 100dvh;
         background-position-x: 70%;
         background-position-y: 110%;
@@ -2283,7 +2277,7 @@ li[data-key="home"] {
             font-family: $font-family-condensed;
             font-size: 1em;
             padding-inline: 1rem;
-            $white-space: nowrap;
+            white-space: nowrap;
             width: 100%;
             max-width: 300px;
             color: $black !important;
@@ -3124,7 +3118,7 @@ ul.onetopic {
 /*#region*///Texto página y libro
 
 .box {
-    font-family: $font-family-serif !important;
+    font-family: $font-family-serif, serif !important;
     font-size: 21px;
     line-height: 1.8;
     font-size: clamp(15px, 2.1vw, 21px);
@@ -4435,7 +4429,7 @@ body.format-multitopic div#course-header>div#course-header-banner[style^="backgr
 
         .moodle-dialogue-hd.yui3-widget-hd {
             overflow: hidden;
-            $white-space: nowrap;
+            white-space: nowrap;
         }
 
         h3 {
@@ -4640,7 +4634,7 @@ table.mod-data-default-template {
     #next-activity-link {
         overflow: hidden;
         text-overflow: ellipsis;
-        $white-space: nowrap;
+        white-space: nowrap;
         word-break: normal;
         overflow-wrap: anywhere;
         max-width: 100%;
@@ -5299,7 +5293,7 @@ table.feedbackbox {
     color: $gray-800;
     border: 1px solid $gray-500;
     background: $gray-200;
-    $white-space: normal;
+    white-space: normal;
     font-family: $font-family-monospace;
 }
 
@@ -5375,7 +5369,7 @@ textarea {
 
 
 #page-mod-diary-report .diaryuserentry td.userfullname {
-    $white-space: nowrap;
+    white-space: nowrap;
     font-weight: bold;
 }
 
@@ -5439,10 +5433,7 @@ textarea {
 
 @media (min-width: 576px) {
 	.toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation)>.form-control-lg:not(:last-child) {
-		border-radius: 3px;
-	}
-	.toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation)>.toggle-sensitive-btn {
-		display: block;
+		border-radius: 0.2rem 0 0 0.2rem;
 	}
 }
 
@@ -7373,7 +7364,7 @@ img.userpicture {
 }
 
 .action-menu {
-    $white-space: nowrap;
+    white-space: nowrap;
     display: inline;
     margin: 0;
 }
@@ -10004,3 +9995,663 @@ a.linkpop[title] {
   Buenos Aires, Argentina
   2026
 */
+
+/* =========================================================
+   Migrado desde Raw initial SCSS
+   ---------------------------------------------------------
+   Estas reglas no son variables; por eso van en post.scss.
+   ========================================================= */
+
+@media (min-width: 576px) {
+    .toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation) > .form-control-lg:not(:last-child) {
+        border-radius: 3px;
+    }
+
+    .toggle-sensitive-wrapper.small-screens-only.input-group:not(.has-validation) > .toggle-sensitive-btn {
+        display: block;
+    }
+}
+
+.pagelayout-login {
+    #page {
+        background: #144d3c url(https://campuscoop.flacso.org.ar/theme/gflacso4cooperacion/pix/mapa.svg) no-repeat !important;
+    }
+}
+
+:root {
+    --color-area: hsl(162, 59%, 35%) !important;
+    --color-area-1: hsl(162, 59%, 53%) !important;
+    --color-area-2: hsl(162, 59%, 73%) !important;
+    --color-area-3: hsl(162, 59%, 92%) !important;
+    --color-area-4: hsl(162, 59%, 25%) !important;
+    --color-area-5: hsla(162, 59%, 35%, .8) !important;
+    --color-area-6: hsla(162, 59%, 25%, .5) !important;
+    color-scheme: light;
+}
+
+#page-header h1.h2,
+#page-header .h2.h1,
+#course-header .h2 {
+    border: none !important;
+    font-size: clamp(1.5rem, 2.2vw, 1.75rem) !important;
+    font-weight: 500 !important;
+    background: transparent;
+    color: var(--color-area-4) !important;
+}
+
+/* =========================================================
+   Navbar Moodle 5.1 / Bootstrap 5
+   ---------------------------------------------------------
+   Moodle 5.x usa bg-body en la barra superior; Moodle 4.1
+   solía usar bg-white/navbar-light. Dejamos ambos selectores.
+   ========================================================= */
+
+.navbar.fixed-top,
+.navbar.fixed-top.bg-body,
+.navbar.fixed-top.bg-white,
+.navbar.fixed-top.navbar-light {
+    background-color: #142e4d !important;
+    background-image: linear-gradient(180deg, #2f425e 0%, #192e4d 50%, #2f425e 100%) !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 62px;
+    height: 62px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar.fixed-top > .container-fluid {
+    min-height: 62px;
+    align-items: stretch;
+    padding-left: 0;
+}
+
+.navbar.fixed-top .navbar-brand,
+.navbar.fixed-top .primary-navigation,
+.navbar.fixed-top .moremenu,
+.navbar.fixed-top .primary-navigation .navigation,
+.navbar.fixed-top .moremenu .nav {
+    min-height: 62px;
+}
+
+.navbar.fixed-top .navbar-brand {
+    display: flex !important;
+    align-items: center;
+    padding: 0 1rem;
+    margin-right: 0;
+    color: #fff !important;
+}
+
+.navbar.fixed-top .navbar-brand .logo,
+.navbar.fixed-top .navbar-brand img {
+    max-height: 46px !important;
+    width: auto !important;
+    display: block;
+    padding: 0.4rem 0;
+}
+
+.navbar.fixed-top .nav-link,
+.navbar.fixed-top .navbar-nav .nav-link,
+.navbar.fixed-top .dropdown-toggle,
+.navbar.fixed-top .popover-region-toggle,
+.navbar.fixed-top .userbutton,
+.navbar.fixed-top .usertext,
+.navbar.fixed-top .icon,
+.navbar.fixed-top label {
+    color: #fff !important;
+}
+
+.navbar.fixed-top .primary-navigation .navigation .nav-link,
+.navbar.fixed-top .moremenu .nav-link {
+    min-height: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: none !important;
+    color: #fff !important;
+}
+
+.navbar.fixed-top .primary-navigation .navigation .nav-link.active,
+.navbar.fixed-top .primary-navigation .navigation .nav-link[aria-current="page"],
+.navbar.fixed-top .moremenu .nav-link.active,
+.navbar.fixed-top .moremenu .nav-link[aria-current="page"],
+.navbar.fixed-top .navbar-nav .show > .nav-link {
+    background-color: #258e6e !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.navbar.fixed-top .primary-navigation .navigation .nav-link:hover,
+.navbar.fixed-top .primary-navigation .navigation .nav-link:focus,
+.navbar.fixed-top .moremenu .nav-link:hover,
+.navbar.fixed-top .moremenu .nav-link:focus,
+.navbar.fixed-top .navbar-nav .nav-link:hover,
+.navbar.fixed-top .navbar-nav .nav-link:focus {
+    background-color: hsl(162, 32%, 50%) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.navbar.fixed-top .dropdown-menu {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+.navbar.fixed-top .dropdown-menu .dropdown-item,
+.navbar.fixed-top .dropdown-menu .dropdown-item .icon {
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+.navbar.fixed-top .dropdown-menu .dropdown-item:hover,
+.navbar.fixed-top .dropdown-menu .dropdown-item:focus {
+    background-color: #f2f3f4 !important;
+    color: #000 !important;
+}
+
+
+/* =========================================================
+   Migrado desde Raw SCSS
+   Curso Historia como Excusa
+   ---------------------------------------------------------
+   Normalizado: se reemplazaron espacios no separables y se
+   mantiene anidado bajo los cursos correspondientes.
+   ========================================================= */
+
+.mi-nota {
+    margin: 20px 0;
+    border-bottom: 2px solid var(--color-area-5);
+    padding-bottom: 2em;
+}
+
+.mi-nota label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.mi-nota textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Roboto';
+}
+
+.course-671,
+.course-711,
+.course-731 {
+    --color-area: #038EAA;
+    --color-area-1: #F8A839;
+    --color-area-2: #FF5E20;
+    --color-area-3: #7FBEBF;
+    --color-area-4: #B2671F;
+    --color-area-5: hsla(213, 58%, 50%, 0.8);
+    --color-area-6: hsla(213, 58%, 30%, 0.5);
+
+    .ver-mas details:before {
+        content: "More";
+        top: 31px;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background-color: #038EAA;
+        background-image: linear-gradient(#7FBEBF, #038EAA 60%, #038EAA);
+        background-repeat: no-repeat;
+        color: #fff;
+        border-color: #038EAA;
+
+        &:hover {
+            outline: 0.2rem solid #038EAA;
+        }
+    }
+
+    .btn-secondary,
+    .box a.btn-secondary {
+        background-color: #FF5E20;
+        background-image: linear-gradient(#f9a382, #FF5E20 60%, #FF5E20) !important;
+        background-repeat: no-repeat;
+        color: #fff !important;
+        border-color: #FF5E20;
+
+        &:hover {
+            outline: 0.2rem solid #FF5E20;
+        }
+    }
+
+    .box a.btn-primary {
+        color: #fff !important;
+
+        &:hover {
+            color: #fff !important;
+            outline: 0.2rem solid #038EAA !important;
+        }
+    }
+
+    .links_bloque_lateral a,
+    .box a {
+        color: #FF5E20 !important;
+        text-decoration: none !important;
+
+        &:hover,
+        :hover {
+            color: #038EAA !important;
+        }
+
+        &:before {
+            color: #038EAA !important;
+        }
+    }
+
+    #page-header h1.h2 {
+        font-size: 1.5em;
+        font-weight: 400 !important;
+        color: #002743;
+        border-radius: 0;
+        border-bottom: solid 0.1em var(--color-area);
+        font-family: 'Roboto Condensed';
+    }
+
+    [data-for="sectioninfo"] .description-inner h3 {
+        font-size: 2.5em !important;
+    }
+
+    .prevsection a[href*="section=1"] {
+        display: none !important;
+    }
+
+    .course-content .single-section .section-navigation:first-child {
+        anchor-name: --inicio;
+    }
+
+    .volver-inicio {
+        position: fixed;
+        position-anchor: --inicio;
+        position-area: center center;
+
+        a {
+            padding: 12px;
+            height: 50px;
+            display: inline-block;
+
+            &:hover {
+                background: var(--color-area-3);
+                border-radius: 10px;
+                text-decoration: none;
+            }
+
+            &:before {
+                content: ' ';
+                font-family: "FontAwesome";
+                font-size: 0.9em;
+                position: relative;
+                bottom: 1px;
+            }
+        }
+    }
+
+    .card-deck {
+        a {
+            color: var(--color-area);
+
+            &:hover {
+                color: var(--color-area-5);
+                text-decoration: none;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+
+        .card {
+            &:hover .card-footer {
+                background-color: var(--color-area);
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .card-footer {
+            position: relative;
+
+            a {
+                &:hover {
+                    color: white;
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+            }
+        }
+
+        &.inicio {
+            .card-body {
+                padding: 0.75rem !important;
+            }
+        }
+    }
+
+    .my-3[data-for="sectioninfo"] {
+        margin-top: 0 !important;
+        border: none;
+        padding: 0;
+
+        img {
+            aspect-ratio: 2.2857142857;
+            object-fit: cover;
+            max-width: 100% !important;
+            float: none;
+            margin-right: 0;
+            margin-bottom: 0;
+            object-position: top;
+        }
+    }
+
+    .card-deck {
+        &.contenidos {
+            min-height: 200px;
+
+            .card-body {
+                padding: 2rem;
+            }
+        }
+
+        .img-fluid {
+            margin-bottom: 1rem;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        h5 {
+            font-size: 1.9em;
+            font-family: 'Roboto Condensed';
+            font-weight: 400 !important;
+        }
+
+        .card-text {
+            font-size: 1em;
+        }
+
+        .card-footer {
+            text-align: right;
+            font-size: 1.2em;
+        }
+    }
+
+    h2.accesshide {
+        padding: 0 !important;
+    }
+
+    #page-course-view-onetopic .course-content ul.section {
+        margin-top: 0 !important;
+    }
+
+    #tabs-tree-start {
+        margin-top: 0;
+    }
+
+    .my-3[data-for="sectioninfo"] .no-overflow {
+        margin-top: 0 !important;
+    }
+
+    .card.cierre {
+        .card-body {
+            padding-inline: 2rem;
+            margin-top: 2.5lh;
+        }
+
+        h5 {
+            border: none;
+            border-bottom: 4px solid var(--color-area);
+            margin-bottom: 1lh;
+            background: #e9ecef;
+            padding: 0.3em 0.9em 0.3em 0.7em;
+            line-height: 130%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            font-size: 1.5em;
+            text-align: center !important;
+        }
+    }
+
+    .breadcrumb-item a[href*="section=0"] {
+        font-size: 0;
+        visibility: hidden;
+    }
+
+    .breadcrumb-item a[href*="section=0"]::before {
+        content: "";
+        font-family: "FontAwesome";
+        font-size: 0.8rem;
+        visibility: visible;
+        display: inline-block;
+        bottom: 2px;
+        position: relative;
+        margin-right: 3px;
+    }
+
+    .breadcrumb-item a[href*="section=0"]::after {
+        content: "INICIO";
+        font-size: 1rem;
+        visibility: visible;
+        display: inline-block;
+    }
+
+    .pagelayout-incourse {
+        #page-content {
+            margin-top: 1lh;
+        }
+    }
+
+    #page {
+        anchor-name: --ancla-1;
+    }
+
+    .card.cierre {
+        &:hover {
+            background-color: color-mix(in srgb, var(--color-area-1), transparent 90%);
+        }
+
+        .card-body {
+            padding: 4rem 6rem !important;
+            font-family: 'Roboto Serif';
+            line-height: 1.8;
+        }
+    }
+
+    .card {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .drawer .card {
+        overflow: visible;
+    }
+
+    .c4l-estimatedtime,
+    .c4lv-estimatedtime {
+        font-size: 0.9em;
+        margin-bottom: 0;
+        padding-left: 2.6em;
+    }
+
+    .c4l-estimatedtime::before,
+    .c4lv-estimatedtime::before {
+        content: "";
+        background-image: url("/theme/image.php/gflacso4cooperacion/tiny_c4l/1773329938/noun_project_icons/c4l_estimatedtime");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 12px;
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #topofscroll {
+        anchor-name: --navegacion-interna;
+    }
+
+    .course-content .single-section .section-navigation:not(.mdl-bottom) {
+        padding-bottom: 0;
+    }
+
+    .course-content #section-1 {
+        ul.section {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+.course-731 .breadcrumb-item a[href*="section=0"]::after {
+    content: "HOME";
+}
+
+.path-course.course-671 .secondary-navigation,
+.path-course.course-731 .secondary-navigation {
+    padding-bottom: 0;
+}
+
+.boton-mahi {
+    position: fixed;
+    position-anchor: --ancla-1;
+    position-area: bottom center;
+    visibility: visible;
+    width: 4em;
+    height: 4em;
+    background-color: rgba(255,255,255,0.6);
+    padding: 0.5rem 0.8rem;
+    line-height: 1;
+    border-radius: 50px;
+    border: 2px solid #054762;
+    margin-bottom: 1lh;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+
+    &:hover {
+        background-color: rgba(226,202,148,0.6);
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.9);
+        -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.9);
+        -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,0.9);
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    a:focus {
+        background-color: transparent !important;
+    }
+}
+
+.links_historia {
+    font-size: 1.2em;
+
+    p {
+        margin: 0;
+        line-height: 1.8;
+    }
+
+    a {
+        color: var(--color-area);
+
+        .icon-menu {
+            color: var(--color-area-2);
+            margin-right: 6px;
+            font-size: 0.95em;
+        }
+
+        &:hover,
+        :hover {
+            text-decoration: none;
+            color: var(--color-area-3) !important;
+
+            .icon-menu {
+                color: var(--color-area);
+            }
+        }
+    }
+}
+
+.navegacion-interna {
+    position: fixed;
+    position-anchor: --navegacion-interna;
+    position-area: top center;
+    visibility: visible;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 10px;
+
+    a {
+        padding: 12px;
+        height: 50px;
+        display: inline-block;
+        line-height: 25px;
+
+        &:hover {
+            background: var(--color-area-3);
+            text-decoration: none;
+        }
+
+        &.ir-inicio {
+            &:before {
+                content: ' ';
+                font-family: "FontAwesome";
+                font-size: 0.9em;
+                position: relative;
+                bottom: 1px;
+            }
+
+            &:hover {
+                border-radius: 10px 0 0 10px;
+            }
+        }
+
+        &.ir-caso {
+            &:before {
+                content: ' ';
+                font-family: "FontAwesome";
+                font-size: 0.9em;
+                position: relative;
+                bottom: 1px;
+            }
+
+            &:hover {
+                border-radius: 0 10px 10px 0;
+            }
+        }
+    }
+}
+

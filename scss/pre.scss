@@ -57,22 +57,22 @@ $colors: map-merge(("blue": $blue,
     $colors
 );
 
-$primary: #258e6e !default;
+$primary: #2fb636 !default;
 
 // Derivados del color primario
-$primary-1: hsl(162, 32%, 50%) !default; // Color primario más claro
-$primary-2: hsl(162, 32%, 74%) !default; // Color primario aún más claro
-$primary-3: hsl(162, 31%, 93%) !default; // Color primario muy claro
+$primary-1: hsl(123, 59%, 50%) !default; // Color primario más claro
+$primary-2: hsl(123, 59%, 74%) !default; // Color primario aún más claro
+$primary-3: hsl(123, 59%, 93%) !default; // Color primario muy claro
 $primary-a: saturate($primary, 20%) !default; // Color primario más saturado
 
-$base: #144d3c !default;
+$base: #144b4d !default;
 $base-a: rgba($base, 0.5) !default;
 
 $background-1: $primary-3 !default;
 $background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
 $background-3: hsla(45, 100%, 38%, 0.3) !default;
 
-$secondary: hsl(312, 59%, 35%) !default;
+$secondary: #7a2fb6 !default;
 
 // Derivados del color secundario
 $secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
@@ -181,3 +181,25 @@ $btn-border-radius-sm: 3px !default;
 
 // Navbar
 $navbar-dark-color: rgba($white, 0.6) !default;
+
+/* =========================================================
+   Compatibilidad Moodle 5.1 / Bootstrap 5
+   ---------------------------------------------------------
+   Definiciones defensivas para evitar que SCSS viejo falle
+   si una variable ya no viene desde Boost/Bootstrap.
+   ========================================================= */
+
+$secondary-b: rgba($secondary, 0.65) !default;
+$secondary-y: $secondary-b !default;
+$secondary-bg: $secondary-3 !default;
+
+$navbar-light-color: rgba($black, .65) !default;
+$navbar-light-hover-color: rgba($black, .8) !default;
+$navbar-light-active-color: $black !default;
+$navbar-light-disabled-color: rgba($black, .3) !default;
+
+$navbar-dark-color: rgba($white, .75) !default;
+$navbar-dark-hover-color: $white !default;
+$navbar-dark-active-color: $white !default;
+$navbar-dark-disabled-color: rgba($white, .35) !default;
+
