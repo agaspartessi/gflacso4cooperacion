@@ -1,26 +1,3833 @@
 /* =========================================================
-   POST.SCSS TEST MINIMO - gflacso4cooperacion
-   Si esto aparece, el post.scss está entrando y compilando.
+   TANDA 1A - NAVBAR MOODLE 5.1 / BOOTSTRAP 5
+   CSS PURO: sin variables SCSS, sin nesting, sin mixins.
+   Objetivo: confirmar que Raw SCSS aplica y recuperar la barra.
    ========================================================= */
 
-body::after {
-    content: "ACA POST CSS";
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    z-index: 999999;
-    background: #d00000;
-    color: #ffffff;
-    padding: 10px 14px;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
-    pointer-events: none;
+/* Navbar principal Moodle 5.1 / Bootstrap 5 */
+body .navbar.fixed-top,
+body nav.navbar.fixed-top,
+body .navbar.fixed-top.bg-body,
+body .navbar.fixed-top.bg-white,
+body .navbar.fixed-top.navbar-light {
+    background-color: #142e4d !important;
+    background-image: linear-gradient(180deg, #2f425e 0%, #192e4d 50%, #2f425e 100%) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    min-height: 62px;
+    height: 62px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    --bs-navbar-color: #ffffff;
+    --bs-navbar-hover-color: #ffffff;
+    --bs-navbar-active-color: #ffffff;
+    --bs-navbar-disabled-color: rgba(255, 255, 255, .55);
+    --bs-navbar-brand-color: #ffffff;
+    --bs-navbar-brand-hover-color: #ffffff;
 }
 
-/* Cambio visual extra para confirmar en la navbar */
-.navbar.fixed-top {
-    outline: 4px solid #d00000 !important;
+/* Contenedor interno */
+body .navbar.fixed-top>.container-fluid {
+    min-height: 62px;
+    align-items: stretch;
+    padding-left: 0;
+    padding-right: 1rem;
+}
+
+/* Marca / logo */
+body .navbar.fixed-top .navbar-brand {
+    min-height: 62px;
+    display: flex !important;
+    align-items: center;
+    padding: 0 18px;
+    margin-right: 0;
+    color: #ffffff !important;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .12);
+}
+
+body .navbar.fixed-top .navbar-brand:hover,
+body .navbar.fixed-top .navbar-brand:focus {
+    color: #ffffff !important;
+}
+
+body .navbar.fixed-top .navbar-brand img,
+body .navbar.fixed-top .navbar-brand .logo {
+    max-height: 46px !important;
+    width: auto !important;
+    display: block;
+    padding: 0.35rem 0;
+}
+
+/* Navegación principal */
+body .navbar.fixed-top .primary-navigation,
+body .navbar.fixed-top .moremenu {
+    min-height: 62px;
+}
+
+body .navbar.fixed-top .primary-navigation .navigation,
+body .navbar.fixed-top .moremenu .nav {
+    min-height: 62px;
+    align-items: stretch;
+}
+
+/* Links principales */
+body .navbar.fixed-top .nav-link,
+body .navbar.fixed-top .navbar-nav .nav-link,
+body .navbar.fixed-top .primary-navigation .navigation .nav-link,
+body .navbar.fixed-top .moremenu .nav-link {
+    min-height: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .12);
+}
+
+/* Estado activo y hover */
+body .navbar.fixed-top .primary-navigation .navigation .nav-link.active,
+body .navbar.fixed-top .primary-navigation .navigation .nav-link[aria-current="page"],
+body .navbar.fixed-top .moremenu .nav-link.active,
+body .navbar.fixed-top .moremenu .nav-link[aria-current="page"],
+body .navbar.fixed-top .navbar-nav .show>.nav-link,
+body .navbar.fixed-top .nav-link:hover,
+body .navbar.fixed-top .nav-link:focus,
+body .navbar.fixed-top .navbar-nav .nav-link:hover,
+body .navbar.fixed-top .navbar-nav .nav-link:focus,
+body .navbar.fixed-top .primary-navigation .navigation .nav-link:hover,
+body .navbar.fixed-top .primary-navigation .navigation .nav-link:focus,
+body .navbar.fixed-top .moremenu .nav-link:hover,
+body .navbar.fixed-top .moremenu .nav-link:focus {
+    background-color: #258e6e !important;
+    color: #ffffff !important;
+    border: 0 !important;
+}
+
+/* Íconos, usuario, notificaciones, mensajes */
+body .navbar.fixed-top .dropdown-toggle,
+body .navbar.fixed-top .popover-region-toggle,
+body .navbar.fixed-top .userbutton,
+body .navbar.fixed-top .usertext,
+body .navbar.fixed-top .icon,
+body .navbar.fixed-top .btn,
+body .navbar.fixed-top label {
+    color: #ffffff !important;
+}
+
+/* Flechita dropdown */
+body .navbar.fixed-top .dropdown-toggle::after {
+    color: #ffffff !important;
+}
+
+/* Área derecha */
+body .navbar.fixed-top .navbar-nav.ms-auto {
+    margin-left: auto !important;
+}
+
+body .navbar.fixed-top .popover-region-toggle,
+body .navbar.fixed-top .navbar-nav .nav-link {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+}
+
+/* Switch modo edición Bootstrap 5 */
+body .navbar.fixed-top .form-check-label {
+    color: #ced4da !important;
+}
+
+body .navbar.fixed-top .form-check-input:checked {
+    background-color: #258e6e !important;
+    border-color: #258e6e !important;
+}
+
+/* Compatibilidad por si queda alguna clase vieja Bootstrap 4 */
+body .navbar.fixed-top .custom-control-label {
+    color: #ced4da !important;
+}
+
+body .navbar.fixed-top .custom-control-input:checked~.custom-control-label::before {
+    background-color: #258e6e !important;
+    border-color: #258e6e !important;
+}
+
+/* Dropdowns: fondo claro y texto oscuro */
+body .navbar.fixed-top .dropdown-menu {
+    background-color: #ffffff !important;
+    color: #212529 !important;
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+}
+
+body .navbar.fixed-top .dropdown-menu .dropdown-item,
+body .navbar.fixed-top .dropdown-menu .dropdown-item .icon {
+    color: #212529 !important;
+    text-shadow: none !important;
+}
+
+body .navbar.fixed-top .dropdown-menu .dropdown-item:hover,
+body .navbar.fixed-top .dropdown-menu .dropdown-item:focus,
+body .navbar.fixed-top .dropdown-menu .dropdown-item.active {
+    background-color: #258e6e !important;
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   TANDA 1B - BREADCRUMB + OFFSET LAYOUT
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar breadcrumb fijo debajo de la navbar
+   - evitar que el contenido quede tapado por navbar/breadcrumb
+   ========================================================= */
+
+/* Breadcrumb fijo debajo de la navbar */
+body:not(.pagelayout-login) .breadcrumb {
+    width: 100%;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    z-index: 1028;
+    min-height: 35px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    background-color: #ffffff !important;
+    border: 1px solid rgba(222, 222, 222, .95) !important;
+    border-radius: 0;
+    padding: 0.55rem 1rem;
+    margin: 0;
+
+    line-height: 1.2;
+    font-size: 0.9em;
+    font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Ítems del breadcrumb en una sola línea */
+body:not(.pagelayout-login) .breadcrumb-item {
+    display: inline;
+    float: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Separador */
+body:not(.pagelayout-login) .breadcrumb-item+.breadcrumb-item::before {
+    float: none;
+    color: #6c757d;
+}
+
+/* Links */
+body:not(.pagelayout-login) .breadcrumb-item a {
+    color: #144d3c !important;
+    font-weight: normal;
+    text-decoration: none !important;
+}
+
+body:not(.pagelayout-login) .breadcrumb-item a:hover,
+body:not(.pagelayout-login) .breadcrumb-item a:focus {
+    color: #258e6e !important;
+    text-decoration: underline !important;
+}
+
+/* Ítem activo */
+body:not(.pagelayout-login) .breadcrumb-item.active {
+    color: #495057 !important;
+}
+
+/* Si el breadcrumb está vacío, que no pinte una barra blanca */
+body:not(.pagelayout-login) .breadcrumb:empty {
+    display: none !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Ajuste general: contenido debajo de navbar + breadcrumb */
+body:not(.pagelayout-login) #page.drawers {
+    margin-top: 105px;
+}
+
+/* En páginas donde no hay drawers, también damos aire */
+body:not(.pagelayout-login) #page-wrapper #page {
+    padding-top: 0;
+}
+
+/* Ajuste de drawers para que empiecen debajo de navbar + breadcrumb */
+@media (min-width: 992px) {
+
+    body:not(.pagelayout-login) .drawer-left,
+    body:not(.pagelayout-login) .drawer-right {
+        top: 106px;
+        height: calc(100vh - 106px);
+    }
+}
+
+/* En mobile, dejamos el breadcrumb más flexible */
+@media (max-width: 767.98px) {
+    body:not(.pagelayout-login) .breadcrumb {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.82em;
+    }
+
+    body:not(.pagelayout-login) .breadcrumb-item {
+        display: inline-flex;
+        flex: 0 0 auto;
+        max-width: 65vw;
+    }
+
+    body:not(.pagelayout-login) #page.drawers {
+        margin-top: 105px;
+    }
+}
+
+/* =========================================================
+   TANDA 1C - DRAWERS / COURSE INDEX / BLOQUES LATERALES
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar estilo de drawers laterales
+   - recuperar estilo del índice de curso
+   - recuperar estilo de bloques dentro de drawers
+   ========================================================= */
+
+/* Drawer general */
+body .drawer {
+    z-index: 1029;
+    background-color: #ffffff;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg,
+            #e9ecef 0,
+            #e9ecef 1px,
+            #ffffff 0,
+            #ffffff 50%);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, .05);
+    border-color: #e9ecef;
+}
+
+/* Contenido scrolleable del drawer */
+body .drawercontent {
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+    scrollbar-color: #258e6e #dff4ee;
+    scrollbar-width: auto;
+}
+
+/* Tipografía lateral */
+body .drawer-right,
+body .drawer-left {
+    font-size: 0.87em;
+    line-height: 1.2;
+}
+
+body .drawer-right h6,
+body .drawer-left h6 {
+    font-size: 0.8em;
+}
+
+/* Header del drawer */
+body .drawerheader {
+    padding: 0;
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 18dvh;
+    left: -41.5px;
+    margin-bottom: 0;
+    width: 80px;
+    background: transparent;
+    z-index: 2;
+    box-shadow: none !important;
+}
+
+body .drawer.drawer-left .drawerheader {
+    right: -79.5px;
+    left: auto;
+}
+
+body .drawer.scrolled .drawerheader {
+    box-shadow: none !important;
+}
+
+body .drawerheadercontent {
+    position: relative;
+    bottom: -45px;
+    left: -49px;
+}
+
+body .drawerheadercontent .btn.btn-icon {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    width: 42px;
+    height: 42px;
+}
+
+/* Toggle interno de cierre */
+body .drawertoggle,
+body .btn.drawertoggle {
+    border: none !important;
+    background-color: #8e247b !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    z-index: 1050;
+}
+
+body .drawertoggle:hover,
+body .drawertoggle:focus,
+body .btn.drawertoggle:hover,
+body .btn.drawertoggle:focus {
+    border: none !important;
+    background-color: #258e6e !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+body .drawertoggle .icon,
+body .btn.drawertoggle .icon {
+    color: #ffffff !important;
+    font-size: 1rem;
+}
+
+/* Toggle de drawer derecho */
+body .drawer.drawer-right .drawertoggle {
+    margin-left: 0;
+    margin-right: auto;
+    border-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-inline: 0.8rem;
+    padding-block: 0.65rem;
+}
+
+/* Toggle de drawer izquierdo */
+body .drawer.drawer-left .drawertoggle {
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-inline: 0.8rem;
+    padding-block: 0.65rem;
+}
+
+/* Botones flotantes de apertura de drawers */
+body .drawer-toggles .drawer-toggler {
+    position: fixed;
+    bottom: 18dvh;
+    top: unset;
+    z-index: 10;
+}
+
+body .drawer-toggles .drawer-toggler .btn {
+    background-color: #8e247b !important;
+    border: none !important;
+    z-index: 1050;
+    margin: 0;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    padding-block: 0.5rem;
+    transition:
+        color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out,
+        padding 0.15s ease-in-out;
+}
+
+body .drawer-toggles .drawer-toggler .btn:hover,
+body .drawer-toggles .drawer-toggler .btn:focus {
+    background-color: #258e6e !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+body .drawer-toggles .drawer-toggler .btn .icon {
+    color: #ffffff !important;
+    font-size: 1rem;
+}
+
+/* Toggle izquierdo/derecho con pequeño desplazamiento hover */
+body .drawer-toggles .drawer-left-toggle .btn,
+body .drawer-left-toggle .btn {
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+    border: none !important;
+}
+
+body .drawer-toggles .drawer-right-toggle .btn,
+body .drawer-right-toggle .btn {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border: none !important;
+}
+
+body .drawer-toggles .drawer-left-toggle .btn:hover,
+body .drawer-left-toggle .btn:hover {
+    padding-left: 1rem;
+}
+
+body .drawer-toggles .drawer-right-toggle .btn:hover,
+body .drawer-right-toggle .btn:hover {
+    padding-right: 1.2rem;
+}
+
+/* Posición drawer derecho */
+body .drawer-toggler.drawer-right-toggle {
+    right: 0;
+}
+
+@media (min-width: 576px) {
+    body #page.drawers .drawer-right-toggle {
+        margin-right: 0;
+    }
+}
+
+/* Drawer derecho/izquierdo */
+body .drawer.drawer-right,
+body .drawer.drawer-right.show {
+    transition: right 0.25s ease-in-out;
+}
+
+body .drawer.drawer-right.show {
+    border-left: 1px solid #e9ecef;
+}
+
+body .drawer.drawer-left {
+    border-right: none;
+}
+
+/* Tarjetas dentro del drawer */
+body .drawer .card {
+    border: none;
+    margin: 0 !important;
+    border-bottom: 1px solid #76bfa9;
+    border-radius: 0;
+    background-color: #ffffff;
+}
+
+body .drawer .card-body {
+    padding: 0 !important;
+    background-color: #e9ecef;
+}
+
+body .drawer .card-title {
+    background-color: #258e6e;
+    color: #ffffff;
+    width: 100% !important;
+    display: inline-block !important;
+    padding: 0.5em;
+    margin: 0;
+}
+
+body .drawer .card-text {
+    padding: 0.5em 1em 1.25em !important;
+}
+
+/* Calendario dentro de drawers */
+body .drawer .calendarmonth {
+    background-color: #e9ecef;
+    width: 100%;
+    padding-top: 1em;
+}
+
+/* Botón agregar bloque */
+body .block-add {
+    margin: 0 !important;
+    border-radius: 0;
+}
+
+/* Course index */
+body #course-index {
+    background-color: #ffffff;
+    background-clip: border-box;
+    border: 0;
+    border-radius: 0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+body .courseindex .courseindex-section {
+    border: 0;
+    padding-top: 0.5em;
+}
+
+body .courseindex .courseindex-item {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+}
+
+body .courseindex .courseindex-item.courseindex-section-title a {
+    font-weight: 500;
+}
+
+body .courseindex .courseindex-item .courseindex-link,
+body .courseindex .courseindex-item .courseindex-chevron {
+    color: #495057;
+}
+
+body .courseindex .courseindex-item.pageitem {
+    border-radius: 0;
+    background-color: #dff4ee !important;
+    border-left: 4px solid #258e6e;
+}
+
+body .courseindex .courseindex-item.pageitem .courseindex-link,
+body .courseindex .courseindex-item.pageitem .courseindex-chevron {
+    color: #144d3c !important;
+}
+
+body .courseindex .courseindex-item:hover,
+body .courseindex .courseindex-item:focus {
+    background: #e9ecef;
+    border-radius: 0;
+}
+
+body .courseindex .courseindex-section.dropready .courseindex-item-content {
+    padding-bottom: 0.5em;
+}
+
+/* Controles calendario */
+body .calendar-controls .current {
+    text-align: center !important;
+}
+
+body .calendar-controls a.arrow_link:hover {
+    color: #258e6e !important;
+    text-decoration: none;
+}
+
+/* Flecha calendario anterior */
+body .calendar-controls a.arrow_link.previous .arrow {
+    color: transparent;
+}
+
+body .calendar-controls a.arrow_link.previous .arrow::after {
+    font-family: "FontAwesome";
+    content: "";
+    position: relative;
+    left: 0;
+    top: 2px;
+    color: #8e247b;
+}
+
+/* Flecha calendario siguiente */
+body .calendar-controls a.arrow_link.next .arrow {
+    color: transparent;
+}
+
+body .calendar-controls a.arrow_link.next .arrow::after {
+    font-family: "FontAwesome";
+    content: "";
+    position: relative;
+    left: -13px;
+    top: -13px;
+    color: #8e247b;
+}
+
+/* Main inner dentro de drawers */
+@media (min-width: 576px) {
+    body #page.drawers .main-inner {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    body #page.drawers .main-inner {
+        padding: 1.5rem 3rem;
+    }
+}
+
+/* Ya compensamos top/height en Tanda 1B; acá solo aseguramos en desktop */
+@media (min-width: 992px) {
+
+    body .drawer-left,
+    body .drawer-right {
+        top: 106px;
+        height: calc(100vh - 106px);
+    }
+
+    body .drawer-left section:last-child,
+    body .drawer-right section:last-child {
+        margin-bottom: 5.8em;
+    }
+}
+
+/* Responsive: menos agresivo en mobile */
+@media (max-width: 767.98px) {
+    body .drawerheader {
+        bottom: 12dvh;
+    }
+
+    body .drawer-toggles .drawer-toggler {
+        bottom: 12dvh;
+    }
+
+    body .drawer .card-text {
+        padding: 0.75em !important;
+    }
+}
+
+/* =========================================================
+   TANDA 1D - ANCHOS / TITULOS / BOTONES GENERALES
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar anchos centrales
+   - recuperar títulos institucionales
+   - recuperar botones primarios/secundarios
+   - ajustar typography base sin romper Bootstrap 5
+   ========================================================= */
+
+/* Variables CSS propias, seguras en Raw SCSS */
+:root {
+    --coop-white: #ffffff;
+    --coop-black: #000000;
+    --coop-gray-100: #f2f3f4;
+    --coop-gray-200: #e9ecef;
+    --coop-gray-300: #dee2e6;
+    --coop-gray-400: #ced4da;
+    --coop-gray-500: #adb5bd;
+    --coop-gray-600: #6c757d;
+    --coop-gray-700: #495057;
+    --coop-gray-800: #343a40;
+    --coop-gray-900: #090a0b;
+
+    --coop-primary: #258e6e;
+    --coop-primary-1: hsl(162, 32%, 50%);
+    --coop-primary-2: hsl(162, 32%, 74%);
+    --coop-primary-3: hsl(162, 31%, 93%);
+    --coop-primary-dark: #144d3c;
+
+    --coop-secondary: hsl(312, 59%, 35%);
+    --coop-secondary-1: hsl(312, 59%, 45%);
+    --coop-secondary-2: hsl(312, 59%, 60%);
+
+    --coop-flacso: #142e4d;
+    --coop-area: hsl(162, 59%, 35%);
+    --coop-area-1: hsl(162, 59%, 53%);
+    --coop-area-2: hsl(162, 59%, 73%);
+    --coop-area-3: hsl(162, 59%, 92%);
+    --coop-area-4: hsl(162, 59%, 25%);
+    --coop-area-5: hsla(162, 59%, 35%, .8);
+    --coop-area-6: hsla(162, 59%, 25%, .5);
+
+    --color-area: hsl(162, 59%, 35%) !important;
+    --color-area-1: hsl(162, 59%, 53%) !important;
+    --color-area-2: hsl(162, 59%, 73%) !important;
+    --color-area-3: hsl(162, 59%, 92%) !important;
+    --color-area-4: hsl(162, 59%, 25%) !important;
+    --color-area-5: hsla(162, 59%, 35%, .8) !important;
+    --color-area-6: hsla(162, 59%, 25%, .5) !important;
+}
+
+/* ---------------------------------------------------------
+   Base typography
+   --------------------------------------------------------- */
+
+body {
+    font-size: 18px;
+    background-color: #ffffff;
+    min-height: 100svh;
+}
+
+/* Textos generales */
+p,
+ol,
+ul,
+dl {
+    margin-bottom: 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Imágenes */
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Links generales */
+a {
+    color: #8e247b;
+    word-wrap: break-word;
+    text-shadow: 0 0 0.1px;
+}
+
+a:hover,
+a:focus {
+    color: #258e6e;
+}
+
+/* Tablas */
+table {
+    background: #ffffff;
+    font-size: 0.9em;
+    line-height: 1.2;
+}
+
+/* Labels e inputs */
+label {
+    margin: 0 0.5rem;
+}
+
+fieldset {
+    margin-bottom: 2em;
+}
+
+input[type="image"] {
+    max-width: 12px;
+    max-height: 13px;
+}
+
+input[name^="requiredbutton"] {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(18%) saturate(4022%) hue-rotate(308deg) brightness(93%) contrast(98%);
+}
+
+input[name^="moveherebutton"][type="image"] {
+    max-width: 400px;
+    max-height: 50px;
+    width: 120px;
+}
+
+/* ---------------------------------------------------------
+   Anchos principales
+   --------------------------------------------------------- */
+
+/* Ancho páginas configuración */
+#page.drawers .main-inner {
+    width: min(1000px, 100%) !important;
+    margin-top: 2rem;
+}
+
+/* Ancho columna central */
+.pagelayout-standard #page.drawers .main-inner,
+body.limitedwidth #page.drawers .main-inner,
+.header-maxwidth,
+.secondary-navigation .navigation .nav-tabs {
+    width: min(1000px, 100%) !important;
+    max-width: 1000px;
+}
+
+/* Vertical tabs / páginas de administración más anchas */
+.pagelayout-standard #page.drawers .main-inner .verticaltabs,
+body.limitedwidth #page.drawers .main-inner .verticaltabs {
+    max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+    .header-maxwidth {
+        padding: 0;
+    }
+
+    #page.drawers div[role="main"] {
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+/* ---------------------------------------------------------
+   Títulos
+   --------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    text-align: left !important;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 500 !important;
+}
+
+h1,
+.h1 {
+    font-size: 3.1em;
+}
+
+h2,
+.h2 {
+    font-size: 2.3em;
+}
+
+h3,
+.h3 {
+    font-size: 1.8em;
+}
+
+h4,
+.h4 {
+    font-size: 1.5em;
+}
+
+h5,
+.h5 {
+    font-size: 1.3em;
+}
+
+h6,
+.h6 {
+    font-size: 1.2em;
+}
+
+/* H2 institucional */
+h2 {
+    font-size: 1.6em !important;
+    line-height: 130%;
+    padding: 0.3em 0.6em 0.3em 0.5em;
+    font-weight: 400 !important;
+    border: 1px solid var(--color-area-2);
+    border-left: 6px solid var(--color-area);
+    background: #e9ecef;
+    border-radius: 0 15px 15px 0;
+    margin-bottom: 1em;
+}
+
+/* Accesshide no debe quedar afectado por h2 */
+h2.accesshide {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 1px !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+/* Títulos resumen secciones */
+.summarytext h3 {
+    font-size: 1.5em;
+    font-weight: 500 !important;
+}
+
+/* Encabezado de página / curso */
+#page-header h1.h2,
+#page-header .h2.h1,
+#course-header .h2 {
+    border: none !important;
+    border-radius: 0;
+    font-size: clamp(1.5rem, 2.2vw, 1.75rem) !important;
+    padding: 0.2em 0;
+    margin: 0 0 1em !important;
+    line-height: 1;
+    background: transparent;
+    color: var(--color-area-4) !important;
+    font-weight: 500 !important;
+}
+
+#page-header h1.h2::after,
+#page-header .h2.h1::after,
+#course-header .h2::after {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 4px;
+    background-color: var(--color-area);
+    margin-top: 15px;
+}
+
+/* Ocultar h1 dentro de recursos, como en el post original */
+.path-mod #page-header h1.h2 {
+    display: none;
+}
+
+/* Títulos de instancia */
+.instancename {
+    font-size: 1.25em;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+/* Textos secundarios */
+.text-secondary {
+    color: #adb5bd !important;
+}
+
+code,
+.code {
+    color: #495057;
+}
+
+/* ---------------------------------------------------------
+   Secondary / tertiary navigation
+   --------------------------------------------------------- */
+
+.secondary-navigation {
+    padding-bottom: 2em;
+    font-weight: 400;
+}
+
+.secondary-navigation a {
+    color: #144d3c;
+}
+
+.secondary-navigation a:hover,
+.secondary-navigation a:focus {
+    color: #258e6e;
+}
+
+.tertiary-navigation {
+    padding-top: 1em;
+}
+
+/* Page context header */
+.page-context-header {
+    display: none;
+}
+
+.format-site .page-context-header,
+.path-course .page-context-header {
+    display: flex;
+}
+
+.page-header-image {
+    display: none;
+}
+
+/* ---------------------------------------------------------
+   Botones
+   --------------------------------------------------------- */
+
+.btn {
+    padding: 0.7rem 1.1rem;
+    margin: 0.2rem 0.3rem;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+
+/* Primary */
+.btn-primary,
+.btn.btn-primary,
+input[type="submit"].btn-primary {
+    background-color: #258e6e !important;
+    background-image: linear-gradient(hsl(162, 32%, 50%), #258e6e 60%, #258e6e) !important;
+    background-repeat: no-repeat;
+    color: #ffffff !important;
+    border-color: #258e6e !important;
+    border: none !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+input[type="submit"].btn-primary:hover,
+input[type="submit"].btn-primary:focus {
+    color: #ffffff !important;
+    background-color: hsl(162, 32%, 74%) !important;
+    border-color: #258e6e !important;
+    background-image: linear-gradient(hsl(162, 32%, 74%), hsl(162, 32%, 50%), #258e6e) !important;
+    outline: 0.2rem solid hsl(162, 32%, 50%);
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* Secondary */
+.btn-secondary,
+.btn.btn-secondary {
+    background-color: hsl(312, 59%, 35%) !important;
+    background-image: linear-gradient(hsl(312, 59%, 45%), hsl(312, 59%, 35%) 90%, hsl(312, 59%, 35%)) !important;
+    background-repeat: no-repeat;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.btn-secondary a,
+.btn.btn-secondary a {
+    color: #ffffff !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary.focus,
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
+    background-color: #e9ecef !important;
+    background-image: linear-gradient(hsl(312, 59%, 60%), hsl(312, 59%, 45%), hsl(312, 59%, 35%)) !important;
+    color: #ffffff !important;
+    border: none !important;
+    outline: 0.2rem solid hsl(312, 59%, 45%);
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* Success / info / warning / danger / dark sin mixins */
+.btn-success {
+    background-image: linear-gradient(#4bc451, #2fb636 60%, #2fb636) !important;
+    color: #ffffff !important;
+}
+
+.btn-info {
+    background-image: linear-gradient(#4fc6b3, #2fb6a0 60%, #2fb6a0) !important;
+    color: #ffffff !important;
+}
+
+.btn-warning {
+    background-image: linear-gradient(#c8b63f, #b6a02f 60%, #b6a02f) !important;
+    color: #ffffff !important;
+}
+
+.btn-danger {
+    background-image: linear-gradient(#c94a5e, #b62f46 60%, #b62f46) !important;
+    color: #ffffff !important;
+}
+
+.btn-dark {
+    background-image: linear-gradient(#495057, #343a40 60%, #343a40) !important;
+    color: #ffffff !important;
+}
+
+/* Search form */
+.simplesearchform .btn {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* Input groups Bootstrap 5 */
+.input-group>.form-control,
+.input-group>.form-control-plaintext,
+.input-group>.form-select,
+.input-group>.custom-select,
+.input-group>.custom-file {
+    margin: 0;
+}
+
+/* Form focus */
+.form-control:focus,
+.form-select:focus,
+select.form-control:focus {
+    border-color: #258e6e;
+    box-shadow: 0 0 0 .2rem rgba(37, 142, 110, .2);
+}
+
+/* Dropdown menus */
+.dropdown-menu .dropdown-header {
+    color: #6c757d;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:hover .icon,
+.dropdown-menu a:hover span {
+    color: #ffffff !important;
+}
+
+.dropdown-menu a.text-dark:hover,
+.dropdown-menu a.text-dark:focus {
+    color: #adb5bd !important;
+}
+
+/* Cronograma */
+.fila-par {
+    background-color: var(--color-area-2);
+}
+
+.fila-impar {
+    background-color: var(--color-area-3);
+}
+
+/* =========================================================
+   TANDA 1E - ACTIVITY HEADER / RECURSOS INTERNOS / LAYOUT FINO
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar estilo de encabezados internos de actividades
+   - ajustar páginas de recursos sin romper Boost 5
+   - dejar listas y descripciones más parecidas al diseño original
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Activity header en recursos internos
+   --------------------------------------------------------- */
+
+body #page.drawers .activity-header {
+    margin: 0;
+    font-size: 21px;
+    font-size: clamp(15px, 2.1vw, 21px);
+    line-height: 1.6;
+}
+
+body.path-mod .activity-header:not(:empty) {
+    background-color: rgba(255, 255, 255, .6);
+    margin-bottom: 1em;
+    padding: 1em 2em 2em 2em;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 2px solid var(--color-area);
+    border-top: 0;
+    border-color: var(--color-area);
+}
+
+/* Completion y descripción dentro del header */
+body.path-mod .activity-header .completion-info {
+    padding-top: 0 !important;
+}
+
+body.path-mod .activity-header .activity-description {
+    padding-bottom: 0 !important;
+}
+
+/* Cuando Moodle muestra header muy vacío, lo hacemos más liviano */
+body.path-mod .activity-header:empty {
+    display: none !important;
+}
+
+/* ---------------------------------------------------------
+   Header de actividad / título interno
+   --------------------------------------------------------- */
+
+body.path-mod #page-header h1.h2 {
+    display: none;
+}
+
+body.path-mod #region-main h2,
+body.path-mod #region-main .activity-header h2 {
+    color: #144d3c;
+}
+
+/* ---------------------------------------------------------
+   Contenedor principal en páginas de actividades
+   --------------------------------------------------------- */
+
+body.path-mod #region-main,
+body.pagelayout-incourse #region-main {
+    background-color: transparent;
+    border: none;
+}
+
+body.path-mod #region-main>.card,
+body.pagelayout-incourse #region-main>.card {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+/* Cajas generales internas */
+body.path-mod .box,
+body.path-mod .generalbox,
+body.path-mod .activity-information,
+body.path-mod .activity-description {
+    border-radius: 0.5rem;
+}
+
+/* Descripción de actividad */
+body.path-mod .activity-description {
+    color: #343a40;
+}
+
+body.path-mod .activity-description p {
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Recursos tipo page/resource/url/folder
+   --------------------------------------------------------- */
+
+body.path-mod-page .box.generalbox,
+body.path-mod-resource .resourcecontent,
+body.path-mod-url .urlworkaround,
+body.path-mod-folder .foldertree {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+/* Links dentro de recursos */
+body.path-mod-page .box.generalbox a,
+body.path-mod-resource .resourcecontent a,
+body.path-mod-url .urlworkaround a,
+body.path-mod-folder .foldertree a {
+    color: #8e247b;
+    text-decoration: underline;
+}
+
+body.path-mod-page .box.generalbox a:hover,
+body.path-mod-resource .resourcecontent a:hover,
+body.path-mod-url .urlworkaround a:hover,
+body.path-mod-folder .foldertree a:hover {
+    color: #258e6e;
+}
+
+/* Imágenes dentro de recursos */
+body.path-mod-page .box.generalbox img,
+body.path-mod-resource .resourcecontent img,
+body.path-mod-book .book_content img,
+body.path-mod-lesson .contents img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* ---------------------------------------------------------
+   Listas y contenido largo
+   --------------------------------------------------------- */
+
+body.path-mod #region-main ul,
+body.path-mod #region-main ol {
+    margin-bottom: 1em;
+}
+
+body.path-mod #region-main li {
+    margin-bottom: 0.35em;
+}
+
+body.path-mod #region-main p {
+    line-height: 1.65;
+}
+
+/* Evita que contenidos anchos rompan el layout */
+body.path-mod #region-main table,
+body.path-mod #region-main iframe,
+body.path-mod #region-main video,
+body.path-mod #region-main object,
+body.path-mod #region-main embed {
+    max-width: 100%;
+}
+
+body.path-mod #region-main iframe {
+    border: none;
+}
+
+/* ---------------------------------------------------------
+   Book / Libro
+   --------------------------------------------------------- */
+
+body.path-mod-book .book_content {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+body.path-mod-book .book_toc {
+    border-radius: 0.75rem;
+}
+
+body.path-mod-book .book_toc ul {
+    padding-left: 1rem;
+}
+
+body.path-mod-book .book_content h3,
+body.path-mod-book .book_content h4 {
+    color: #144d3c;
+}
+
+/* ---------------------------------------------------------
+   Lesson / Lección
+   --------------------------------------------------------- */
+
+body.path-mod-lesson .contents,
+body.path-mod-lesson .lessonbutton {
+    border-radius: 0.75rem;
+}
+
+body.path-mod-lesson .contents {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 1.5rem;
+}
+
+/* ---------------------------------------------------------
+   H5P / HVP
+   --------------------------------------------------------- */
+
+body.path-mod-h5pactivity .h5pactivity,
+body.path-mod-hvp .h5p-iframe-wrapper,
+body.path-mod-hvp .h5p-content {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+body.path-mod-h5pactivity .h5pactivity-description,
+body.path-mod-hvp .activity-description {
+    color: #343a40;
+}
+
+/* ---------------------------------------------------------
+   Correcciones visuales de activity item heredadas
+   --------------------------------------------------------- */
+
+body .activityname a {
+    color: #000000;
+}
+
+body .activityname a:hover {
+    color: #258e6e;
+}
+
+body .section .activity.indented+.indented .activity-item {
+    border: none;
+}
+
+body .activity-item:hover {
+    background: none;
+}
+
+body .description .course-description-item {
+    font-size: 0.875em;
+    background-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0;
+}
+
+/* ---------------------------------------------------------
+   Dropdowns internos
+   --------------------------------------------------------- */
+
+body.path-mod .dropdown-menu .dropdown-item:hover,
+body.path-mod .dropdown-menu .dropdown-item:focus {
+    background-color: #258e6e;
+    color: #ffffff !important;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+    body.path-mod .activity-header:not(:empty) {
+        padding: 1rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    body.path-mod-page .box.generalbox,
+    body.path-mod-resource .resourcecontent,
+    body.path-mod-url .urlworkaround,
+    body.path-mod-folder .foldertree,
+    body.path-mod-book .book_content,
+    body.path-mod-lesson .contents {
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
+/* =========================================================
+   TANDA 2 + 3 - LOGIN + FOOTER
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar estilo del login
+   - recuperar footer institucional
+   - mantener máxima compatibilidad con Raw SCSS
+   ========================================================= */
+
+
+/* =========================================================
+   TANDA 2 - LOGIN
+   ========================================================= */
+
+/* Fondo general login */
+body.pagelayout-login #page {
+    background-color: #144d3c !important;
+    background-image: url("/theme/gflacso4cooperacion/pix/mapa.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: 100dvh !important;
+    background-position-x: 70% !important;
+    background-position-y: 110% !important;
+    min-height: 100vh;
+}
+
+/* Ocultar footer en login */
+body.pagelayout-login #page-footer,
+body#page-login-index footer#page-footer,
+body#page-login-forgot_password footer#page-footer,
+body#page-login-signup footer#page-footer {
+    display: none !important;
+}
+
+/* Contenedor principal del login */
+body.pagelayout-login #page div[role="main"] {
+    min-height: calc(100vh - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Wrapper login */
+body.pagelayout-login .login-wrapper {
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caja login Moodle 5.x */
+body.pagelayout-login .login-container {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    overflow-y: auto;
+    line-height: 1.2;
+    font-size: 0.9em;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Formulario */
+body.pagelayout-login .loginform {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 405px;
+    margin-inline: auto;
+}
+
+body.pagelayout-login form#login {
+    width: 100%;
+}
+
+/* Logo login */
+body.pagelayout-login .login-logo {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+body.pagelayout-login .login-logo img,
+body.pagelayout-login .img-fluid {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* Inputs */
+body.pagelayout-login .login-container .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+body.pagelayout-login .login-container .form-control:focus {
+    border-color: #258e6e;
+    box-shadow: 0 0 0 .2rem rgba(37, 142, 110, .25);
+}
+
+/* Botón principal login */
+body.pagelayout-login #loginbtn,
+body.pagelayout-login .login-container .btn.btn-primary {
+    width: 100% !important;
+    background-color: #258e6e !important;
+    background-image: linear-gradient(#42a98a, #258e6e 60%, #258e6e) !important;
+    background-repeat: no-repeat;
+    border-color: #258e6e !important;
+    color: #ffffff !important;
+    margin: 0;
+}
+
+body.pagelayout-login #loginbtn:hover,
+body.pagelayout-login #loginbtn:focus,
+body.pagelayout-login .login-container .btn.btn-primary:hover,
+body.pagelayout-login .login-container .btn.btn-primary:focus {
+    background-color: #144d3c !important;
+    background-image: linear-gradient(#258e6e, #144d3c 70%, #144d3c) !important;
+    border-color: #144d3c !important;
+    color: #ffffff !important;
+}
+
+/* Botones secundarios: invitado, crear cuenta, etc. */
+body.pagelayout-login .login-container .btn.btn-secondary,
+body.pagelayout-login .login-signup .btn.btn-secondary {
+    background-color: #8e247b !important;
+    background-image: linear-gradient(#b63aa0, #8e247b 90%, #8e247b) !important;
+    background-repeat: no-repeat;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+body.pagelayout-login .login-container .btn.btn-secondary:hover,
+body.pagelayout-login .login-container .btn.btn-secondary:focus,
+body.pagelayout-login .login-signup .btn.btn-secondary:hover,
+body.pagelayout-login .login-signup .btn.btn-secondary:focus {
+    background-color: #711b62 !important;
+    color: #ffffff !important;
+}
+
+/* Links login */
+body#page-login-index a,
+body.pagelayout-login .login-container a {
+    color: #ffffff;
+}
+
+body#page-login-index a:hover,
+body#page-login-index a:focus,
+body.pagelayout-login .login-container a:hover,
+body.pagelayout-login .login-container a:focus {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Dropdowns del login: mantener texto legible */
+body.pagelayout-login .dropdown-menu a,
+body#page-login-index a.dropdown-item {
+    color: #212529 !important;
+}
+
+body.pagelayout-login .dropdown-menu a:hover,
+body.pagelayout-login .dropdown-menu a:focus,
+body#page-login-index a.dropdown-item:hover,
+body#page-login-index a.dropdown-item:focus {
+    color: #ffffff !important;
+    background-color: #258e6e !important;
+}
+
+/* Divisores */
+body.pagelayout-login .login-divider,
+body.pagelayout-login .login-container .login-divider {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, .45);
+}
+
+body.pagelayout-login .login-container .divider {
+    display: none;
+}
+
+/* Alertas */
+body.pagelayout-login .login-container .alert {
+    padding: 0.5rem;
+    font-size: 0.9em;
+}
+
+/* Recuperar contraseña */
+body.pagelayout-login .login-form-forgotpassword.form-group {
+    margin-block: 0.7em;
+}
+
+/* Menú de idioma */
+body.pagelayout-login .login-languagemenu {
+    display: flex;
+    justify-content: center;
+}
+
+/* Instrucciones / crear cuenta */
+body.pagelayout-login .login-instructions {
+    background: transparent !important;
+    color: #000000;
+    margin-top: 1rem !important;
+    margin-bottom: 0 !important;
+    border: none;
+    padding: 2rem;
+    position: relative;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .25);
+}
+
+body.pagelayout-login .login-instructions::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 24px);
+    height: 235px;
+    background: rgba(255, 255, 255, .88);
+    z-index: -1;
+    top: 0;
+    left: 12px;
+    border: 2px solid #258e6e;
+    border-radius: 3px;
+    outline: 12px solid rgba(255, 255, 255, .88);
+}
+
+body.pagelayout-login .login-instructions h2 {
+    font-size: 1.3em !important;
+    background: transparent !important;
+    color: #000000;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding-top: 0;
+    text-align: center !important;
+    margin-bottom: 1.5rem;
+}
+
+/* Signup dentro del login */
+body.pagelayout-login .login-signup {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Páginas signup / forgot password */
+body#page-login-signup .container-fluid,
+body#page-login-forgot_password .container-fluid,
+body#page-login-signup #region-main,
+body#page-login-forgot_password #region-main {
+    padding: 0 !important;
+    margin: 0;
+}
+
+body#page-login-signup .login-container,
+body#page-login-forgot_password .login-container {
+    background: rgba(255, 255, 255, .88) !important;
+    color: #000000;
+    margin-block: 2rem !important;
+    border: 2px solid #258e6e;
+    border-radius: 6px !important;
+    outline: 12px solid rgba(255, 255, 255, .88);
+    padding: 1rem 2rem;
+    text-shadow: none;
+    font-size: 0.9em;
+    height: auto;
+}
+
+body#page-login-signup .login-container [role="main"],
+body#page-login-forgot_password .login-container [role="main"] {
+    flex-direction: column;
+}
+
+body#page-login-signup .login-container label,
+body#page-login-forgot_password .login-container label {
+    margin-left: 0;
+}
+
+body#page-login-signup .login-container .form-control,
+body#page-login-forgot_password .login-container .form-control {
+    margin: 0;
+    padding: 0.35rem 0.5rem;
+    min-height: calc(1em + 1rem + 2px);
+}
+
+body#page-login-signup .login-container .d-flex,
+body#page-login-forgot_password .login-container .d-flex {
+    flex-direction: row;
+}
+
+body#page-login-signup .login-container h1.login-heading,
+body#page-login-forgot_password .login-container h1.login-heading {
+    margin-bottom: 0;
+}
+
+body#page-login-signup .login-container h3,
+body#page-login-forgot_password .login-container h3 {
+    font-size: 1.3em;
+}
+
+body#page-login-signup .login-container .icon,
+body#page-login-forgot_password .login-container .icon {
+    margin: 0;
+}
+
+body#page-login-signup .login-container .felement,
+body#page-login-forgot_password .login-container .felement {
+    padding-bottom: 0;
+}
+
+body#page-login-signup .login-container .fdescription.required,
+body#page-login-forgot_password .login-container .fdescription.required {
+    margin-top: 2em;
+}
+
+body#page-login-signup .login-container .mform fieldset,
+body#page-login-forgot_password .login-container .mform fieldset {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Ocultar botón accesibilidad en login si interfiere */
+body.pagelayout-login .local-accessibility-buttoncontainer,
+body#page-login-index .local-accessibility-buttoncontainer,
+body#page-login-forgot_password .local-accessibility-buttoncontainer,
+body#page-login-signup .local-accessibility-buttoncontainer {
+    display: none !important;
+}
+
+/* Login desktop horizontal */
+@media (min-width: 768px) and (orientation: landscape) {
+    body.pagelayout-login #page {
+        background-size: contain !important;
+        background-position-x: 0 !important;
+        background-position-y: 45% !important;
+    }
+
+    body#page-login-index .col-12 {
+        padding: 0;
+    }
+
+    body.pagelayout-login .login-container {
+        margin-right: 0;
+        padding: 3em 4em;
+        width: 50vw !important;
+        max-width: 50vw !important;
+    }
+
+    body.pagelayout-login .login-divider {
+        display: none;
+    }
+
+    body.pagelayout-login .login-form,
+    body.pagelayout-login .loginform .d-flex {
+        width: 100%;
+    }
+
+    body#page-login-signup .login-container,
+    body#page-login-forgot_password .login-container {
+        width: auto !important;
+        max-width: 450px !important;
+        margin-inline: 8em;
+    }
+}
+
+/* Login tablet vertical */
+@media (min-width: 768px) and (orientation: portrait) {
+    body.pagelayout-login #page {
+        background-size: cover !important;
+        background-position-x: center !important;
+    }
+
+    body.pagelayout-login .login-wrapper {
+        justify-content: center;
+    }
+}
+
+/* Login mobile */
+@media (max-width: 767.98px) {
+    body#page-login-index #page-wrapper #page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    body.pagelayout-login .login-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 2rem 1.25rem;
+    }
+
+    body#page-login-signup .login-container .mform {
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 75vw;
+    }
+}
+
+@media (max-width: 852px) and (orientation: landscape) {
+    body.pagelayout-login .login-wrapper {
+        justify-content: center;
+    }
+
+    body.pagelayout-login .login-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/* =========================================================
+   TANDA 3 - FOOTER
+   ========================================================= */
+
+/* Evita espacio extra antes del footer */
+#topofscroll {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Footer principal */
+#page-footer.nova-foot {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    line-height: 120%;
+    font-size: 0.952381em;
+    font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+    color: #ffffff !important;
+    text-align: left;
+    background-color: #144d3c !important;
+    background-image: url("/theme/gflacso4cooperacion/pix/mapa.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position-x: left !important;
+    background-position-y: center !important;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 1em;
+    border-top: none !important;
+}
+
+/* Contenedor interno */
+#page-footer.nova-foot .container-fluid {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Ocultar filas grandes institucionales heredadas si existen */
+#page-footer.nova-foot .row.large,
+#page-footer.nova-foot .adres2 {
+    display: none !important;
+}
+
+/* Bloque derecho del footer */
+#page-footer.nova-foot .adres {
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    font-size: 1.04762em;
+    line-height: 120%;
+    width: 380px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 80px;
+    border-left: 2px solid #ffffff;
+    min-height: 100%;
+    display: flow-root;
+    padding-left: 80px;
+    padding-bottom: 30px;
+}
+
+/* Links del footer */
+#page-footer.nova-foot a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    margin: 0;
+    border-top: none;
+}
+
+#page-footer.nova-foot a:hover,
+#page-footer.nova-foot a:focus {
+    color: #b5d4c9 !important;
+    text-decoration: underline !important;
+}
+
+/* Redes sociales */
+#page-footer.nova-foot .social {
+    float: left;
+    height: 30px;
+    margin-right: 40px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+/* Íconos sociales */
+#page-footer.nova-foot .red {
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-decoration: none !important;
+    filter: brightness(5);
+}
+
+#page-footer.nova-foot .red::before,
+#page-footer.nova-foot .red::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Íconos desde archivos del theme.
+   Si no aparecen, revisar que existan estos SVG en /theme/gflacso4cooperacion/pix/logos-svg/ */
+#page-footer.nova-foot .insta {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/insta.svg") !important;
+}
+
+#page-footer.nova-foot .face {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/face.svg") !important;
+}
+
+#page-footer.nova-foot .twi {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/twi.svg") !important;
+}
+
+#page-footer.nova-foot .reddelinkedin {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/linkedin.svg") !important;
+}
+
+#page-footer.nova-foot .youtube {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/youtube.svg") !important;
+}
+
+#page-footer.nova-foot .cloud {
+    background-image: url("/theme/gflacso4cooperacion/pix/logos-svg/cloud.svg") !important;
+}
+
+#page-footer.nova-foot .red:hover,
+#page-footer.nova-foot .red:focus {
+    filter: brightness(1.8);
+    transform: none !important;
+}
+
+/* Detalle institucional */
+#page-footer.nova-foot .detail {
+    float: left;
+    width: 100%;
+}
+
+#page-footer.nova-foot .adres small {
+    width: 200px;
+    float: left;
+    display: block;
+    margin-right: 5px;
+    color: #ffffff;
+    font-size: 0.95em;
+    line-height: 120%;
+}
+
+/* Corrige visualmente HTML viejo tipo <small><p>...</p></small> */
+#page-footer.nova-foot .adres small p,
+#page-footer.nova-foot .detail small p {
+    margin: 0;
+    color: #ffffff;
+}
+
+#page-footer.nova-foot .facultad,
+#page-footer.nova-foot .detail .facultad {
+    font-weight: 700;
+}
+
+/* Ocultar links móviles heredados */
+#page-footer.nova-foot .mobilelink {
+    display: none !important;
+}
+
+/* Columnas viejas del footer, por si aparecen */
+#page-footer.nova-foot .row1,
+#page-footer.nova-foot .row2 {
+    margin: 0 auto;
+    float: left;
+    width: 100%;
+}
+
+#page-footer.nova-foot .row2 {
+    margin-left: 20%;
+}
+
+#page-footer.nova-foot ul,
+#page-footer.nova-foot ol {
+    float: left;
+    margin-left: 1%;
+    list-style-type: none;
+    padding: 0;
+}
+
+#page-footer.nova-foot ol li,
+#page-footer.nova-foot ul li {
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+/* Sticky footer simple, sin :has() */
+@media (min-width: 576px) {
+    #page-wrapper {
+        height: auto !important;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page-wrapper #page {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page-wrapper #page-content,
+    #page-wrapper #topofscroll {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    #page #page-footer.nova-foot {
+        margin-top: auto !important;
+        flex-shrink: 0;
+    }
+}
+
+/* Responsive footer */
+@media only screen and (max-width: 768px) {
+
+    footer#page-footer.nova-foot,
+    #page-footer.nova-foot {
+        background-size: 200vh !important;
+        background-position-x: center !important;
+        background-position-y: bottom !important;
+    }
+
+    #page-footer.nova-foot .adres {
+        width: 410px;
+        max-width: calc(100vw - 40px);
+        margin: 0 auto;
+        float: none;
+        position: initial;
+        border-left: none;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+
+    #page-footer.nova-foot .social {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        float: none;
+        height: auto;
+    }
+
+    #page-footer.nova-foot .red {
+        float: none;
+        margin-left: 0 !important;
+    }
+
+    #page-footer.nova-foot .detail {
+        float: none;
+        text-align: left;
+    }
+
+    #page-footer.nova-foot .adres small {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #page-my-index #region-main.has-blocks {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   TANDA 4 - CURSOS / SECCIONES / FORMATOS DE CURSO
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Objetivo:
+   - recuperar estilo de secciones de curso
+   - recuperar tarjetas y bloques internos
+   - ajustar tabs/onetopic sin romper Boost 5
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. Contenedor general del curso
+   --------------------------------------------------------- */
+
+body.path-course-view .course-content {
+    margin-top: 0.5rem;
+}
+
+body.path-course-view .course-content ul,
+body.path-course-view .course-content ol {
+    padding-left: 0;
+}
+
+body.path-course-view .course-content ul.section,
+body.path-course-view .course-content .section {
+    list-style: none;
+}
+
+/* Limpieza de márgenes en formatos clásicos */
+body.path-course-view .course-content>ul,
+body.path-course-view .course-content>.weeks,
+body.path-course-view .course-content>.topics {
+    margin-left: 0;
+}
+
+
+/* ---------------------------------------------------------
+   2. Secciones de curso
+   --------------------------------------------------------- */
+
+body.path-course-view .course-section,
+body.path-course-view li.section.main,
+body.path-course-view .format-section {
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    background-color: #ffffff;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+}
+
+/* En edición, un poco más de separación */
+body.editing.path-course-view .course-section,
+body.editing.path-course-view li.section.main {
+    margin-bottom: 1.5rem;
+}
+
+/* Header de sección */
+body.path-course-view .course-section-header,
+body.path-course-view .section .section-header {
+    background-color: #f2f3f4;
+}
+
+/* Título de sección */
+body.path-course-view .sectionname,
+body.path-course-view .course-section-header .sectionname,
+body.path-course-view .course-section-header h3,
+body.path-course-view .course-section-header h4 {
+    color: #144d3c !important;
+    font-weight: 600 !important;
+    line-height: 1.25;
+    margin-bottom: 0;
+}
+
+/* Links en títulos de sección */
+body.path-course-view .sectionname a,
+body.path-course-view .course-section-header .sectionname a {
+    color: #144d3c !important;
+    text-decoration: none !important;
+}
+
+body.path-course-view .sectionname a:hover,
+body.path-course-view .course-section-header .sectionname a:hover {
+    color: #258e6e !important;
+    text-decoration: underline !important;
+}
+
+/* Descripción / summary de sección */
+body.path-course-view .summary,
+body.path-course-view .section-summary-activities,
+body.path-course-view .description-inner {
+    color: #343a40;
+}
+
+body.path-course-view .section .content {
+    padding: 1rem;
+}
+
+/* Sección 0 / general */
+body.path-course-view #section-0,
+body.path-course-view .course-section#section-0 {
+    border-color: #b5d4c9;
+    background-color: #ffffff;
+}
+
+body.path-course-view #section-0 .course-section-header,
+body.path-course-view #section-0 .section-header {
+    background-color: #dff4ee;
+}
+
+/* Sección actual */
+body.path-course-view .course-section.current,
+body.path-course-view li.section.current {
+    border-color: #258e6e !important;
+    box-shadow: 0 0 0 2px rgba(37, 142, 110, .16);
+}
+
+body.path-course-view .course-section.current .course-section-header,
+body.path-course-view li.section.current .section-header {
+    background-color: #dff4ee !important;
+}
+
+/* Secciones ocultas */
+body.path-course-view .course-section.hidden,
+body.path-course-view li.section.hidden {
+    opacity: 0.7;
+    background-color: #f8f9fa;
+}
+
+
+/* ---------------------------------------------------------
+   3. Actividades dentro del curso
+   --------------------------------------------------------- */
+
+body.path-course-view .activity,
+body.path-course-view .activity-item {
+    border-radius: 10px;
+}
+
+body.path-course-view .activity-item {
+    border-color: #dee2e6;
+}
+
+body.path-course-view .activity-item:hover {
+    background-color: rgba(37, 142, 110, .04);
+    border-color: #b5d4c9;
+}
+
+/* Nombre de actividad */
+body.path-course-view .activityname,
+body.path-course-view .activityname a,
+body.path-course-view .instancename {
+    color: #111827;
+    font-weight: 500;
+}
+
+body.path-course-view .activityname a:hover,
+body.path-course-view .instancename:hover {
+    color: #258e6e;
+}
+
+/* Íconos de actividad */
+body.path-course-view .activityiconcontainer {
+    border-radius: 10px;
+}
+
+/* Texto de descripción de actividad */
+body.path-course-view .activity-description,
+body.path-course-view .activity-information {
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+/* Disponibilidad / restricciones */
+body.path-course-view .availabilityinfo,
+body.path-course-view .contentafterlink {
+    font-size: 0.92rem;
+    color: #6c757d;
+}
+
+
+/* ---------------------------------------------------------
+   4. Imágenes y contenidos dentro de secciones
+   --------------------------------------------------------- */
+
+body.path-course-view .description-inner img,
+body.path-course-view .summary img,
+body.path-course-view .no-overflow img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+body.path-course-view .my-3[data-for="sectioninfo"] {
+    margin-top: 0 !important;
+    border: none;
+    padding: 0;
+}
+
+body.path-course-view .my-3[data-for="sectioninfo"] .no-overflow {
+    margin-top: 0 !important;
+}
+
+body.path-course-view .my-3[data-for="sectioninfo"] img {
+    max-width: 100% !important;
+    float: none !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Banner de sección si aparece una imagen grande */
+body.path-course-view [data-for="sectioninfo"] .description-inner>p:first-child>img:only-child,
+body.path-course-view [data-for="sectioninfo"] .no-overflow>p:first-child>img:only-child {
+    width: 100% !important;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   5. Navegación entre secciones
+   --------------------------------------------------------- */
+
+body.path-course-view .section-navigation {
+    background-color: transparent;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body.path-course-view .section-navigation .mdl-left,
+body.path-course-view .section-navigation .mdl-right {
+    max-width: 48%;
+}
+
+body.path-course-view .section-navigation a {
+    color: #144d3c !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+body.path-course-view .section-navigation a:hover,
+body.path-course-view .section-navigation a:focus {
+    color: #258e6e !important;
+    text-decoration: underline !important;
+}
+
+/* Vista de una sola sección */
+body.path-course-view .single-section .section-navigation:first-child {
+    margin-bottom: 0.75rem;
+}
+
+body.path-course-view .single-section .course-section {
+    border-color: #b5d4c9;
+}
+
+
+/* ---------------------------------------------------------
+   6. Tarjetas internas usadas en cursos
+   --------------------------------------------------------- */
+
+body.path-course-view .card-deck,
+body.path-course-view .card-group {
+    gap: 1rem;
+}
+
+body.path-course-view .card-deck .card,
+body.path-course-view .card-group .card,
+body.path-course-view .card.contenidos,
+body.path-course-view .card.cierre {
+    border-radius: 15px;
+    overflow: hidden;
+    border-color: #dee2e6;
+}
+
+body.path-course-view .card-deck .card:hover,
+body.path-course-view .card-group .card:hover,
+body.path-course-view .card.contenidos:hover,
+body.path-course-view .card.cierre:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+}
+
+/* Links dentro de tarjetas */
+body.path-course-view .card-deck a,
+body.path-course-view .card-group a {
+    color: #258e6e;
+    text-decoration: none;
+}
+
+body.path-course-view .card-deck a:hover,
+body.path-course-view .card-group a:hover {
+    color: #144d3c;
+    text-decoration: none;
+}
+
+/* Tarjetas de contenidos */
+body.path-course-view .card-deck.contenidos,
+body.path-course-view .card-group.contenidos {
+    min-height: 200px;
+}
+
+body.path-course-view .card-deck.contenidos .card-body,
+body.path-course-view .card-group.contenidos .card-body {
+    padding: 2rem;
+}
+
+body.path-course-view .card-deck .img-fluid,
+body.path-course-view .card-group .img-fluid {
+    margin-bottom: 1rem;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: top;
+}
+
+body.path-course-view .card-deck h5,
+body.path-course-view .card-group h5 {
+    font-size: 1.9em;
+    font-weight: 400 !important;
+}
+
+body.path-course-view .card-deck .card-text,
+body.path-course-view .card-group .card-text {
+    font-size: 1em;
+}
+
+body.path-course-view .card-deck .card-footer,
+body.path-course-view .card-group .card-footer {
+    text-align: right;
+    font-size: 1.2em;
+}
+
+/* Tarjeta de cierre */
+body.path-course-view .card.cierre .card-body {
+    padding: 2rem !important;
+    line-height: 1.7;
+}
+
+body.path-course-view .card.cierre h5 {
+    border: none;
+    border-bottom: 4px solid #258e6e;
+    margin-bottom: 1rem;
+    background: #e9ecef;
+    padding: 0.5rem 0.75rem;
+    line-height: 130%;
+    font-size: 1.35rem;
+    text-align: center !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. Formato Onetopic / pestañas / tabs de curso
+   --------------------------------------------------------- */
+
+body#page-course-view-onetopic .course-content ul.section {
+    margin-top: 0 !important;
+}
+
+body#page-course-view-onetopic #tabs-tree-start {
+    margin-top: 0;
+}
+
+/* Tabs de plugins de formato de curso */
+body.path-course-view .format_onetopic .nav-tabs,
+body.path-course-view .course-content .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+body.path-course-view .format_onetopic .nav-tabs .nav-link,
+body.path-course-view .course-content .nav-tabs .nav-link {
+    color: #144d3c;
+    border-radius: 8px 8px 0 0;
+}
+
+body.path-course-view .format_onetopic .nav-tabs .nav-link.active,
+body.path-course-view .course-content .nav-tabs .nav-link.active {
+    color: #000000;
+    border-color: #258e6e #258e6e #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   8. Formato flexible / subsecciones / flexsections
+   --------------------------------------------------------- */
+
+body.path-course-view .format-flexsections .course-section,
+body.path-course-view .format_flexsections .course-section,
+body.path-course-view .format-flexsections li.section,
+body.path-course-view .format_flexsections li.section {
+    border-radius: 12px;
+}
+
+body.path-course-view .format-flexsections .sectionname,
+body.path-course-view .format_flexsections .sectionname {
+    color: #144d3c !important;
+}
+
+
+/* ---------------------------------------------------------
+   9. Botones de edición dentro de cursos
+   --------------------------------------------------------- */
+
+body.editing.path-course-view .activity-item .dropdown-toggle,
+body.editing.path-course-view .course-section .dropdown-toggle {
+    border-radius: 6px;
+}
+
+body.editing.path-course-view .activity-item .dropdown-toggle:hover,
+body.editing.path-course-view .course-section .dropdown-toggle:hover {
+    background-color: #f2f3f4;
+}
+
+/* Botón agregar actividad */
+body.path-course-view .activity-add,
+body.path-course-view .addresourcemodchooser,
+body.path-course-view .section-modchooser-link {
+    color: #258e6e !important;
+}
+
+body.path-course-view .activity-add:hover,
+body.path-course-view .addresourcemodchooser:hover,
+body.path-course-view .section-modchooser-link:hover {
+    color: #144d3c !important;
+}
+
+
+/* ---------------------------------------------------------
+   10. Casos específicos de cursos Historia como Excusa
+   Migrado desde Raw SCSS viejo, sin nesting.
+   --------------------------------------------------------- */
+
+body.course-671,
+body.course-711,
+body.course-731 {
+    --color-area: #038EAA;
+    --color-area-1: #F8A839;
+    --color-area-2: #FF5E20;
+    --color-area-3: #7FBEBF;
+    --color-area-4: #B2671F;
+    --color-area-5: hsla(213, 58%, 50%, 0.8);
+    --color-area-6: hsla(213, 58%, 30%, 0.5);
+}
+
+body.course-671 .ver-mas details::before,
+body.course-711 .ver-mas details::before,
+body.course-731 .ver-mas details::before {
+    content: "More";
+    top: 31px;
+    display: inline-block;
+}
+
+body.course-671 .btn-primary,
+body.course-711 .btn-primary,
+body.course-731 .btn-primary {
+    background-color: #038EAA !important;
+    background-image: linear-gradient(#7FBEBF, #038EAA 60%, #038EAA) !important;
+    background-repeat: no-repeat;
+    color: #ffffff !important;
+    border-color: #038EAA !important;
+}
+
+body.course-671 .btn-primary:hover,
+body.course-711 .btn-primary:hover,
+body.course-731 .btn-primary:hover {
+    outline: 0.2rem solid #038EAA;
+}
+
+body.course-671 .btn-secondary,
+body.course-671 .box a.btn-secondary,
+body.course-711 .btn-secondary,
+body.course-711 .box a.btn-secondary,
+body.course-731 .btn-secondary,
+body.course-731 .box a.btn-secondary {
+    background-color: #FF5E20 !important;
+    background-image: linear-gradient(#f9a382, #FF5E20 60%, #FF5E20) !important;
+    background-repeat: no-repeat;
+    color: #ffffff !important;
+    border-color: #FF5E20 !important;
+}
+
+body.course-671 .btn-secondary:hover,
+body.course-671 .box a.btn-secondary:hover,
+body.course-711 .btn-secondary:hover,
+body.course-711 .box a.btn-secondary:hover,
+body.course-731 .btn-secondary:hover,
+body.course-731 .box a.btn-secondary:hover {
+    outline: 0.2rem solid #FF5E20;
+}
+
+body.course-671 .box a.btn-primary,
+body.course-711 .box a.btn-primary,
+body.course-731 .box a.btn-primary {
+    color: #ffffff !important;
+}
+
+body.course-671 .box a.btn-primary:hover,
+body.course-711 .box a.btn-primary:hover,
+body.course-731 .box a.btn-primary:hover {
+    color: #ffffff !important;
+    outline: 0.2rem solid #038EAA !important;
+}
+
+body.course-671 .links_bloque_lateral a,
+body.course-671 .box a,
+body.course-711 .links_bloque_lateral a,
+body.course-711 .box a,
+body.course-731 .links_bloque_lateral a,
+body.course-731 .box a {
+    color: #FF5E20 !important;
+    text-decoration: none !important;
+}
+
+body.course-671 .links_bloque_lateral a:hover,
+body.course-671 .box a:hover,
+body.course-711 .links_bloque_lateral a:hover,
+body.course-711 .box a:hover,
+body.course-731 .links_bloque_lateral a:hover,
+body.course-731 .box a:hover {
+    color: #038EAA !important;
+}
+
+body.course-671 .links_bloque_lateral a::before,
+body.course-671 .box a::before,
+body.course-711 .links_bloque_lateral a::before,
+body.course-711 .box a::before,
+body.course-731 .links_bloque_lateral a::before,
+body.course-731 .box a::before {
+    color: #038EAA !important;
+}
+
+body.course-671 #page-header h1.h2,
+body.course-711 #page-header h1.h2,
+body.course-731 #page-header h1.h2 {
+    font-size: 1.5em;
+    font-weight: 400 !important;
+    color: #002743;
+    border-radius: 0;
+    border-bottom: solid 0.1em var(--color-area);
+}
+
+body.course-671 [data-for="sectioninfo"] .description-inner h3,
+body.course-711 [data-for="sectioninfo"] .description-inner h3,
+body.course-731 [data-for="sectioninfo"] .description-inner h3 {
+    font-size: 2.5em !important;
+}
+
+body.course-671 .prevsection a[href*="section=1"],
+body.course-711 .prevsection a[href*="section=1"],
+body.course-731 .prevsection a[href*="section=1"] {
+    display: none !important;
+}
+
+body.course-731 .breadcrumb-item a[href*="section=0"]::after {
+    content: "HOME";
+}
+
+
+/* ---------------------------------------------------------
+   11. Navegación interna fija de recursos
+   --------------------------------------------------------- */
+
+body.path-course-view #topofscroll {
+    anchor-name: --navegacion-interna;
+}
+
+/* Ojo: position-anchor todavía no es universal, pero es CSS final.
+   Si algún navegador no lo soporta, simplemente lo ignora. */
+body.path-course-view .navegacion-interna {
+    position: fixed;
+    position-anchor: --navegacion-interna;
+    position-area: top center;
+    visibility: visible;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 10px;
+}
+
+body.path-course-view .navegacion-interna a {
+    padding: 12px;
+    height: 50px;
+    display: inline-block;
+    line-height: 25px;
+}
+
+body.path-course-view .navegacion-interna a:hover {
+    background: var(--color-area-3);
+    text-decoration: none;
+}
+
+body.path-course-view .navegacion-interna a.ir-inicio::before {
+    content: " ";
+    font-family: "FontAwesome";
+    font-size: 0.9em;
+    position: relative;
+    bottom: 1px;
+}
+
+body.path-course-view .navegacion-interna a.ir-inicio:hover {
+    border-radius: 10px 0 0 10px;
+}
+
+body.path-course-view .navegacion-interna a.ir-caso::before {
+    content: " ";
+    font-family: "FontAwesome";
+    font-size: 0.9em;
+    position: relative;
+    bottom: 1px;
+}
+
+body.path-course-view .navegacion-interna a.ir-caso:hover {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* ---------------------------------------------------------
+   12. Responsive
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    body.path-course-view .course-section,
+    body.path-course-view li.section.main {
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    body.path-course-view .section .content {
+        padding: 0.75rem;
+    }
+
+    body.path-course-view .section-navigation .mdl-left,
+    body.path-course-view .section-navigation .mdl-right {
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+    body.path-course-view .card.cierre .card-body {
+        padding: 1.25rem !important;
+    }
+
+    body.path-course-view [data-for="sectioninfo"] .description-inner>p:first-child>img:only-child,
+    body.path-course-view [data-for="sectioninfo"] .no-overflow>p:first-child>img:only-child {
+        aspect-ratio: 3 / 2;
+    }
+}
+
+/* =========================================================
+   TANDA 5 + 6 - TODO LO QUE QUEDA
+   Moodle 5.1 / Bootstrap 5
+   CSS puro: sin variables SCSS, sin nesting, sin mixins, sin :has().
+   Incluye:
+   - Actividades específicas
+   - Recursos
+   - Bloques HTML
+   - Tarjetas
+   - Recuadros
+   - Acordeones
+   - C4L
+   - Accesibilidad
+   - Componentes visuales varios
+   ========================================================= */
+
+
+/* =========================================================
+   TANDA 5 - ACTIVIDADES Y RECURSOS ESPECIFICOS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. Activity item general
+   --------------------------------------------------------- */
+
+body.path-course-view .activity-item {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 0.5rem;
+    transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+body.path-course-view .activity-item:hover {
+    background-color: rgba(37, 142, 110, .04);
+    border-color: #b5d4c9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+}
+
+body.path-course-view .activity-item .activity-name-area,
+body.path-course-view .activity-item .activitytitle {
+    min-height: 36px;
+}
+
+body.path-course-view .activity-item .activityname,
+body.path-course-view .activity-item .activityname a,
+body.path-course-view .activity-item .instancename {
+    color: #111827 !important;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+body.path-course-view .activity-item .activityname a:hover,
+body.path-course-view .activity-item .instancename:hover {
+    color: #258e6e !important;
+    text-decoration: underline !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. Íconos de actividad Moodle 5.x
+   --------------------------------------------------------- */
+
+body .activityiconcontainer {
+    border-radius: 10px !important;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .activityiconcontainer .activityicon,
+body .activityiconcontainer img.activityicon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Colores por propósito */
+body .activityiconcontainer.assessment {
+    background-color: #2fb636 !important;
+}
+
+body .activityiconcontainer.collaboration {
+    background-color: #b65c2f !important;
+}
+
+body .activityiconcontainer.communication {
+    background-color: #b6a02f !important;
+}
+
+body .activityiconcontainer.content {
+    background-color: #2f4fb6 !important;
+}
+
+body .activityiconcontainer.interface {
+    background-color: #832fb6 !important;
+}
+
+body .activityiconcontainer.administration {
+    background-color: #289a8f !important;
+}
+
+/* Si algún ícono queda raro, comentar esta regla */
+body .activityiconcontainer img.activityicon {
+    filter: brightness(0) invert(1);
+}
+
+
+/* ---------------------------------------------------------
+   3. Estados de finalización / disponibilidad
+   --------------------------------------------------------- */
+
+body.path-course-view .activity-item .completion-info,
+body.path-course-view .activity-item .automatic-completion-conditions {
+    font-size: 0.88rem;
+    color: #6c757d;
+}
+
+body.path-course-view .activity-item .badge {
+    border-radius: 999px;
+}
+
+body.path-course-view .activity-item .availabilityinfo,
+body.path-course-view .activity-item .contentafterlink {
+    color: #6c757d;
+    font-size: 0.92rem;
+}
+
+body.editing.path-course-view .activity-item .editing_move,
+body.editing.path-course-view .activity-item .dropdown-toggle,
+body.editing.path-course-view .activity-item .btn-icon {
+    border-radius: 6px;
+}
+
+body.editing.path-course-view .activity-item .dropdown-toggle:hover,
+body.editing.path-course-view .activity-item .btn-icon:hover {
+    background-color: #f2f3f4;
+}
+
+
+/* ---------------------------------------------------------
+   4. Archivo, URL, Página, Carpeta
+   --------------------------------------------------------- */
+
+body.path-mod-resource .resourcecontent,
+body.path-mod-page .box.generalbox,
+body.path-mod-folder .foldertree,
+body.path-mod-url .urlworkaround {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+body.path-mod-resource .resourcecontent a,
+body.path-mod-page .box.generalbox a,
+body.path-mod-folder .foldertree a,
+body.path-mod-url .urlworkaround a {
+    color: #8e247b;
+    text-decoration: underline;
+}
+
+body.path-mod-resource .resourcecontent a:hover,
+body.path-mod-page .box.generalbox a:hover,
+body.path-mod-folder .foldertree a:hover,
+body.path-mod-url .urlworkaround a:hover {
+    color: #258e6e;
+}
+
+body.path-mod-folder .foldertree {
+    margin-top: 1rem;
+}
+
+body.path-mod-folder .foldertree .fp-filename-icon {
+    margin-right: 0.5rem;
+}
+
+
+/* ---------------------------------------------------------
+   5. Foro
+   --------------------------------------------------------- */
+
+body.path-mod-forum .forum-post-container,
+body.path-mod-forum .forumpost,
+body.path-mod-forum .discussion-list,
+body.path-mod-forum .forumheaderlist {
+    border-radius: 12px;
+}
+
+body.path-mod-forum .forumpost {
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+body.path-mod-forum .forumpost .header {
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+body.path-mod-forum .forumpost .subject {
+    color: #144d3c;
+    font-weight: 600;
+}
+
+body.path-mod-forum .discussion-list thead th,
+body.path-mod-forum table.discussion-list thead th {
+    background-color: #f2f3f4;
+    color: #111827;
+}
+
+body.path-mod-forum .discussion-list a,
+body.path-mod-forum .forumheaderlist a {
+    color: #8e247b;
+}
+
+body.path-mod-forum .discussion-list a:hover,
+body.path-mod-forum .forumheaderlist a:hover {
+    color: #258e6e;
+}
+
+
+/* ---------------------------------------------------------
+   6. Tarea / Assignment
+   --------------------------------------------------------- */
+
+body.path-mod-assign .submissionstatustable,
+body.path-mod-assign .feedback,
+body.path-mod-assign .gradingtable,
+body.path-mod-assign .generaltable {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.path-mod-assign .submissionstatustable {
+    border: 1px solid #dee2e6;
+}
+
+body.path-mod-assign .submissionstatussubmitted,
+body.path-mod-assign .submissiongraded {
+    background-color: #dff4ee !important;
+    color: #144d3c !important;
+}
+
+body.path-mod-assign .submissionstatusdraft,
+body.path-mod-assign .submissionnotgraded {
+    background-color: #fff3cd !important;
+    color: #664d03 !important;
+}
+
+body.path-mod-assign .submissionstatus,
+body.path-mod-assign .gradingstatus {
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   7. Cuestionario / Quiz
+   --------------------------------------------------------- */
+
+body.path-mod-quiz .quizattemptsummary,
+body.path-mod-quiz .que,
+body.path-mod-quiz .quizreviewsummary,
+body.path-mod-quiz .qn_buttons {
+    border-radius: 12px;
+}
+
+body.path-mod-quiz .que {
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+body.path-mod-quiz .que .info {
+    background-color: #f2f3f4;
+    border-radius: 10px;
+    border: none;
+}
+
+body.path-mod-quiz .que .formulation {
+    background-color: #ffffff;
+    border-color: #dee2e6;
+    border-radius: 10px;
+}
+
+body.path-mod-quiz .qn_buttons .qnbutton {
+    border-radius: 8px;
+}
+
+body.path-mod-quiz .qn_buttons .qnbutton.thispage {
+    border-color: #258e6e !important;
+}
+
+
+/* ---------------------------------------------------------
+   8. H5P / HVP
+   --------------------------------------------------------- */
+
+body.path-mod-h5pactivity #region-main,
+body.path-mod-hvp #region-main {
+    background-color: transparent;
+}
+
+body.path-mod-h5pactivity .h5pactivity,
+body.path-mod-hvp .h5p-iframe-wrapper,
+body.path-mod-hvp .h5p-content {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.path-mod-h5pactivity .h5pactivity-description,
+body.path-mod-hvp .activity-description {
+    color: #495057;
+}
+
+
+/* ---------------------------------------------------------
+   9. Libro / Lección / Wiki / Taller / Glosario
+   --------------------------------------------------------- */
+
+body.path-mod-book .book_content,
+body.path-mod-lesson .contents,
+body.path-mod-wiki .wiki_contentbox,
+body.path-mod-workshop .workshop-view,
+body.path-mod-glossary .glossarydisplay {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+body.path-mod-book .book_toc {
+    border-radius: 12px;
+}
+
+body.path-mod-book .book_toc ul {
+    padding-left: 1rem;
+}
+
+body.path-mod-book .book_content h3,
+body.path-mod-lesson .contents h3,
+body.path-mod-wiki .wiki_contentbox h3 {
+    color: #144d3c;
+}
+
+
+/* ---------------------------------------------------------
+   10. Etiquetas / Labels
+   --------------------------------------------------------- */
+
+body.path-course-view .activity.label,
+body.path-course-view .modtype_label .activity-item {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+body.path-course-view .modtype_label .activity-item:hover {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+body.path-course-view .modtype_label .no-overflow {
+    max-width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   11. Selector de actividades / modchooser
+   --------------------------------------------------------- */
+
+body .activity-add,
+body .section-modchooser-link,
+body .addresourcemodchooser {
+    color: #258e6e !important;
+    font-weight: 500;
+}
+
+body .activity-add:hover,
+body .section-modchooser-link:hover,
+body .addresourcemodchooser:hover {
+    color: #144d3c !important;
+}
+
+body .choosercontainer,
+body .modal-content {
+    border-radius: 12px;
+}
+
+body .choosercontainer .option,
+body .activitychooser .option {
+    border-radius: 10px;
+}
+
+body .choosercontainer .option:hover,
+body .activitychooser .option:hover {
+    background-color: rgba(37, 142, 110, .06);
+}
+
+
+/* ---------------------------------------------------------
+   12. Calificador / Grader
+   --------------------------------------------------------- */
+
+body.path-grade-report-grader table,
+body.path-grade-report-grader .gradeparent,
+body.path-grade-report-grader .gradestable {
+    font-size: 0.9rem;
+}
+
+body.path-grade-report-grader .gradeparent th,
+body.path-grade-report-grader .gradeparent td {
+    border-color: #dee2e6;
+}
+
+body.path-grade-report-grader .gradeparent th {
+    background-color: #f2f3f4;
+    color: #111827;
+}
+
+body.path-grade-report-grader .gradeparent tr:hover td {
+    background-color: rgba(37, 142, 110, .05);
+}
+
+
+/* ---------------------------------------------------------
+   13. Base de datos / Database
+   --------------------------------------------------------- */
+
+body.path-mod-data .defaulttemplate,
+body.path-mod-data .datapreferences,
+body.path-mod-data .data-field-html {
+    border-radius: 12px;
+}
+
+body.path-mod-data .defaulttemplate {
+    border: 1px solid #dee2e6;
+    background: #ffffff;
+    padding: 1rem;
+}
+
+body.path-mod-data .data-field-html a {
+    color: #8e247b;
+}
+
+body.path-mod-data .data-field-html a:hover {
+    color: #258e6e;
+}
+
+
+/* ---------------------------------------------------------
+   14. Responsive actividades
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+    body .activityiconcontainer {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+    body .activityiconcontainer .activityicon,
+    body .activityiconcontainer img.activityicon {
+        width: 22px;
+        height: 22px;
+    }
+
+    body.path-course-view .activity-item {
+        border-radius: 8px;
+    }
+
+    body.path-mod-book .book_content,
+    body.path-mod-lesson .contents,
+    body.path-mod-wiki .wiki_contentbox,
+    body.path-mod-workshop .workshop-view,
+    body.path-mod-glossary .glossarydisplay,
+    body.path-mod-resource .resourcecontent,
+    body.path-mod-page .box.generalbox,
+    body.path-mod-folder .foldertree,
+    body.path-mod-url .urlworkaround {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+}
+
+
+/* =========================================================
+   TANDA 6 - COMPONENTES ACCESORIOS / BLOQUES HTML / TARJETAS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. Bloque tipo nota / textarea
+   --------------------------------------------------------- */
+
+body .mi-nota {
+    margin: 20px 0;
+    border-bottom: 2px solid rgba(37, 142, 110, .8);
+    padding-bottom: 2em;
+}
+
+body .mi-nota label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+body .mi-nota textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   2. Cajas / recuadros institucionales
+   --------------------------------------------------------- */
+
+body .recuadro,
+body .recuadro-verde,
+body .recuadro-destacado,
+body .destacado,
+body .bloque-destacado {
+    border: 1px solid #b5d4c9;
+    border-left: 6px solid #258e6e;
+    background-color: #f2f3f4;
+    border-radius: 0 15px 15px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+body .recuadro h2,
+body .recuadro h3,
+body .recuadro-verde h2,
+body .recuadro-verde h3,
+body .recuadro-destacado h2,
+body .recuadro-destacado h3,
+body .destacado h2,
+body .destacado h3,
+body .bloque-destacado h2,
+body .bloque-destacado h3 {
+    margin-top: 0;
+    color: #144d3c;
+}
+
+body .recuadro p:last-child,
+body .recuadro-verde p:last-child,
+body .recuadro-destacado p:last-child,
+body .destacado p:last-child,
+body .bloque-destacado p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   3. Citas / epígrafes / notas
+   --------------------------------------------------------- */
+
+body blockquote,
+body .cita,
+body .quote {
+    border-left: 5px solid #258e6e;
+    background-color: #f2f3f4;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #343a40;
+}
+
+body .epigrafe,
+body .caption,
+body .pie-imagen {
+    font-size: 0.88rem;
+    color: #6c757d;
+    line-height: 1.35;
+    margin-top: 0.5rem;
+}
+
+
+/* ---------------------------------------------------------
+   4. Acordeones / details
+   --------------------------------------------------------- */
+
+body details,
+body .accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+body details summary {
+    cursor: pointer;
+    background-color: #f2f3f4;
+    color: #144d3c;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+}
+
+body details[open] summary {
+    border-bottom: 1px solid #dee2e6;
+}
+
+body details>*:not(summary) {
+    padding: 1rem;
+}
+
+body .accordion-button {
+    color: #144d3c;
+    font-weight: 600;
+}
+
+body .accordion-button:not(.collapsed) {
+    color: #144d3c;
+    background-color: #dff4ee;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .125);
+}
+
+body .accordion-button:focus {
+    border-color: #258e6e;
+    box-shadow: 0 0 0 .2rem rgba(37, 142, 110, .2);
+}
+
+
+/* ---------------------------------------------------------
+   5. Tarjetas visuales HTML
+   --------------------------------------------------------- */
+
+body .card-deck.inicio,
+body .cards-inicio,
+body .tarjetas,
+body .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+body .card-deck.inicio .card,
+body .cards-inicio .card,
+body .tarjetas .card,
+body .cards-grid .card {
+    flex: 1 1 260px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    transition: box-shadow .18s ease, transform .18s ease;
+}
+
+body .card-deck.inicio .card:hover,
+body .cards-inicio .card:hover,
+body .tarjetas .card:hover,
+body .cards-grid .card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+    transform: translateY(-1px);
+}
+
+body .card-deck.inicio .card-body,
+body .cards-inicio .card-body,
+body .tarjetas .card-body,
+body .cards-grid .card-body {
+    padding: 1rem;
+}
+
+body .card-deck.inicio .card-footer,
+body .cards-inicio .card-footer,
+body .tarjetas .card-footer,
+body .cards-grid .card-footer {
+    background-color: #f2f3f4;
+    border-top: 1px solid #dee2e6;
+}
+
+body .card-deck.inicio .card:hover .card-footer,
+body .cards-inicio .card:hover .card-footer,
+body .tarjetas .card:hover .card-footer,
+body .cards-grid .card:hover .card-footer {
+    background-color: #258e6e;
+    color: #ffffff;
+}
+
+body .card-deck.inicio .card:hover .card-footer a,
+body .cards-inicio .card:hover .card-footer a,
+body .tarjetas .card:hover .card-footer a,
+body .cards-grid .card:hover .card-footer a {
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. Links bloque lateral / listas de links
+   --------------------------------------------------------- */
+
+body .links_bloque_lateral a,
+body .links_historia a,
+body .lista-links a {
+    color: #8e247b;
+    text-decoration: none;
+}
+
+body .links_bloque_lateral a:hover,
+body .links_historia a:hover,
+body .lista-links a:hover {
+    color: #258e6e;
+    text-decoration: underline;
+}
+
+body .links_historia {
+    font-size: 1.2em;
+}
+
+body .links_historia p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+body .links_historia .icon-menu {
+    color: #258e6e;
+    margin-right: 6px;
+    font-size: 0.95em;
+}
+
+
+/* ---------------------------------------------------------
+   7. C4L / Components for Learning
+   --------------------------------------------------------- */
+
+body .c4l-estimatedtime,
+body .c4lv-estimatedtime {
+    font-size: 0.9em;
+    margin-bottom: 0;
+    padding-left: 2.6em;
+    position: relative;
+}
+
+body .c4l-estimatedtime::before,
+body .c4lv-estimatedtime::before {
+    content: "";
+    background-image: url("/theme/image.php/gflacso4cooperacion/tiny_c4l/1773329938/noun_project_icons/c4l_estimatedtime");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 12px;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+/* ---------------------------------------------------------
+   8. Botón volver inicio / botón flotante
+   --------------------------------------------------------- */
+
+body .volver-inicio {
+    position: fixed;
+    visibility: visible;
+    z-index: 1000;
+}
+
+body .volver-inicio a {
+    padding: 12px;
+    height: 50px;
+    display: inline-block;
+    color: #144d3c;
+}
+
+body .volver-inicio a:hover {
+    background: var(--color-area-3);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+body .volver-inicio a::before {
+    content: " ";
+    font-family: "FontAwesome";
+    font-size: 0.9em;
+    position: relative;
+    bottom: 1px;
+}
+
+body .boton-mahi {
+    position: fixed;
+    visibility: visible;
+    width: 4em;
+    height: 4em;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 0.8rem;
+    line-height: 1;
+    border-radius: 50px;
+    border: 2px solid #054762;
+    margin-bottom: 1em;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+body .boton-mahi:hover {
+    background-color: rgba(226, 202, 148, 0.6);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.9);
+}
+
+body .boton-mahi a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body .boton-mahi a:focus {
+    background-color: transparent !important;
+}
+
+
+/* ---------------------------------------------------------
+   9. Navegación interna recursos
+   --------------------------------------------------------- */
+
+body .navegacion-interna {
+    position: fixed;
+    visibility: visible;
+    text-align: center;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+body .navegacion-interna a {
+    padding: 12px;
+    height: 50px;
+    display: inline-block;
+    line-height: 25px;
+    color: #144d3c;
+    text-decoration: none;
+}
+
+body .navegacion-interna a:hover {
+    background: var(--color-area-3);
+    text-decoration: none;
+}
+
+body .navegacion-interna a.ir-inicio::before {
+    content: " ";
+    font-family: "FontAwesome";
+    font-size: 0.9em;
+    position: relative;
+    bottom: 1px;
+}
+
+body .navegacion-interna a.ir-inicio:hover {
+    border-radius: 10px 0 0 10px;
+}
+
+body .navegacion-interna a.ir-caso::before {
+    content: " ";
+    font-family: "FontAwesome";
+    font-size: 0.9em;
+    position: relative;
+    bottom: 1px;
+}
+
+body .navegacion-interna a.ir-caso:hover {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* ---------------------------------------------------------
+   10. Imágenes flotantes / no-overflow / multimedia
+   --------------------------------------------------------- */
+
+body .no-overflow {
+    overflow: hidden;
+}
+
+body .no-overflow img,
+body .generalbox img,
+body .box img,
+body .course-content img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+body iframe,
+body video,
+body object,
+body embed {
+    max-width: 100%;
+}
+
+body iframe {
+    border: none;
+}
+
+
+/* ---------------------------------------------------------
+   11. Sliders / carruseles Bootstrap 5
+   --------------------------------------------------------- */
+
+body .carousel,
+body .carousel-inner,
+body .carousel-item {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body .carousel-caption {
+    background: rgba(0, 0, 0, .45);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+body .carousel-control-prev,
+body .carousel-control-next {
+    opacity: .85;
+}
+
+body .carousel-control-prev:hover,
+body .carousel-control-next:hover {
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   12. Alertas / mensajes institucionales
+   --------------------------------------------------------- */
+
+body .alert {
+    border-radius: 8px;
+}
+
+body .alert-info {
+    background-color: #dff4ee;
+    border-color: #b5d4c9;
+    color: #144d3c;
+}
+
+body .alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    color: #664d03;
+}
+
+body .alert-success {
+    background-color: #dff4ee;
+    border-color: #b5d4c9;
+    color: #144d3c;
+}
+
+
+/* ---------------------------------------------------------
+   13. Badges / etiquetas
+   --------------------------------------------------------- */
+
+body .badge {
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+body .badge-primary,
+body .bg-primary {
+    background-color: #258e6e !important;
+}
+
+body .badge-secondary,
+body .bg-secondary {
+    background-color: #8e247b !important;
+}
+
+
+/* ---------------------------------------------------------
+   14. Tablas generales
+   --------------------------------------------------------- */
+
+body table.generaltable {
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body table.generaltable thead th {
+    background-color: #f2f3f4;
+    color: #111827;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+body table.generaltable tbody tr:hover {
+    background-color: rgba(37, 142, 110, .06);
+}
+
+
+/* ---------------------------------------------------------
+   15. Accesibilidad / botón accesibilidad
+   --------------------------------------------------------- */
+
+body .local-accessibility-buttoncontainer {
+    z-index: 1040;
+}
+
+body .local-accessibility-buttoncontainer button,
+body .local-accessibility-buttoncontainer .btn {
+    border-radius: 999px;
+}
+
+
+/* ---------------------------------------------------------
+   16. Responsive final
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    body .recuadro,
+    body .recuadro-verde,
+    body .recuadro-destacado,
+    body .destacado,
+    body .bloque-destacado {
+        padding: 1rem;
+        border-radius: 0 10px 10px 0;
+    }
+
+    body .card-deck.inicio,
+    body .cards-inicio,
+    body .tarjetas,
+    body .cards-grid {
+        display: block;
+    }
+
+    body .card-deck.inicio .card,
+    body .cards-inicio .card,
+    body .tarjetas .card,
+    body .cards-grid .card {
+        margin-bottom: 1rem;
+    }
+
+    body .navegacion-interna {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    body .boton-mahi {
+        right: 1rem;
+        bottom: 1rem;
+    }
 }
