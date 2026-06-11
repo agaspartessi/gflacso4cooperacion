@@ -1,4 +1,5 @@
-/*#region*/// Color system
+/*#region*/
+// Color system
 
 $white: #fff !default;
 $gray-100: #f2f3f4 !default;
@@ -141,7 +142,8 @@ $yiq-text-light: $white !default;
 
 $yiq-contrasted-threshold: 190 !default;
 
-/*#region*/// Typography
+/*#region*/
+// Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
@@ -181,3 +183,18 @@ $btn-border-radius-sm: 3px !default;
 
 // Navbar
 $navbar-dark-color: rgba($white, 0.6) !default;
+
+/* GFLACSO PRE FILE TEST */
+html::before {
+  content: "PRE FILE OK";
+  position: fixed;
+  left: 16px;
+  top: 120px;
+  z-index: 999999;
+  background: #ff0000;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+}
