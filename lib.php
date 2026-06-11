@@ -2,17 +2,12 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Builds the main SCSS content for the gflacso4cooperacion theme.
+ * Returns the selected Boost preset.
  *
- * Important order:
- * 1. theme scss/pre.scss
- * 2. Raw initial SCSS from theme settings
- * 3. Boost preset
- * 4. theme scss/post.scss
- * 5. Raw SCSS from theme settings
- *
- * This order allows pre.scss to define Bootstrap/Moodle variables before
- * the Boost preset is compiled.
+ * Order handled by Moodle:
+ * 1. prescsscallback  -> pre.scss + Raw initial SCSS
+ * 2. scss             -> Boost preset
+ * 3. extrascsscallback -> post.scss + Raw SCSS
  *
  * @param theme_config $theme
  * @return string
@@ -20,115 +15,100 @@ defined('MOODLE_INTERNAL') || die();
 function theme_gflacso4cooperacion_get_main_scss_content($theme): string {
     global $CFG;
 
-    $output = '';
+    $preset = get_config('theme_gflacso4cooperacion', 'preset') ?: 'default.scss';
 
-    /*
-     * 1. Theme pre.scss.
-     * Must be loaded before the Boost preset, otherwise variables with !default
-     * will arrive too late and will not affect Bootstrap/Moodle compilation.
-     */
-    $prepath = $CFG->dirroot . '/theme/gflacso4cooperacion/scss/pre.scss';
-
-    if (is_readable($prepath)) {
-        $output .= "\n/* === GFLACSO PRE.SCSS FILE === */\n";
-        $output .= file_get_contents($prepath) . "\n";
-    } else {
-        $output .= "\n/* === GFLACSO PRE.SCSS NOT READABLE: " . $prepath . " === */\n";
+    if ($preset === 'plain.scss') {
+        $presetpath = $CFG->dirroot . '/theme/boost/scss/preset/plain.scss';
+        return is_readable($presetpath) ? file_get_contents($presetpath) : '';
     }
 
-    /*
-     * 2. Raw initial SCSS from admin settings.
-     * This is placed after the file-based pre.scss so you can temporarily
-     * override/test variables from the Moodle UI.
-     */
-    $rawpre = get_config('theme_gflacso4cooperacion', 'scsspre');
-
-    if (!empty($rawpre)) {
-        $output .= "\n/* === GFLACSO RAW INITIAL SCSS FROM DB === */\n";
-        $output .= $rawpre . "\n";
-    }
-
-    /*
-     * 3. Main Boost preset.
-     * Respect the selected preset if the theme settings define one.
-     */
-    $preset = 'default.scss';
-
-    if (!empty($theme->settings->preset)) {
-        $preset = $theme->settings->preset;
-    } else {
-        $configuredpreset = get_config('theme_gflacso4cooperacion', 'preset');
-        if (!empty($configuredpreset)) {
-            $preset = $configuredpreset;
-        }
+    if ($preset === 'default.scss') {
+        $presetpath = $CFG->dirroot . '/theme/boost/scss/preset/default.scss';
+        return is_readable($presetpath) ? file_get_contents($presetpath) : '';
     }
 
     $fs = get_file_storage();
     $context = context_system::instance();
 
-    if ($preset === 'plain.scss') {
-        $presetpath = $CFG->dirroot . '/theme/boost/scss/preset/plain.scss';
+    $presetfile = $fs->get_file(
+        $context->id,
+        'theme_gflacso4cooperacion',
+        'preset',
+        0,
+        '/',
+        $preset
+    );
 
-        if (is_readable($presetpath)) {
-            $output .= "\n/* === BOOST PLAIN PRESET === */\n";
-            $output .= file_get_contents($presetpath) . "\n";
-        }
-
-    } else if ($preset === 'default.scss') {
-        $presetpath = $CFG->dirroot . '/theme/boost/scss/preset/default.scss';
-
-        if (is_readable($presetpath)) {
-            $output .= "\n/* === BOOST DEFAULT PRESET === */\n";
-            $output .= file_get_contents($presetpath) . "\n";
-        }
-
-    } else {
-        $presetfile = $fs->get_file(
-            $context->id,
-            'theme_gflacso4cooperacion',
-            'preset',
-            0,
-            '/',
-            $preset
-        );
-
-        if ($presetfile) {
-            $output .= "\n/* === GFLACSO UPLOADED PRESET: " . $preset . " === */\n";
-            $output .= $presetfile->get_content() . "\n";
-        } else {
-            $presetpath = $CFG->dirroot . '/theme/boost/scss/preset/default.scss';
-
-            if (is_readable($presetpath)) {
-                $output .= "\n/* === BOOST FALLBACK DEFAULT PRESET === */\n";
-                $output .= file_get_contents($presetpath) . "\n";
-            }
-        }
+    if ($presetfile) {
+        return $presetfile->get_content();
     }
 
-    /*
-     * 4. Theme post.scss.
-     * This should contain final theme rules. In your current testing workflow
-     * you can keep it empty or minimal and continue using Raw SCSS.
-     */
+    $fallback = $CFG->dirroot . '/theme/boost/scss/preset/default.scss';
+    return is_readable($fallback) ? file_get_contents($fallback) : '';
+}
+
+/**
+ * Prepends SCSS before the Boost preset.
+ * This is where variables should go.
+ *
+ * @param theme_config $theme
+ * @return string
+ */
+function theme_gflacso4cooperacion_get_pre_scss($theme): string {
+    global $CFG;
+
+    $scss = '';
+
+    $prepath = $CFG->dirroot . '/theme/gflacso4cooperacion/scss/pre.scss';
+
+    if (is_readable($prepath)) {
+        $scss .= "\n/* === GFLACSO PRE.SCSS FILE === */\n";
+        $scss .= file_get_contents($prepath) . "\n";
+    } else {
+        $scss .= "\n/* === GFLACSO PRE.SCSS NOT READABLE: {$prepath} === */\n";
+    }
+
+    $brandcolor = get_config('theme_gflacso4cooperacion', 'brandcolor');
+    if (!empty($brandcolor)) {
+        $scss .= "\n/* === GFLACSO BRAND COLOR FROM SETTINGS === */\n";
+        $scss .= '$primary: ' . $brandcolor . ";\n";
+    }
+
+    $rawpre = get_config('theme_gflacso4cooperacion', 'scsspre');
+    if (!empty($rawpre)) {
+        $scss .= "\n/* === GFLACSO RAW INITIAL SCSS FROM DB === */\n";
+        $scss .= $rawpre . "\n";
+    }
+
+    return $scss;
+}
+
+/**
+ * Appends SCSS after the Boost preset.
+ * This is where final theme rules and admin Raw SCSS should go.
+ *
+ * @param theme_config $theme
+ * @return string
+ */
+function theme_gflacso4cooperacion_get_extra_scss($theme): string {
+    global $CFG;
+
+    $scss = '';
+
     $postpath = $CFG->dirroot . '/theme/gflacso4cooperacion/scss/post.scss';
 
     if (is_readable($postpath)) {
-        $output .= "\n/* === GFLACSO POST.SCSS FILE === */\n";
-        $output .= file_get_contents($postpath) . "\n";
+        $scss .= "\n/* === GFLACSO POST.SCSS FILE === */\n";
+        $scss .= file_get_contents($postpath) . "\n";
     } else {
-        $output .= "\n/* === GFLACSO POST.SCSS NOT READABLE: " . $postpath . " === */\n";
+        $scss .= "\n/* === GFLACSO POST.SCSS NOT READABLE: {$postpath} === */\n";
     }
 
-    /*
-     * 5. Raw SCSS from admin settings.
-     * This goes at the end so it can be used for safe testing/overrides.
-     */
     $rawpost = get_config('theme_gflacso4cooperacion', 'scss');
-
     if (!empty($rawpost)) {
-        $output .= "\n/* === GFLACSO RAW SCSS FROM DB === */\n";
-        $output .= $rawpost . "\n";
+        $scss .= "\n/* === GFLACSO RAW SCSS FROM DB === */\n";
+        $scss .= $rawpost . "\n";
     }
 
-    return $output;
+    return $scss;
 }

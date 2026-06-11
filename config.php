@@ -17,8 +17,18 @@ $THEME->haseditswitch = true;
 
 $THEME->removedprimarynavitems = ['home'];
 
+/**
+ * Main SCSS: only the selected Boost preset.
+ * Pre and post SCSS are injected through Moodle's native callbacks.
+ */
 $THEME->scss = function($theme) {
     return theme_gflacso4cooperacion_get_main_scss_content($theme);
 };
+
+/**
+ * Native Moodle callbacks.
+ */
+$THEME->prescsscallback = 'theme_gflacso4cooperacion_get_pre_scss';
+$THEME->extrascsscallback = 'theme_gflacso4cooperacion_get_extra_scss';
 
 
