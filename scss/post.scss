@@ -1640,6 +1640,126 @@ form#login {
 
 /*#endregion*/
 
+// Restore Cooperación's 5.1 form while retaining Moodle 5.3 auth behaviour.
+#page-login-index .login-container {
+    .loginform {
+        width: 100%;
+        max-width: 405px;
+        margin-inline: auto;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    #loginlogo {
+        width: 100%;
+        margin-bottom: 2rem !important;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            border: 1px solid $white;
+        }
+    }
+
+    .login-form .login-input-wrapper .form-control {
+        background-color: $white;
+        padding-inline: 1rem;
+        border-radius: 3px;
+        min-width: 0;
+    }
+
+    .login-form .login-form-username,
+    .login-form .login-form-password {
+        margin-bottom: 1rem !important;
+    }
+
+    .login-form .toggle-sensitive-wrapper {
+        flex-direction: row;
+        width: 100%;
+
+        .toggle-sensitive-btn {
+            --bs-btn-bg: #{$secondary};
+            --bs-btn-hover-bg: #{$secondary-1};
+            --bs-btn-active-bg: #{$secondary};
+            background: linear-gradient($secondary-1, $secondary 90%, $secondary);
+            color: $white;
+            padding: 0.5rem 1rem;
+            margin: 0;
+            border: 0;
+            border-radius: 0 3px 3px 0;
+            align-self: stretch;
+
+            &:focus-visible {
+                outline: 2px solid $white;
+                outline-offset: 2px;
+            }
+        }
+    }
+
+    .coop-login-registration {
+        position: relative;
+        isolation: isolate;
+        width: 100%;
+        box-sizing: border-box;
+        color: $black;
+        background: rgba($white, 0.88);
+        border: 12px solid transparent;
+        border-radius: 16px;
+        padding: 2rem 0.75rem 0.75rem;
+        margin: 0 0 1.5rem;
+        text-shadow: 1px 1px 5px rgba($black, 0.6);
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border: 2px solid $primary;
+            border-radius: 3px;
+            pointer-events: none;
+        }
+
+        h2.login-heading {
+            color: $black;
+            font-size: 1.3em !important;
+            font-weight: 500;
+            margin: 1rem 0 2rem;
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        p { margin-bottom: 0; }
+
+        .login-signup {
+            margin: 0;
+            padding: 0;
+        }
+
+        a.btn-secondary {
+            color: $white;
+            max-width: 100%;
+            white-space: normal;
+            margin-top: 0;
+            font-size: 1em;
+        }
+    }
+
+    .login-languagemenu { margin-block: 1rem 2rem !important; }
+}
+
+@media (max-width: 767.98px) {
+    #page-login-index {
+        .login-wrapper { min-height: 100dvh; }
+        .login-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 1.5rem;
+        }
+    }
+}
+
 /*#region*/
 //FOOTER
 

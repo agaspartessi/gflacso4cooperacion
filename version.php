@@ -2,7 +2,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Moodle 5.3 adaptation; validate with real campus courses and settings.
-$plugin->version = 2026101900;
+$plugin->version = 2026101901;
 $plugin->requires = 2026100500;
 $plugin->component = 'theme_gflacso4cooperacion';
 
@@ -11,4 +11,4 @@ $plugin->dependencies = [
 ];
 
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = '2.0.0-beta1';
+$plugin->release = '2.0.0-beta2';

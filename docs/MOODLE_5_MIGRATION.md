@@ -27,7 +27,7 @@ No se ejecutó Moodle ni se accedió a la base de datos del campus. Este entorno
 
 1. Descargar la rama `moodle-5.3`. Renombrar la carpeta a `gflacso4cooperacion`.
 2. Sustituir el theme únicamente en testing: `<moodle>/public/theme/gflacso4cooperacion`.
-3. Administración del sitio > Notificaciones: registrar la versión `2026101900`.
+3. Administración del sitio > Notificaciones: registrar la versión `2026101901`.
 4. Purgar todas las cachés y recargar con Ctrl+F5.
 5. Revisar Raw initial SCSS y Raw SCSS: sus reglas finales pueden reintroducir posiciones antiguas de cajones, login y navbar.
 6. Comprobar login, recuperación, instrucciones de acceso y autenticación externa/MFA si se usan; escritorio y celular.
@@ -48,3 +48,9 @@ node tools/check_login.cjs /ruta/a/moodle /tmp/coop-css/moodle-default.css /tmp/
 ```
 
 El nombre del CSS depende del nombre de carpeta del checkout de Moodle. Los servicios externos se simulan; estos checks no sustituyen las pruebas del campus.
+
+## Beta2 — formulario de ingreso como en 5.1
+
+Se añade `templates/core/loginform.mustache`, partiendo del formulario real de 5.3 y conservando sus tokens, mensajes, CAPTCHA, proveedores externos y JavaScript nativo. Se retiran el saludo, subtítulo e iconos nuevos; las etiquetas siguen presentes para lectores de pantalla. Se recuperan campos compactos, logo enmarcado, recuperación debajo del botón y panel de registro. El texto predeterminado de registro usa `loginsteps` y las instrucciones administrativas se conservan cuando existen. El panel crece con su contenido y los botones admiten varias líneas en móvil.
+
+Verificados: compilación Dart Sass default/plain y ocho escenarios de renderizado Mustache (registro, instrucciones y formulario habilitados/deshabilitados), tokens y acceso externo. Continúa pendiente la verificación visual en navegador y en el campus.

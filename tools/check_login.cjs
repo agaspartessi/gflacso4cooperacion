@@ -23,11 +23,11 @@ const translations = {
     loginforgotpassword: '¿Olvidaste tu contraseña?', login: 'Acceder', loginseparatoror: 'O',
     loginwith: 'Acceder con cuenta institucional', cookiesnotice: 'Aviso de cookies', loginasguest: 'Entrar como invitado',
 };
-let form = clean(fs.readFileSync(path.join(root, 'lib/templates/loginform.mustache'), 'utf8'))
+let form = clean(fs.readFileSync(path.join(__dirname, '../templates/core/loginform.mustache'), 'utf8'))
     .replace(/{{#str}}([\s\S]*?){{\/str}}/g, (_, key) => translations[key.trim().split(',')[0]] || key.trim().split(',')[0])
     .replace(/{{#pix}}[\s\S]*?{{\/pix}}/g, '<span aria-hidden="true">●</span>');
 form = Mustache.render(form, {
-    sitename: 'FLACSO Cooperación', showloginform: true, hasidentityproviders: true,
+    sitename: 'FLACSO Cooperación', showloginform: true, hasidentityproviders: true, cansignup: true,
     identityproviders: [{name: 'Institucional', url: '#sso'}], canloginasguest: true,
     loginurl: '#login', forgotpasswordurl: '#recover', logintoken: 'fixture-only',
 });
@@ -50,9 +50,9 @@ fs.writeFileSync(path.join(output, 'login.html'), `<!doctype html><html lang="es
         assert(!geometry.overflow, `${width} horizontal overflow`);
         assert(geometry.left >= -1 && geometry.right <= width + 1 && geometry.top >= -1, `${width} panel outside viewport`);
         const colour = selector => page.locator(selector).first().evaluate(el => getComputedStyle(el).color);
-        assert.equal(await colour('.loginform h1'), 'rgb(255, 255, 255)', 'heading on green');
-        assert.equal(await colour('.loginform label'), 'rgb(255, 255, 255)', 'labels on navy');
-        assert.equal(await colour('.loginform .text-muted'), 'rgb(222, 226, 230)', 'subtitle on navy');
+        assert.equal(await page.locator('.loginform > h1').count(), 0, 'no new welcome heading');
+        assert(await page.locator('label[for="username"]').evaluate(el => el.classList.contains('visually-hidden')), 'accessible hidden label');
+        assert.equal(await colour('.coop-login-registration h2'), 'rgb(0, 0, 0)', 'registration title on light panel');
         assert.notEqual(await colour('.login-identityprovider-btn'), 'rgb(255, 255, 255)', 'SSO text on white');
         await page.locator('.login-cookiesnotice button').scrollIntoViewIfNeeded();
         assert(await page.locator('.login-cookiesnotice button').isVisible(), 'bottom controls reachable');
@@ -62,6 +62,6 @@ fs.writeFileSync(path.join(output, 'login.html'), `<!doctype html><html lang="es
     await page.locator('.loginform').evaluate(el => { el.innerHTML = '<h1>Verificación</h1><div style="height:1500px">Formulario largo</div><button id="continue" class="btn btn-primary">Continuar</button>'; });
     await page.locator('#continue').scrollIntoViewIfNeeded();
     assert(await page.locator('#continue').isVisible(), 'long form bottom reachable');
-    console.log('PASS 5 login viewports, text contrast, SSO button and long-form layout');
+    console.log('PASS 5 login viewports, classic form, signup panel, SSO and long-form layout');
     await browser.close();
 })().catch(error => { console.error(error); process.exit(1); });
