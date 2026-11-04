@@ -8774,7 +8774,9 @@ ul.onetopic {
         border: none;
     }
 
-    &:not(:has(p, span, h1, h2, h3, h4, h5, h6, img, div)) {
+    // HTML tag selectors are case-insensitive. Uppercase headings prevent
+    // Bootstrap's @extend h1..h6 from corrupting nested :not(:has()) in scssphp.
+    &:not(:has(p, span, H1, H2, H3, H4, H5, H6, img, div)) {
         border: none;
         padding: 0;
     }
@@ -9241,7 +9243,9 @@ ul.onetopic {
     border-radius: 0 0 .3rem .3rem;
     padding: 1em;
 
-    &:not(:has(p, span, h1, h2, h3, h4, h5, h6, img, div)) {
+    // HTML tag selectors are case-insensitive. Uppercase headings prevent
+    // Bootstrap's @extend h1..h6 from corrupting nested :not(:has()) in scssphp.
+    &:not(:has(p, span, H1, H2, H3, H4, H5, H6, img, div)) {
         border: none;
         padding: 0;
     }

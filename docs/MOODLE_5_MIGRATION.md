@@ -62,3 +62,9 @@ Se registran callbacks propios para ambos campos. Los valores se consultan media
 Motivo: en testing ambos campos no se aplicaban, incluso con código mínimo, mientras en Boost sí. El fallo exacto de esa instalación no pudo reproducirse con el checkout oficial de Moodle; esta versión refuerza la carga ante ausencia del aporte del padre o settings incompletos en el objeto del theme. No se presenta esa hipótesis como una causa confirmada del campus.
 
 Verificaciones: carga real de configuración y callbacks con las clases oficiales de Moodle y PHP, marcadores en el CSS compilado por scssphp, ausencia de duplicados con herencia nativa, settings incompletos y sin callbacks del padre. Pendiente confirmar el resultado en testing. `tools/check_compatibility.php` incorpora los casos sin callbacks heredados y con settings incompletos.
+
+## Beta5 — causa confirmada del Raw descartado por el navegador
+
+En dos selectores de post.scss, `:not(:has(p, span, h1, h2, h3, h4, h5, h6, img, div))` interactuaba con los `@extend h1..h6` de Bootstrap. El compilador PHP devolvía éxito, pero generaba alternativas `.h1`…`.h6` con paréntesis sin cerrar. El navegador dejaba de registrar reglas a partir del primer selector defectuoso, incluido el Raw final. Se confirmó en la CSSOM del campus: su última regla era la inmediatamente anterior al selector defectuoso, aunque la respuesta CSS contenía el Raw más adelante.
+
+Se usan H1…H6 dentro de esos dos selectores. En documentos HTML conservan la coincidencia de etiquetas, pero no activan las extensiones Sass de Bootstrap. Se retira el refuerzo de callbacks de beta4, que no resolvía el problema, recuperando la carga original de los ajustes mediante Boost. No se cambian los valores guardados ni el diseño.

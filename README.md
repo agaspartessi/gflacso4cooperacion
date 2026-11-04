@@ -1,6 +1,6 @@
 # Campus Cooperación — Moodle 5.3
 
-Rama `moodle-5.3`, versión `2.0.0-beta4` (`2026110400`). Requiere Moodle y Boost 5.3.
+Rama `moodle-5.3`, versión `2.0.0-beta5` (`2026110401`). Requiere Moodle y Boost 5.3.
 
 Adaptación de `main` de Cooperación con las correcciones técnicas de Uruguay,
 conservando paleta verde/violeta, tipografías, recursos, footer y estilos de cursos.
