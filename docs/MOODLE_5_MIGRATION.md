@@ -54,3 +54,11 @@ El nombre del CSS depende del nombre de carpeta del checkout de Moodle. Los serv
 Se añade `templates/core/loginform.mustache`, partiendo del formulario real de 5.3 y conservando sus tokens, mensajes, CAPTCHA, proveedores externos y JavaScript nativo. Se retiran el saludo, subtítulo e iconos nuevos; las etiquetas siguen presentes para lectores de pantalla. Se recuperan campos compactos, logo enmarcado, recuperación debajo del botón y panel de registro. El texto predeterminado de registro usa `loginsteps` y las instrucciones administrativas se conservan cuando existen. El panel crece con su contenido y los botones admiten varias líneas en móvil.
 
 Verificados: compilación Dart Sass default/plain y ocho escenarios de renderizado Mustache (registro, instrucciones y formulario habilitados/deshabilitados), tokens y acceso externo. Continúa pendiente la verificación visual en navegador y en el campus.
+
+## Beta4 — carga explícita de ajustes Raw (4 de noviembre de 2026)
+
+Se registran callbacks propios para ambos campos. Los valores se consultan mediante `get_config('theme_gflacso4cooperacion', ...)`. Si la cadena heredada ya incluye el valor, el callback hijo no lo repite; si no lo incluye, lo incorpora. La consulta de la cadena usa una guarda por objeto y campo para excluir el propio aporte durante la comprobación. No se modifican los ajustes ni los estilos institucionales.
+
+Motivo: en testing ambos campos no se aplicaban, incluso con código mínimo, mientras en Boost sí. El fallo exacto de esa instalación no pudo reproducirse con el checkout oficial de Moodle; esta versión refuerza la carga ante ausencia del aporte del padre o settings incompletos en el objeto del theme. No se presenta esa hipótesis como una causa confirmada del campus.
+
+Verificaciones: carga real de configuración y callbacks con las clases oficiales de Moodle y PHP, marcadores en el CSS compilado por scssphp, ausencia de duplicados con herencia nativa, settings incompletos y sin callbacks del padre. Pendiente confirmar el resultado en testing. `tools/check_compatibility.php` incorpora los casos sin callbacks heredados y con settings incompletos.

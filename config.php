@@ -16,11 +16,11 @@ $THEME->hidefromselector = false;
 $THEME->haseditswitch = true;
 $THEME->removedprimarynavitems = ['home'];
 
-// Boost already supplies brandcolor and Raw initial SCSS before this callback.
+// Read this theme's stored Raw settings explicitly, retaining native inheritance.
 $THEME->prescsscallback = 'theme_gflacso4cooperacion_get_pre_scss';
+$THEME->extrascsscallback = 'theme_gflacso4cooperacion_get_extra_scss';
 
-// Keep post.scss here so Boost's inherited extra callback adds Raw SCSS last,
-// exactly once. Registering a second raw-SCSS callback would duplicate it.
+// post.scss precedes the final Raw settings. The callbacks avoid adding Raw twice.
 $THEME->scss = function($theme) {
     return theme_gflacso4cooperacion_get_main_scss_content($theme);
 };

@@ -66,6 +66,10 @@ function get_file_storage() {
     };
 }
 function get_string($key, $component) { return 'AI generated image'; }
+function get_config($component, $setting) {
+    global $storedsettings;
+    return $storedsettings->$setting ?? false;
+}
 class theme_stub extends \core\output\theme_config {
     public function __construct($settings) {
         $this->settings = $settings;
@@ -75,6 +79,7 @@ class theme_stub extends \core\output\theme_config {
             'extrascsscallback' => 'theme_boost_get_extra_scss',
         ]];
     }
+    public function omit_parent_callbacks() { $this->parent_configs = []; }
     public function setting_file_url($name, $area) { return null; }
     public function image_url($name, $component = '', $svg = null) { return 'https://example.invalid/image.svg'; }
 }
@@ -89,14 +94,18 @@ $cases = [
         'scss' => '.raw-post-once { color: blue; } .navbar.bg-body { background: #123456 !important; }',
     ],
 ];
+$cases['without-parent'] = clone $cases['configured'];
+$cases['stale-settings'] = clone $cases['configured'];
 foreach ($cases as $name => $settings) {
-    $THEME = new theme_stub($settings);
+    $storedsettings = clone $settings;
+    $THEME = new theme_stub($name === 'stale-settings' ? (object)['preset'=>'default.scss'] : $settings);
+    if ($name === 'without-parent') { $THEME->omit_parent_callbacks(); }
     require "$root/config.php";
     $pre = $THEME->get_pre_scss_code();
     $main = ($THEME->scss)($THEME);
     $extra = $THEME->get_extra_scss_code();
     $source = $pre . "\n" . $main . "\n" . $extra;
-    if ($name === 'configured') {
+    if (in_array($name, ['configured', 'without-parent', 'stale-settings'], true)) {
         foreach (['raw-pre-once', 'raw-post-once'] as $marker) {
             if (substr_count($source, $marker) !== 1) { throw new Exception('Duplicated raw SCSS'); }
         }
