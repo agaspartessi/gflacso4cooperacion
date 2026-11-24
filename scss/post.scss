@@ -3,13 +3,14 @@
 
 // Variables globales de color
 :root {
-    --color-area: hsl(162, 59%, 35%) !important;
-    --color-area-1: hsl(162, 59%, 53%) !important;
-    --color-area-2: hsl(162, 59%, 73%) !important;
-    --color-area-3: hsl(162, 59%, 92%) !important;
-    --color-area-4: hsl(162, 59%, 25%) !important;
-    --color-area-5: hsla(162, 59%, 35%, .8) !important;
-    --color-area-6: hsla(162, 59%, 25%, .5) !important;
+    --color-area: #258e6e !important;
+
+    --color-area-1: oklch(from var(--color-area) calc(l + (1 - l) * 0.44) c h) !important;
+    --color-area-2: oklch(from var(--color-area) calc(l + (1 - l) * 0.66) calc(c * 0.8) h) !important;
+    --color-area-3: oklch(from var(--color-area) calc(l + (1 - l) * 0.90) calc(c * 0.26) h) !important;
+    --color-area-4: oklch(from var(--color-area) calc(l * 0.78) calc(c * 0.76) h) !important;
+    --color-area-5: oklch(from var(--color-area) l c h / 0.8) !important;
+    --color-area-6: oklch(from var(--color-area-4) l c h / 0.5) !important;
 
     color-scheme: light dark;
 }
@@ -5676,8 +5677,7 @@ img.userpicture {
 
 /*#endregion*/
 
-/*#region*/
-//c4l 
+/*#region*///c4l
 
 .box {
     max-width: 100% !important;
@@ -5944,7 +5944,6 @@ img.userpicture {
     position: absolute;
     bottom: 16px;
     right: 10px;
-    background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/noun_project_icons/c4l_docard);
     background-size: 45px 45px;
     background-repeat: no-repeat;
     width: 45px;
@@ -5957,7 +5956,6 @@ img.userpicture {
     position: absolute;
     bottom: 16px;
     right: 10px;
-    background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/noun_project_icons/c4l_dontcard);
     background-size: 45px 45px;
     background-repeat: no-repeat;
     width: 45px;
@@ -5974,12 +5972,9 @@ img.userpicture {
         position: absolute;
         top: 16px;
         right: -3px;
-        background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/noun_project_icons/c4l_tip);
         background-size: 45px 45px;
-        /* Cambia el tamaño de la imagen aquí */
         background-repeat: no-repeat;
         width: 45px;
-        /* Ajusta estas dimensiones */
         height: 45px;
     }
 }
@@ -5994,7 +5989,6 @@ img.userpicture {
         position: absolute;
         top: 16px;
         right: -3px;
-        background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/noun_project_icons/c4l_reminder);
         background-size: 45px 45px;
         background-repeat: no-repeat;
         width: 45px;
@@ -6012,7 +6006,6 @@ img.userpicture {
         position: absolute;
         top: 16px;
         right: -3px;
-        background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/c4l_attention);
         background-size: 45px 45px;
         background-repeat: no-repeat;
         width: 45px;
@@ -6026,7 +6019,6 @@ img.userpicture {
     position: absolute;
     bottom: 16px;
     right: -3px;
-    background-image: url(/theme/image.php/gflacso4academic/tiny_c4l/1742241821/noun_project_icons/c4l_expectedfeedback);
     background-size: 45px 45px;
     background-repeat: no-repeat;
     width: 45px;
@@ -6428,8 +6420,7 @@ img.userpicture {
 
 /*#endregion*/
 
-/*#region*/
-//Imagenes flotantes
+/*#region*///Imagenes flotantes
 
 .responsive-img-right,
 .responsive-img-left {
@@ -8244,8 +8235,7 @@ a.linkpop[title] {
 
 /*#endregion*/
 
-/*#region*/
-//Formato pestañas
+/*#region*///Formato pestañas
 
 #page-course-view-onetopic {
     .course-content ul.section {
@@ -8858,202 +8848,6 @@ ul.onetopic {
 .activityiconcontainer {
     display: inline-table;
     padding: .7rem;
-}
-
-@media (max-width: 767.98px) {
-
-    .format-onetopic .verticaltabs .onetopic-tab-body {
-        padding-left: 0;
-    }
-
-    .format-onetopic .verticaltabs>.tabs-wrapper .nav-tabs {
-        box-sizing: border-box;
-        background: transparent !important;
-        padding: 0;
-        display: inline-flex;
-    }
-
-    .format-onetopic .verticaltabs>.tabs-wrapper .nav-item {
-        max-width: 33%;
-        width: 32.6%;
-        display: inline-block;
-        margin: 0 !important;
-
-        .nav-link {
-            border: none !important;
-            margin-bottom: 0.25rem !important;
-            border-right: 3px solid $white !important;
-        }
-    }
-
-    .format-onetopic .format_onetopic-tabs .nav-link {
-        box-sizing: border-box;
-        margin: 0 !important;
-        border-radius: 3px !important;
-        padding: 0.5em 0.2em;
-    }
-
-    .format-onetopic .verticaltabs .onetopic-tab-body .nav-tabs .nav-link,
-    .nav-pills .nav-item,
-    .format-onetopic .onetopic-tab-body .nav-tabs .nav-link,
-    .format-onetopic .format_onetopic-tabs .nav-link {
-        border: none !important;
-        margin-bottom: 0.25rem !important;
-        border-right: 3px solid $white !important;
-        padding-block: 10px;
-    }
-
-    .format-onetopic .verticaltabs>.tabs-wrapper {
-        border: none;
-        background: transparent !important;
-    }
-
-    .nav-tabs:not(.more-nav),
-    .nav-pills {
-        padding: 0;
-        background: transparent;
-    }
-
-    .nav-tabs:not(.more-nav) .nav-item,
-    .nav-pills .nav-item {
-        max-width: 33%;
-        width: 32.6%;
-        display: inline-block;
-        margin: 0 !important;
-        margin-right: 0.1em !important;
-        margin-bottom: 0.15em !important;
-    }
-
-    .format-onetopic .verticaltabs>.tabs-wrapper .nav-tabs {
-        & .nav-link {
-
-            &:hover,
-            &:focus,
-            &.active {
-                border: 1px solid var(--color-area);
-            }
-        }
-
-        & .nav-item.show .nav-link {
-            border: 1px solid var(--color-area);
-        }
-    }
-
-    .tabs-wrapper {
-        & .nav-link {
-
-            &.active,
-            &:hover {
-                border: 1px solid var(--color-area);
-            }
-        }
-    }
-
-    .format-onetopic .verticaltabs>.tabs-wrapper ul li:first-child .nav-link {
-        border-top: 1px solid var(--color-area);
-    }
-
-    .format-onetopic .onetopic-tab-body .format_onetopic-tabs {
-        padding: 1em;
-        margin-top: 1rem;
-        box-shadow: 0 0 10px 3px rgba(193, 193, 193, 1);
-
-        -webkit-box-shadow: 0 0 10px 3px rgba(193, 193, 193, 1);
-        -moz-box-shadow: 0 0 10px 3px rgba(193, 193, 193, 1);
-    }
-
-    .format-onetopic .onetopic-tab-body .nav-item {
-        max-width: 33%;
-        width: 33%;
-        margin: 0 !important;
-    }
-
-    .format-onetopic .onetopic-tab-body .nav-link {
-        border-radius: 0 !important;
-        border: none !important;
-        border-bottom: 1px solid var(--color-area) !important;
-        padding: 0.5em;
-    }
-
-    .format-onetopic .verticaltabs .onetopic-tab-body .nav-tabs .nav-link {
-
-        &:hover,
-        &:focus,
-        &.active {
-            border: none !important;
-            padding-bottom: 8px !important;
-            margin-top: 0 !important;
-        }
-    }
-
-    :is(.nav-tabs:not(.more-nav), .nav-pills) {
-
-        & .nav-link.active:not(:disabled):not(.disabled):is(:active, .active),
-        .show>& .nav-link.active.dropdown-toggle {
-            border: none !important;
-            padding-bottom: 8px !important;
-            margin-top: 0 !important;
-        }
-    }
-
-    :is(.nav-tabs:not(.more-nav), .nav-pills) {
-
-        & .nav-link.active:not(:disabled):not(.disabled):is(:active, .active),
-        .show>& .nav-link.active.dropdown-toggle {
-            background-color: $primary !important;
-            color: $white !important;
-            width: 100% !important;
-            border-right: 3px solid $white !important;
-            padding-block: 10px !important;
-        }
-    }
-
-    .my-3[data-for="sectioninfo"] {
-        background: transparent;
-        margin: 0 !important;
-        margin-top: 1rem !important;
-        padding: 1rem;
-        border-radius: 0.3rem;
-        border: 2px solid var(--color-area);
-    }
-
-    .my-3[data-for="sectioninfo"] .no-overflow {
-        overflow: visible;
-    }
-
-    [data-for="sectioninfo"] .description-inner h3 {
-        font-size: 1.3em;
-    }
-
-    [data-for="cmlist"] h3,
-    [data-for="cmlist"] h4 {
-        font-size: 1.2em !important;
-        margin-left: inherit;
-        width: 100%;
-        font-weight: 600 !important;
-    }
-
-    .activityiconcontainer {
-        width: 45px;
-        height: 45px;
-    }
-
-    .instancename {
-        font-size: 1em;
-    }
-
-    [data-for="cmlist"] .actividad_en_etiqueta {
-        padding: 1em;
-    }
-
-    [data-for="cmlist"] .actividad_en_etiqueta h3:before {
-        width: 45px;
-        height: 45px;
-    }
-
-    [data-for="cmlist"] .actividad_en_etiqueta h3 {
-        font-size: 1.1em !important;
-    }
 }
 
 .format-singleactivity .page-context-header {

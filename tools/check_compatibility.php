@@ -107,7 +107,7 @@ foreach ($cases as $name => $settings) {
     if ($name === 'uploaded' && !str_contains($source, 'uploaded-marker')) {
         throw new Exception('Uploaded preset was not loaded');
     }
-    if ($name === 'configured' && strpos($source, '$primary: #663399') > strpos($source, '$primary: #258e6e')) {
+    if ($name === 'configured' && strpos($source, '$primary: #663399') > strpos($source, '$primary: #136d52')) {
         throw new Exception('Raw initial SCSS must precede default palette derivation');
     }
     $compiler = new core_scss();

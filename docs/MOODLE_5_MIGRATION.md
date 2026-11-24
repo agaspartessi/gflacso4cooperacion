@@ -68,3 +68,24 @@ Verificaciones: carga real de configuración y callbacks con las clases oficiale
 En dos selectores de post.scss, `:not(:has(p, span, h1, h2, h3, h4, h5, h6, img, div))` interactuaba con los `@extend h1..h6` de Bootstrap. El compilador PHP devolvía éxito, pero generaba alternativas `.h1`…`.h6` con paréntesis sin cerrar. El navegador dejaba de registrar reglas a partir del primer selector defectuoso, incluido el Raw final. Se confirmó en la CSSOM del campus: su última regla era la inmediatamente anterior al selector defectuoso, aunque la respuesta CSS contenía el Raw más adelante.
 
 Se usan H1…H6 dentro de esos dos selectores. En documentos HTML conservan la coincidencia de etiquetas, pero no activan las extensiones Sass de Bootstrap. Se retira el refuerzo de callbacks de beta4, que no resolvía el problema, recuperando la carga original de los ajustes mediante Boost. No se cambian los valores guardados ni el diseño.
+
+## Integración de archivos de Iván — 24/11/2026
+
+Versión `2.0.0-beta6` (`2026112400`). Se integran `pre.scss` y
+`post-coop-20-11-26.scss` como `scss/pre.scss` y `scss/post.scss`.
+Se mantienen los selectores H1–H6 que evitan el fallo de scssphp y los estilos
+del login personalizado. No se cambian ajustes Raw guardados en Moodle.
+
+Observaciones para revisión visual:
+- El primario Sass pasa a `#136d52`, mientras `--color-area` sigue en `#258e6e`.
+- Los derivados de área usan colores relativos `oklch(from ...)`, que requieren
+  soporte del navegador; no se incluyen alternativas para navegadores antiguos.
+- Se retira un bloque móvil de Onetopic (hasta 767.98 px): revisar pestañas y
+  actividades en celular antes de desplegar en producción.
+- Se eliminan seis URLs de iconos C4L que apuntaban al theme académico con una
+  revisión fija; comprobar esos componentes en los cursos.
+
+Validación: compilación con el compilador PHP scssphp de Moodle 5.3 en los
+presets default, plain, subido, fallback y configurado, incluyendo marcadores
+Raw initial/Raw y la comprobación de paréntesis de selectores anidados.
+La integración no incluye instalación ni validación visual en el campus.

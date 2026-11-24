@@ -1,5 +1,4 @@
-/*#region*/
-// Color system
+/*#region*/// Color system
 
 $white: #fff !default;
 $gray-100: #f2f3f4 !default;
@@ -58,35 +57,39 @@ $colors: map-merge(("blue": $blue,
     $colors
 );
 
-$primary: #258e6e !default;
+// Color primario base: #136d52
+$primary: #136d52 !default;
 
 // Derivados del color primario
-$primary-1: hsl(162, 32%, 50%) !default; // Color primario más claro
-$primary-2: hsl(162, 32%, 74%) !default; // Color primario aún más claro
-$primary-3: hsl(162, 31%, 93%) !default; // Color primario muy claro
-$primary-a: saturate($primary, 20%) !default; // Color primario más saturado
+$primary-1: scale-color($primary, $saturation: -46%, $lightness: 25%) !default; // #459a81 - Más claro
+$primary-2: scale-color($primary, $saturation: -46%, $lightness: 60%) !default; // #96d0be - Aún más claro
+$primary-3: scale-color($primary, $saturation: -47%, $lightness: 90%) !default; // #e5f3ef - Muy claro
+$primary-a: scale-color($primary, $saturation: 50%) !default;                    // #097656 - Más saturado
 
-$base: #144d3c !default;
-$base-a: rgba($base, 0.5) !default;
+$base:   #144d3c !default;            // #144d3c - Base oscura
+$base-a: rgba($base, 0.5) !default;   // #144d3c80 - Base oscura con 50% de opacidad
 
-$background-1: $primary-3 !default;
-$background-2: rgba($primary-3, 0.4) !default; // Color de fondo secundario con opacidad
-$background-3: hsla(45, 100%, 38%, 0.3) !default;
+$background-1: $primary-3 !default;               // #e5f3ef - Fondo principal
+$background-2: rgba($primary-3, 0.4) !default;    // #e5f3ef66 - Color de fondo secundario con 40% de opacidad
+$background-3: #c291004d !default;
 
+// Color secundario base: #8e2579 (hsl(312, 59%, 35%))
 $secondary: #8e2579 !default;
 
 // Derivados del color secundario
-$secondary-a: rgba($secondary, 0.8) !default; // Color secundario con opacidad
-$secondary-1: lighten($secondary, 10%) !default; // Color secundario más claro
-$secondary-2: lighten($secondary, 25%) !default; // Color secundario aún más claro
-$secondary-3: lighten($secondary, 70%) !default; // Color secundario muy claro
+$secondary-dark: scale-color($secondary, $lightness: -30%) !default; // #631a55 - Color secundario más oscuro
+$secondary-a: rgba($secondary, 0.8) !default;                 // #8e2579cc - Color secundario con 80% de opacidad
+$secondary-1: scale-color($secondary, $lightness: 15%) !default; // #b52f9b - Color secundario más claro
+$secondary-2: scale-color($secondary, $lightness: 39%) !default; // #d55fbe - Color secundario aún más claro
+$secondary-3: scale-color($secondary, $lightness: 90%) !default; // #f8e5f4 - Color secundario muy claro
 
+// Color flacso base: #142e4d (hsl(213, 59%, 19%))
 $flacso: #142e4d !default;
 
 // Derivados del color flacso
-$flacso-1: lighten($flacso, 10%) !default; // Color flacso más claro
-$flacso-2: lighten($flacso, 30%) !default; // Color flacso más claro
-$flacso-3: lighten($flacso, 70%) !default; // Color flacso muy claro
+$flacso-1: scale-color($flacso, $lightness: 12%) !default; // #1e4674 - Color flacso más claro
+$flacso-2: scale-color($flacso, $lightness: 37%) !default; // #3476c6 - Color flacso aún más claro
+$flacso-3: scale-color($flacso, $lightness: 86%) !default; // #d1e1f3 - Color flacso muy claro
 
 $success: $green !default;
 $info: $cyan !default;
@@ -142,8 +145,7 @@ $yiq-text-light: $white !default;
 
 $yiq-contrasted-threshold: 190 !default;
 
-/*#region*/
-// Typography
+/*#region*/// Typography
 //
 // Font, line-height, and color for body text, headings, and more.
 
