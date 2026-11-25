@@ -120,6 +120,14 @@ foreach ($cases as $name => $settings) {
             throw new Exception('Unbalanced nested selector: ' . $selector);
         }
     }
+    if (str_contains($css, '$white') || str_contains($css, 'color.scale(')) {
+        throw new Exception('Unresolved Sass variable or unsupported module function');
+    }
+    if ($name === 'configured') {
+        foreach (['.raw-pre-once', '.raw-post-once'] as $marker) {
+            if (!str_contains($css, $marker)) { throw new Exception('Missing compiled Raw marker'); }
+        }
+    }
     if (strlen($css) < 100000) { throw new Exception('Incomplete CSS'); }
     if ($outputdir !== null) {
         file_put_contents($outputdir . "/$branch-$name.css", $css);

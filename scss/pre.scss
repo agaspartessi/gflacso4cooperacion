@@ -65,6 +65,8 @@ $primary-1: scale-color($primary, $saturation: -46%, $lightness: 25%) !default; 
 $primary-2: scale-color($primary, $saturation: -46%, $lightness: 60%) !default; // #96d0be - Aún más claro
 $primary-3: scale-color($primary, $saturation: -47%, $lightness: 90%) !default; // #e5f3ef - Muy claro
 $primary-a: scale-color($primary, $saturation: 50%) !default;                    // #097656 - Más saturado
+// 75% de transparencia (25% de opacidad -> #136d5240)
+$primary-75: scale-color($primary, $alpha: -75%) !default;
 
 $base:   #144d3c !default;            // #144d3c - Base oscura
 $base-a: rgba($base, 0.5) !default;   // #144d3c80 - Base oscura con 50% de opacidad

@@ -89,3 +89,46 @@ Validación: compilación con el compilador PHP scssphp de Moodle 5.3 en los
 presets default, plain, subido, fallback y configurado, incluyendo marcadores
 Raw initial/Raw y la comprobación de paréntesis de selectores anidados.
 La integración no incluye instalación ni validación visual en el campus.
+
+## Integración PRE, POST y RAW de Iván — 25/11/2026
+
+Versión `2.0.0-beta7` (`2026112500`). Se sustituye el PRE por
+`pre_25-11-26.scss` y se usa `post-coop-25-11-26.scss` como base. El archivo
+`RAW-para fusionar con POST.scss` se integra por secciones (botones, login,
+navegación, cajones, formatos de curso, contenidos, tarjetas y cuestionarios),
+consolidando reglas coincidentes y evitando repetir el bloque móvil Onetopic
+y los ajustes C4L/stickyfooter ya presentes en el POST.
+
+Correcciones técnicas respecto de los adjuntos:
+- `color.scale($primary, $alpha: -75%)` falla en el parser scssphp de Moodle
+  5.3. Se utiliza `scale-color($primary, $alpha: -75%) !default`.
+- Las variables CSS `--bs-body-bg` y `--bs-tooltip-color` interpolan
+  `#{$white}` para no emitir una variable Sass literal al CSS.
+- La animación de Multitopic referenciaba `desplegarMenu`, sin definición;
+  se reutiliza `desplegarMenuHorizontal`, que sí está definida.
+- Las animaciones de Onetopic se limitan al escritorio; el bloque móvil se
+  conserva después y se respetan las preferencias de movimiento reducido
+  sin dejar las pestañas con opacidad cero.
+- La navegación del libro cambia a -100 px en escritorio, conservando la
+  regla móvil existente de -0.5 rem. Se mantiene H1–H6 en :not(:has()).
+- Los banners H3/H4 nuevos se ubican después de los antiguos para conservar
+  la prioridad del RAW al incorporarlos al archivo.
+
+Observaciones para Iván / validación visual pendiente:
+- La paleta base del POST ahora coincide con el primario #136d52 del PRE;
+  se incorporan alternativas HEX/RGBA y color-mix antes de oklch relativo.
+- El RAW vuelve a fijar posiciones/alturas y ancho de cajones (285 px),
+  incluyendo top de 62/100/110 px. Comprobar con breadcrumb, uno/ambos
+  cajones abiertos, cursos Tiles y anchos de tablet.
+- Los bloques móviles usan hasta 600 px y los de escritorio desde 768 px:
+  revisar también el intervalo 601–767 px.
+- `.container, .card { container-type: inline-size; }` tiene alcance global:
+  revisar las cuadrículas y el contenido de tarjetas de todo el campus.
+- No se modifica el Raw SCSS guardado en Moodle ni se instala el paquete
+  en testing. Si ese Raw contiene los mismos ajustes migrados, conviene
+  revisarlo después de instalar para evitar mantener dos fuentes de estilos.
+
+Validación: cinco escenarios con el compilador PHP scssphp de Moodle 5.3
+(default, plain, preset subido, fallback y configurado), marcadores Raw
+inicial/final, selectores anidados balanceados y variables Sass resueltas.
+La validación visual y funcional del campus sigue pendiente.
